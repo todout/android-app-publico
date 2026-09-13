@@ -1,5 +1,5 @@
 {
-  "version": 14,
+  "version": 15,
   "updated_at": "2026-09-13",
   "channels": [
     {
@@ -8,7 +8,7 @@
       "category": "FÚTBOL ARGENTINO",
       "logo": "android.resource://com.leichtv.tv/drawable/logo_real_tnt_sports",
       "source_type": "dash",
-      "source_url": "https://cdn.cvattv.com.ar/live/c6eds/TNT_Sports_HD/SA_Live_dash_enc_wl/TNT_Sports_HD.mpd",
+      "source_url": "https://cdn.cvattv.com.ar/live/c6eds/TNT_Sports_HD/SA_Live_dash_enc/TNT_Sports_HD.mpd",
       "referer": "https://portal.app.flow.com.ar/",
       "drm_key": "9fb56301bc7687baf0b1a61def9a007a:947d2294ba67256827e8e97f267e71e0"
     },
@@ -18,7 +18,7 @@
       "category": "FÚTBOL ARGENTINO",
       "logo": "android.resource://com.leichtv.tv/drawable/logo_real_espn_premium",
       "source_type": "dash",
-      "source_url": "https://cdn.cvattv.com.ar/live/c7eds/Fox_Sports_Premiun_HD/SA_Live_dash_enc_wl/Fox_Sports_Premiun_HD.mpd",
+      "source_url": "https://cdn.cvattv.com.ar/live/c7eds/Fox_Sports_Premiun_HD/SA_Live_dash_enc/Fox_Sports_Premiun_HD.mpd",
       "referer": "https://portal.app.flow.com.ar/",
       "drm_key": "c502892e037a9f34827147b2b24e42cf:2531bd34bec6c0e8fa4e07aedb261ade"
     },
@@ -68,7 +68,7 @@
       "category": "DEPORTES",
       "logo": "android.resource://com.leichtv.tv/drawable/logo_real_tyc_sports",
       "source_type": "dash",
-      "source_url": "https://cdn.cvattv.com.ar/live/c7eds/TyCSport/SA_Live_dash_enc_wl/TyCSport.mpd",
+      "source_url": "https://cdn.cvattv.com.ar/live/c7eds/TyCSport/SA_Live_dash_enc/TyCSport.mpd",
       "referer": "https://portal.app.flow.com.ar/",
       "drm_key": "0b1e6825350fa1bc0032f8f36287e006:11fc540a4539d18f91cd403a5ed42284"
     },
@@ -188,7 +188,7 @@
       "category": "CANALES DE AIRE",
       "logo": "android.resource://com.leichtv.tv/drawable/logo_real_tv_publica",
       "source_type": "dash",
-      "source_url": "https://cdn.cvattv.com.ar/live/c6eds/Canal7/SA_Live_dash_enc_wl/Canal7.mpd",
+      "source_url": "https://cdn.cvattv.com.ar/live/c6eds/Canal7/SA_Live_dash_enc/Canal7.mpd",
       "referer": "https://portal.app.flow.com.ar/",
       "drm_key": "589f5b6f4afec0b3362cd6be2ab1eb36:6d685f3151730ca6a4be7765a46d30a5"
     },
@@ -198,7 +198,7 @@
       "category": "NOTICIAS",
       "logo": "android.resource://com.leichtv.tv/drawable/logo_real_tn",
       "source_type": "dash",
-      "source_url": "https://cdn.cvattv.com.ar/live/c7eds/TodoNoticias/SA_Live_dash_enc_wl/TodoNoticias.mpd",
+      "source_url": "https://cdn.cvattv.com.ar/live/c7eds/TodoNoticias/SA_Live_dash_enc/TodoNoticias.mpd",
       "referer": "https://portal.app.flow.com.ar/",
       "drm_key": "775d4113d76beac8231e92ed732e27d6:0854a56be655bfa9055ef0e4980f4674"
     },
