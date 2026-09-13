@@ -4,22 +4,27 @@ Aplicación ligera de televisión en vivo para Android TV, Google TV y Fire TV s
 
 ---
 
-## 📥 Enlace de Descarga Directa
+## 📥 Enlaces de Descarga Directa
 
-Puedes descargar el archivo APK directamente o ingresarlo en **Downloader**:
+Puedes descargar los archivos APK directamente o ingresarlos en **Downloader**:
 
-- **Descarga directa alternativa (Raw)**:
-  `https://raw.githubusercontent.com/todout/android-app-publico/main/LeichTV_v1.0.apk`
+### 1. 📺 LeichTV v1.1 (Modo Clásico - Zapping Ultra Rápido)
+- **URL directa para Downloader (Raw)**:
+  `https://raw.githubusercontent.com/todout/android-app-publico/main/LeichTV_v1.1.apk`
+- Ideal para un uso tradicional de televisión (subir y bajar canales de inmediato con el D-Pad).
 
-- **Descarga directa (GitHub Release)**:
-  `https://github.com/todout/android-app-publico/releases/download/v1.0.0/LeichTV_v1.0.apk`
+### 2. ⚡ LeichTV+ v1.0 (Modo Avanzado con DVR / Timeshift)
+- **URL directa para Downloader (Raw)**:
+  `https://raw.githubusercontent.com/todout/android-app-publico/main/LeichTVPlus_v1.0.apk`
+- Incluye pausa en vivo, retroceso y avance de 30 segundos, barra de tiempo flotante y botón para volver al En Vivo.
+- **Se puede instalar en paralelo con LeichTV sin pisarse** (package `com.leichtvplus.tv`).
 
 ---
 
 ## 📺 Instalación en Android TV / Fire TV con Downloader
 
 1. Abre la app **Downloader** en tu televisor o dispositivo TV.
-2. En la barra de búsqueda / URL, introduce la URL directa o el código corto generado (por ejemplo en [go.aftvnews.com](https://go.aftvnews.com)).
+2. En la barra de búsqueda / URL, introduce la URL del APK deseado.
 3. Presiona **Go** para descargar el APK.
 4. Cuando termine la descarga, selecciona **Install**.
 
