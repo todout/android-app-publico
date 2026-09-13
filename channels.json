@@ -1,5 +1,5 @@
 {
-  "version": 13,
+  "version": 14,
   "updated_at": "2026-09-13",
   "channels": [
     {
@@ -143,16 +143,6 @@
       "drm_key": "fdd337296e43e69aefee1bbc4f04e663:d9883167d78827a0ec24dae99e03a3e2"
     },
     {
-      "id": "eventos_flow",
-      "name": "Eventos Flow",
-      "category": "DEPORTES",
-      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/1359.png",
-      "source_type": "dash",
-      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/Eventos1HD/SA_Live_dash_enc/Eventos1HD.mpd",
-      "referer": "https://portal.app.flow.com.ar/",
-      "drm_key": "fdb996352a45b339b86f3eb336af36c6:21b8543c13b2b87e0e097602a71f3f91"
-    },
-    {
       "id": "el_trece",
       "name": "El Trece",
       "category": "CANALES DE AIRE",
@@ -243,14 +233,14 @@
       "drm_key": "92e2f2caa23a7b883e343b26c9f90ed1:ff145008f5c53ee75c6d3498cd778acc"
     },
     {
-      "id": "bloomberg",
-      "name": "Bloomberg",
+      "id": "cnn_espanol",
+      "name": "CNN en Español",
       "category": "NOTICIAS",
-      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/730.png",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_cnn",
       "source_type": "dash",
-      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/Bloomberg/SA_Live_dash_enc/Bloomberg.mpd",
+      "source_url": "https://cdn.cvattv.com.ar/live/c6eds/CNN_en_Espanol/SA_Live_dash_enc/CNN_en_Espanol.mpd",
       "referer": "https://portal.app.flow.com.ar/",
-      "drm_key": "5e627ea0331d29957c4f4188a4591acd:e08fd83ff31754b66ca99dc2a37af398"
+      "drm_key": "c63f6550cfa1dd89e607e6d10e0cd8e1:30e26cc32d090bd86ad1e350fed5ce68"
     },
     {
       "id": "star_channel",
@@ -421,6 +411,16 @@
       "source_url": "https://cdn.cvattv.com.ar/live/c3eds/Nickelodeon/SA_Live_dash_enc/Nickelodeon.mpd",
       "referer": "https://portal.app.flow.com.ar/",
       "drm_key": "89a6be32a372255475c03d910be1eae8:4446ac987204570bbebb8ee5a4945903"
+    },
+    {
+      "id": "eventos_flow",
+      "name": "Eventos Flow",
+      "category": "DEPORTES",
+      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/1359.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/Eventos1HD/SA_Live_dash_enc/Eventos1HD.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "fdb996352a45b339b86f3eb336af36c6:21b8543c13b2b87e0e097602a71f3f91"
     },
     {
       "id": "espn_premium_2",
