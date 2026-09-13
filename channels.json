@@ -1,0 +1,444 @@
+{
+  "version": 13,
+  "updated_at": "2026-09-13",
+  "channels": [
+    {
+      "id": "tnt_sports_1",
+      "name": "TNT Sports (Opción 1 - HD)",
+      "category": "FÚTBOL ARGENTINO",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_tnt_sports",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c6eds/TNT_Sports_HD/SA_Live_dash_enc_wl/TNT_Sports_HD.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "9fb56301bc7687baf0b1a61def9a007a:947d2294ba67256827e8e97f267e71e0"
+    },
+    {
+      "id": "espn_premium_1",
+      "name": "ESPN Premium (Opción 1 - HD)",
+      "category": "FÚTBOL ARGENTINO",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_espn_premium",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c7eds/Fox_Sports_Premiun_HD/SA_Live_dash_enc_wl/Fox_Sports_Premiun_HD.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "c502892e037a9f34827147b2b24e42cf:2531bd34bec6c0e8fa4e07aedb261ade"
+    },
+    {
+      "id": "espn_1",
+      "name": "ESPN",
+      "category": "DEPORTES",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_espn",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/ESPN2HD/SA_Live_dash_enc/ESPN2HD.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "d079ffa3757e8335611fc48be6ba47ff:05059d1cb21b6708a55e9c26fb38e2f3"
+    },
+    {
+      "id": "espn_2",
+      "name": "ESPN 2",
+      "category": "DEPORTES",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_espn_2",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c6eds/ESPN2_Arg/SA_Live_dash_enc/ESPN2_Arg.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "e6eab53cf8ea962b999c59c298596a65:10c103ae76f99620d66fa75f2c03302a"
+    },
+    {
+      "id": "espn_3",
+      "name": "ESPN 3",
+      "category": "DEPORTES",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_espn_3",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/ESPN3/SA_Live_dash_enc/ESPN3.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "deeed0f44c6b45e064f4d5064486e821:bf89ceeb93564ddc603ba6afd8c9266a"
+    },
+    {
+      "id": "espn_4",
+      "name": "ESPN 4",
+      "category": "DEPORTES",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_espn_4",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/ESPNHD/SA_Live_dash_enc/ESPNHD.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "d02981e6faeacef49c90fdb053ab641d:645e13624e933841b1ea35cda1b55bd1"
+    },
+    {
+      "id": "tyc_sports",
+      "name": "TyC Sports",
+      "category": "DEPORTES",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_tyc_sports",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c7eds/TyCSport/SA_Live_dash_enc_wl/TyCSport.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "0b1e6825350fa1bc0032f8f36287e006:11fc540a4539d18f91cd403a5ed42284"
+    },
+    {
+      "id": "dsports_1",
+      "name": "DSports",
+      "category": "DEPORTES",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_dsports",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/DSports_1/SA_Live_dash_enc/DSports_1.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "86d19904429f78baf98cf1fd481c430e:5229197732a9a3e109264b272bd782f2"
+    },
+    {
+      "id": "dsports_2",
+      "name": "DSports 2",
+      "category": "DEPORTES",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_dsports_2",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/DSports_2/SA_Live_dash_enc/DSports_2.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "33848c262a3cc8c0eb8b34cdb9691f04:fd8e52ad745cec9e62263928a10f3abd"
+    },
+    {
+      "id": "fox_sports_1",
+      "name": "FOX Sports",
+      "category": "DEPORTES",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_fox_sports",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/FoxSports/SA_Live_dash_enc/FoxSports.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "37730b00a5f92084c47a8129e84559f3:a2e20a45a057ff4e7c0bc2ad49e6f3e5"
+    },
+    {
+      "id": "fox_sports_2",
+      "name": "FOX Sports 2",
+      "category": "DEPORTES",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_fox_sports_2",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/FoxSports2HD/SA_Live_dash_enc/FoxSports2HD.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "1b0ab680ef94a1842185fa78a830cbd7:23129ab5572aeda7607c920655c0dbea"
+    },
+    {
+      "id": "fox_sports_3",
+      "name": "FOX Sports 3",
+      "category": "DEPORTES",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_fox_sports",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/FoxSports3HD/SA_Live_dash_enc/FoxSports3HD.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "4629bd0ae30c0e72af111fb948fada1c:7864154c679e769e7f164ba083c8fad3"
+    },
+    {
+      "id": "deportv",
+      "name": "DeporTV",
+      "category": "DEPORTES",
+      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/2195.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/DeporTVHD/SA_Live_dash_enc/DeporTVHD.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "e721cdf9043ee562296005056a2757de:70259c9d827905e8088cdedceb56ae87"
+    },
+    {
+      "id": "golf_channel",
+      "name": "Golf Channel",
+      "category": "DEPORTES",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/08/Golf_Channel_Logo.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c6eds/Golf_Channel/SA_Live_dash_enc/Golf_Channel.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "fdd337296e43e69aefee1bbc4f04e663:d9883167d78827a0ec24dae99e03a3e2"
+    },
+    {
+      "id": "eventos_flow",
+      "name": "Eventos Flow",
+      "category": "DEPORTES",
+      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/1359.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/Eventos1HD/SA_Live_dash_enc/Eventos1HD.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "fdb996352a45b339b86f3eb336af36c6:21b8543c13b2b87e0e097602a71f3f91"
+    },
+    {
+      "id": "el_trece",
+      "name": "El Trece",
+      "category": "CANALES DE AIRE",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_eltrece",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/ArtearHD/SA_Live_dash_enc/ArtearHD.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "4aa8ec10f92b212c0cbaaa8e0591b468:17985aeaac30e62e6dad45f4df84cc2c"
+    },
+    {
+      "id": "telefe",
+      "name": "Telefe",
+      "category": "CANALES DE AIRE",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_telefe",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c6eds/TelefeHD/SA_Live_dash_enc/TelefeHD.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "69d08ad795092fc59dbdfb194424dd92:a73948b44e9292eede50c0c654301860"
+    },
+    {
+      "id": "america_tv",
+      "name": "América TV",
+      "category": "CANALES DE AIRE",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_america",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/AmericaTV/SA_Live_dash_enc/AmericaTV.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "3d7afc43dab940d699b61466b245369f:712b5165ff990156e6c9e580b0b4df59"
+    },
+    {
+      "id": "el_nueve",
+      "name": "El Nueve",
+      "category": "CANALES DE AIRE",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_elnueve",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/Canal9/SA_Live_dash_enc/Canal9.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "3ddf62bf44e68f06a6adb810199df713:2ace15b4ffbe70940fdf04cf97e114e7"
+    },
+    {
+      "id": "tv_publica",
+      "name": "TV Pública",
+      "category": "CANALES DE AIRE",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_tv_publica",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c6eds/Canal7/SA_Live_dash_enc_wl/Canal7.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "589f5b6f4afec0b3362cd6be2ab1eb36:6d685f3151730ca6a4be7765a46d30a5"
+    },
+    {
+      "id": "tn",
+      "name": "Todo Noticias",
+      "category": "NOTICIAS",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_tn",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c7eds/TodoNoticias/SA_Live_dash_enc_wl/TodoNoticias.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "775d4113d76beac8231e92ed732e27d6:0854a56be655bfa9055ef0e4980f4674"
+    },
+    {
+      "id": "canal_26",
+      "name": "Canal 26",
+      "category": "NOTICIAS",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_canal26",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c6eds/26_TV_HD/SA_Live_dash_enc/26_TV_HD.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "52e55c3298f2e07cbfe59eb48ffda940:0fb5916a14188e5eed56afb110e82af7"
+    },
+    {
+      "id": "ln_mas",
+      "name": "LN+",
+      "category": "NOTICIAS",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_lnmas",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c7eds/La_Nacion/SA_Live_dash_enc/La_Nacion.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "3561945a15a88603aee20ea15c605d6c:7a1676bb6cc6cbb328f41626d8084594"
+    },
+    {
+      "id": "france_24",
+      "name": "France 24 Español",
+      "category": "NOTICIAS",
+      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/2864.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/France24_Flow/SA_Live_dash_enc/France24_Flow.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "92e2f2caa23a7b883e343b26c9f90ed1:ff145008f5c53ee75c6d3498cd778acc"
+    },
+    {
+      "id": "bloomberg",
+      "name": "Bloomberg",
+      "category": "NOTICIAS",
+      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/730.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/Bloomberg/SA_Live_dash_enc/Bloomberg.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "5e627ea0331d29957c4f4188a4591acd:e08fd83ff31754b66ca99dc2a37af398"
+    },
+    {
+      "id": "star_channel",
+      "name": "Star Channel",
+      "category": "CINE & SERIES",
+      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/19.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/FOXHD/SA_Live_dash_enc/FOXHD.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "fc14190acc872e204f3973c75b6439f2:34cf13899db248a7aa2c1deb288d75ef"
+    },
+    {
+      "id": "cinecanal",
+      "name": "Cinecanal",
+      "category": "CINE & SERIES",
+      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/3445.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/CinecanalHD/SA_Live_dash_enc/CinecanalHD.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "98b31a0a125d81ef4c9caf1683f55444:7ec3df0771fe86c9f405765ce9fb5204"
+    },
+    {
+      "id": "tnt",
+      "name": "TNT",
+      "category": "CINE & SERIES",
+      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/4230.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/TNT_HD_Arg/SA_Live_dash_enc/TNT_HD_Arg.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "61d9873e1f281cd0223acce773cc08b0:3dda0d89ece37c244ed8cb7e90153555"
+    },
+    {
+      "id": "tnt_series",
+      "name": "TNT Series",
+      "category": "CINE & SERIES",
+      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/2999.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/TNTSeries/SA_Live_dash_enc/TNTSeries.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "613a3dc25b1d3ed4186e2a399ac7f081:7b5cf1cf7aeda446359bbcd23b5771b6"
+    },
+    {
+      "id": "space",
+      "name": "Space",
+      "category": "CINE & SERIES",
+      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/4535.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/Space/SA_Live_dash_enc/Space.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "32684b675439d127a5ab1e07b2a57242:e169f625df475d6d1c014cca1a52a251"
+    },
+    {
+      "id": "amc",
+      "name": "AMC",
+      "category": "CINE & SERIES",
+      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/97.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/AMC/SA_Live_dash_enc/AMC.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "30ffe7a2776537e8cec7020d783536f9:7b4f323576ac85d8938f5bebc245131c"
+    },
+    {
+      "id": "fx",
+      "name": "FX",
+      "category": "CINE & SERIES",
+      "logo": "https://cdn.mitvstatic.com/channels/cl_fx_m.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/FXHD/SA_Live_dash_enc/FXHD.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "78a17258be5ca72ec3bc362aeb976816:31c188361f6431cf4dfb5c176870b4e9"
+    },
+    {
+      "id": "adult_swim",
+      "name": "Adult Swim",
+      "category": "CINE & SERIES",
+      "logo": "https://dnqt2wx2urq99.cloudfront.net/ondirectv/LOGOS/Canales/AR/220.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/Adult_Swim/SA_Live_dash_enc/Adult_Swim.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "4e63e6ecde4f9cd9e68021b4c9af2d21:438e6d40e9952362eef1c690c5f8455a"
+    },
+    {
+      "id": "discovery_channel",
+      "name": "Discovery Channel",
+      "category": "DOCUMENTALES",
+      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/17.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/DiscoveryHD/SA_Live_dash_enc/DiscoveryHD.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "f55aec775d92cea41ea0f80b8615495a:8927f326931c6a5af38d0cd7cd744338"
+    },
+    {
+      "id": "nat_geo",
+      "name": "National Geographic",
+      "category": "DOCUMENTALES",
+      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/164.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/NatGeoHD/SA_Live_dash_enc/NatGeoHD.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "73735c1740464c99cca3ffb450c15811:b9241d083c902fa615e4f780081ae926"
+    },
+    {
+      "id": "discovery_id",
+      "name": "Discovery ID",
+      "category": "DOCUMENTALES",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Investigation_Discovery_Logo_2020.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c7eds/ID/SA_Live_dash_enc/ID.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "2a6094881a1486dc8a3efe6be9f22017:ddb8613a5a749a93d9bbc44559298de0"
+    },
+    {
+      "id": "discovery_hh",
+      "name": "Discovery Home & Health",
+      "category": "VARIEDADES",
+      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/340.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/DiscoveryHomeHealthHD/SA_Live_dash_enc/DiscoveryHomeHealthHD.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "6e2bc2b3c9464c407af6d0559bb5e1ea:43ec5e698b6f60a0f41d604909a25186"
+    },
+    {
+      "id": "el_gourmet",
+      "name": "El Gourmet",
+      "category": "VARIEDADES",
+      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/125.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/Gourmet/SA_Live_dash_enc/Gourmet.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "8bde4fca7757c6c9f15a7bada68df2ba:89ba78584f7612f0fccc62d26043433e"
+    },
+    {
+      "id": "ciudad_magazine",
+      "name": "Ciudad Magazine",
+      "category": "VARIEDADES",
+      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/26.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/Magazine/SA_Live_dash_enc/Magazine.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "36bc52ea68831dbbec6a9529bc81a9e8:39858817235ad0c15640dbde56f87d78"
+    },
+    {
+      "id": "cartoon_network",
+      "name": "Cartoon Network",
+      "category": "INFANTILES",
+      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/226.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/CartoonNetwork/SA_Live_dash_enc/CartoonNetwork.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "e77eb4ef8dc7ad8191dc71d04f8fc3b3:b4f9398a9261d11fcd6018acffab94d1"
+    },
+    {
+      "id": "disney_channel",
+      "name": "Disney Channel",
+      "category": "INFANTILES",
+      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/136.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/DisneyChannelHD/SA_Live_dash_enc/DisneyChannelHD.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "138981ed5f75527232593af4c92c9007:0f05c78bd7e8bc3e9e0f708c1424f34b"
+    },
+    {
+      "id": "nickelodeon",
+      "name": "Nickelodeon",
+      "category": "INFANTILES",
+      "logo": "https://entretenimiento.flow.com.ar/content/dam/teco-cms-ecosystem/flow/guia-de-canales/3952.png",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c3eds/Nickelodeon/SA_Live_dash_enc/Nickelodeon.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "89a6be32a372255475c03d910be1eae8:4446ac987204570bbebb8ee5a4945903"
+    },
+    {
+      "id": "espn_premium_2",
+      "name": "ESPN Premium (Opción 2 - Web)",
+      "category": "FÚTBOL ARGENTINO",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_espn_premium",
+      "source_type": "iframe",
+      "source_url": "https://streamtp-golden1.click/global1.php?stream=espnpremium",
+      "referer": "https://angulismotv.pages.dev/"
+    },
+    {
+      "id": "tnt_sports_2",
+      "name": "TNT Sports (Opción 2 - Web)",
+      "category": "FÚTBOL ARGENTINO",
+      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_tnt_sports",
+      "source_type": "iframe",
+      "source_url": "https://streamtp-golden1.click/global1.php?stream=tntsports",
+      "referer": "https://angulismotv.pages.dev/"
+    }
+  ]
+}
