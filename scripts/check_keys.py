@@ -4,10 +4,12 @@ Flow Channel DRM Key Watchdog & Tracker-First Auto-Updater for LeichTV
 Runs autonomously on Raspberry Pi.
 - Architecture: TRACKER-FIRST (Zero traffic to Flow in standard operation).
 - Checks active community trackers on GitHub every 15 minutes.
+- Uses multi-author cascade: dxrioacxta (PlayPrem) and cheroga (CherogaTV), plus reserve mirrors.
 - If and ONLY if a tracker publishes a new/different DRM key for a channel:
   Makes a single surgical verification request to Flow CDN to confirm the new KID
   matches the live stream before applying the change.
-- Logs every Flow request to flow_audit.log to track community source reliability.
+- Rejection Memory: Remembers previously rejected keys from flow_audit.log so Flow is
+  never queried twice for the same known bad key.
 - Updates channels.json and pushes automatically to GitHub.
 - Run with --stats to display an audit and reliability report of community sources.
 """
@@ -26,12 +28,23 @@ REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHANNELS_JSON_PATH = os.path.join(REPO_DIR, "channels.json")
 FLOW_AUDIT_LOG_PATH = os.path.join(REPO_DIR, "flow_audit.log")
 
-# Community trackers cascade (queried on GitHub, zero Flow traffic)
+# Multi-Author Community Trackers Cascade (Queried on GitHub, zero Flow traffic)
 COMMUNITY_TRACKER_URLS = [
+    # Author 1: dxrioacxta (PlayPrem / DxPanel - 5500+ commits, active 24/7)
     "https://raw.githubusercontent.com/dxrioacxta/playprem/main/tv1.json",
     "https://raw.githubusercontent.com/dxrioacxta/playprem/main/canales.json",
+    # Author 2: cheroga (CherogaTV - Independent automated bot, updated daily)
+    "https://raw.githubusercontent.com/cheroga/cheroga.github.io/master/canales_cache.json",
+    # Additional fallback feeds from Author 1
     "https://raw.githubusercontent.com/dxrioacxta/playprem/main/cvn.json",
     "https://raw.githubusercontent.com/dxrioacxta/playprem/main/fieratv.json",
+]
+
+# Known reserve mirrors (available in GitHub code search if main authors rotate)
+RESERVE_MIRRORS_INFO = [
+    "https://raw.githubusercontent.com/zokerpunk/iptv2/main/digital.m3u",
+    "https://raw.githubusercontent.com/elvioladordemark/cijefcji/main/fgerje9",
+    "https://raw.githubusercontent.com/Er2334/Er1/main/04",
 ]
 
 # Priority sports channels to check during high-frequency daytime runs
@@ -80,7 +93,9 @@ def load_trackers_key_map() -> tuple:
 
             data = resp.json()
             for cat in data:
-                for s in cat.get("samples", []):
+                # Support both samples and channels keys (used by different authors)
+                items = cat.get("samples", []) or cat.get("channels", [])
+                for s in items:
                     u_str = s.get("url", "")
                     drm = s.get("drm_license_uri", "")
 
@@ -113,6 +128,23 @@ def load_trackers_key_map() -> tuple:
             print(f"[WARN] Error loading tracker {t_name}: {e}")
 
     return by_path, by_kid, edge_token
+
+def load_rejected_kids() -> set:
+    """Loads previously rejected (channel_id, proposed_kid) from flow_audit.log to avoid re-querying Flow."""
+    rejected = set()
+    if not os.path.exists(FLOW_AUDIT_LOG_PATH):
+        return rejected
+    try:
+        with open(FLOW_AUDIT_LOG_PATH, "r", encoding="utf-8") as f:
+            for line in f:
+                if "RESULT: REJECTED" in line:
+                    m_cid = re.search(r"CHANNEL:\s*([^\s\(]+)", line)
+                    m_kid = re.search(r"PROPOSED_KID:\s*([^\s\|]+)", line)
+                    if m_cid and m_kid:
+                        rejected.add((m_cid.group(1), m_kid.group(1).lower()))
+    except Exception:
+        pass
+    return rejected
 
 def log_flow_audit(cid: str, cname: str, tracker: str, proposed_kid: str, flow_kid: str, result: str, action: str):
     """Logs surgical Flow verification requests for reliability analytics."""
@@ -202,7 +234,7 @@ def print_audit_stats():
     print("Tracker Reliability Breakdown:")
     for t_name, s in tracker_stats.items():
         acc = (s["verified"] / s["total"] * 100) if s["total"] > 0 else 0
-        print(f" * {t_name:16}: {s['verified']} verified / {s['rejected']} rejected ({acc:.1f}% accuracy)")
+        print(f" * {t_name:20}: {s['verified']} verified / {s['rejected']} rejected ({acc:.1f}% accuracy)")
 
     print("-" * 76)
     print("Recent Flow Requests History (last 5):")
@@ -236,6 +268,7 @@ def main():
 
     # Fetch community trackers from GitHub (0 traffic to Flow)
     by_path, by_kid, edge_token = load_trackers_key_map()
+    rejected_kids = load_rejected_kids()
 
     updated_channels = []
 
@@ -260,8 +293,13 @@ def main():
             # Matches perfectly! 0 requests to Flow.
             continue
 
-        # Tracker has a different key!
         target_kid = tracker_entry["kid"]
+
+        # Check rejection memory: if this tracker key was already tested and rejected by Flow, skip it
+        if (cid, target_kid.lower()) in rejected_kids:
+            continue
+
+        # Tracker has a newly proposed key!
         print(f"[{timestamp_str}] [CHANGE DETECTED] Tracker '{tracker_name}' published new key for {cname} ({cid}):")
         print(f"  Local:   {local_drm}")
         print(f"  Tracker: {tracker_drm}")
@@ -276,6 +314,7 @@ def main():
         else:
             print(f"  [REJECTED] Flow live stream KID is {live_kid} (expected {target_kid}). Preserving local key.")
             log_flow_audit(cid, cname, tracker_name, target_kid, live_kid, "REJECTED", "PRESERVED_LOCAL")
+            rejected_kids.add((cid, target_kid.lower()))
 
     if not updated_channels:
         # Compact single-line confirmation for cron log to prevent bloat
