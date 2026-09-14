@@ -2,19 +2,23 @@
 """
 Flow Channel DRM Key Watchdog & Smart Consensus Auto-Updater for LeichTV
 Runs autonomously on Raspberry Pi.
-- Architecture: TRACKER-FIRST + SMART TWO-SOURCE CONSENSUS
+- Architecture: TRACKER-FIRST + SMART TWO-SOURCE CONSENSUS + AUTOMATIC FAILOVER
 - Multi-Author Tracking:
-    * Author A: dxrioacxta (PlayPrem / DxPanel - continuous ~20 min commit cadence)
-    * Author B: cheroga (CherogaTV - independent Cono Sur bot, ~3.3 hr commit cadence)
-- Two-Source Consensus: When Author A and Author B agree on a new key, it is applied
-  DIRECTLY to channels.json with ZERO requests sent to Flow.
-- Fast-Track for Pack Fútbol (TNT Sports & ESPN Premium): If only ONE author publishes a new key,
-  the script uses a surgical verification request against Flow (Semáforo permitting) so we never
-  have to wait 24h for consensus on a match day.
-- Safety Semaphore: Maximum 3 Flow verification requests in any rolling 60-minute window.
-- Non-football channels NEVER make requests to Flow (they require consensus or manual review).
-- Rejection Memory: Remembers previously rejected keys from flow_audit.log.
-- Run with --stats to display reliability breakdown and semaphore status.
+    * Author 1: dxrioacxta (PlayPrem / DxPanel - continuous ~20 min commit cadence)
+    * Author 2: cheroga (CherogaTV - independent Cono Sur bot, ~3.3 hr commit cadence)
+    * Author 3 (Candidata de Reserva / Standby): mazurikian (155 canales Flow, M3U con tokens diarios)
+- Automatic Failover: Si Author 1 o Author 2 deja de responder o es dado de baja, mazurikian
+  es promovido automáticamente al par activo para sostener el consenso de 2 fuentes sin interrupción.
+- Two-Source Consensus: Cuando las 2 fuentes activas coinciden en una nueva key, se aplica
+  DIRECTAMENTE a channels.json con CERO peticiones a Flow.
+- Fast-Track para Pack Fútbol (TNT Sports & ESPN Premium): Si solo UNA fuente publica una nueva key,
+  el script usa una verificación quirúrgica contra Flow (Semáforo mediante) para no esperar 24h
+  en día de partido.
+- Safety Semaphore: Máximo 3 peticiones de verificación a Flow en cualquier ventana móvil de 60 minutos.
+- Canales comunes NUNCA hacen peticiones a Flow (requieren consenso).
+- Rejection Memory: Recuerda keys rechazadas previamente en flow_audit.log.
+- Soporta formatos JSON y M3U (#KODIPROP:inputstream.adaptive.license_key=...).
+- Ejecutar con --stats para ver el estado del semáforo, auditoría y redundancia de fuentes.
 """
 
 import os
@@ -34,8 +38,8 @@ FLOW_AUDIT_LOG_PATH = os.path.join(REPO_DIR, "flow_audit.log")
 # Safety Semaphore: Max surgical Flow requests allowed in any rolling 60-minute window
 MAX_FLOW_REQUESTS_PER_HOUR = 3
 
-# Multi-Author Independent Community Sources
-COMMUNITY_SOURCES = {
+# Primary Independent Community Sources (Active Consensus Pair)
+PRIMARY_SOURCES = {
     "dxrioacxta": [
         "https://raw.githubusercontent.com/dxrioacxta/playprem/main/tv1.json",
         "https://raw.githubusercontent.com/dxrioacxta/playprem/main/canales.json",
@@ -44,6 +48,13 @@ COMMUNITY_SOURCES = {
     ],
     "cheroga": [
         "https://raw.githubusercontent.com/cheroga/cheroga.github.io/master/canales_cache.json"
+    ]
+}
+
+# Standby Candidate Sources (Promoted automatically if any primary source goes offline/404)
+STANDBY_SOURCES = {
+    "mazurikian": [
+        "https://raw.githubusercontent.com/mazurikian/iptv/main/playlist.m3u"
     ]
 }
 
@@ -89,7 +100,6 @@ def get_semaphore_status(max_per_hour: int = MAX_FLOW_REQUESTS_PER_HOUR) -> tupl
     try:
         with open(FLOW_AUDIT_LOG_PATH, "r", encoding="utf-8") as f:
             for line in f:
-                # Only count lines that actually hit Flow (FLOW_REQUEST)
                 if "FLOW_REQUEST" in line:
                     m = re.search(r"\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\]", line)
                     if m:
@@ -102,56 +112,139 @@ def get_semaphore_status(max_per_hour: int = MAX_FLOW_REQUESTS_PER_HOUR) -> tupl
     is_green = (recent_count < max_per_hour)
     return is_green, recent_count, max_per_hour
 
-def load_author_tracker_maps() -> tuple:
+def fetch_single_tracker(url: str) -> tuple:
     """
-    Downloads community trackers from GitHub grouped by author.
-    Returns (author_maps: dict, fresh_edge_token: str)
+    Downloads and parses a tracker URL supporting both JSON and M3U formats.
+    Returns (channel_map: dict, edge_token: str or None, error: str or None)
     """
-    author_maps = {"dxrioacxta": {}, "cheroga": {}}
-    edge_token = DEFAULT_EDGE_TOKEN
+    t_name = url.split("/")[-1]
+    bust_url = f"{url}?t={int(time.time())}"
+    try:
+        resp = requests.get(bust_url, timeout=10)
+        if resp.status_code != 200:
+            return {}, None, f"HTTP {resp.status_code}"
 
-    for author, urls in COMMUNITY_SOURCES.items():
-        for url in urls:
-            t_name = url.split("/")[-1]
-            try:
-                bust_url = f"{url}?t={int(time.time())}"
-                resp = requests.get(bust_url, timeout=10)
-                if resp.status_code != 200:
+        text = resp.text
+        channels = {}
+        edge_tok = None
+
+        # Format A: M3U playlist (#KODIPROP:inputstream.adaptive.license_key=...)
+        if "#EXTM3U" in text or url.endswith(".m3u"):
+            curr_key = None
+            for line in text.splitlines():
+                line = line.strip()
+                if "license_key=" in line:
+                    m = re.search(r"license_key=([a-fA-F0-9]{32}:[a-fA-F0-9]{32})", line)
+                    if m:
+                        curr_key = m.group(1).lower()
+                    else:
+                        m2 = re.search(r"keyid=([a-zA-Z0-9_-]+)&(?:amp;)?key=([a-zA-Z0-9_-]+)", line)
+                        if m2:
+                            curr_key = f"{raw_to_hex(m2.group(1))}:{raw_to_hex(m2.group(2))}"
+                elif "/live/" in line and line.startswith("http"):
+                    if edge_tok is None:
+                        m_tok = re.search(r"/(tok_[^/]+)/", line)
+                        if m_tok:
+                            edge_tok = m_tok.group(1)
+                    p = normalize_path(line[line.find("/live/"):])
+                    if curr_key and p not in channels:
+                        kid = curr_key.split(":")[0]
+                        key = curr_key.split(":")[1]
+                        channels[p] = {
+                            "combo": curr_key,
+                            "tracker": t_name,
+                            "kid": kid,
+                            "key": key
+                        }
+                    curr_key = None
+            return channels, edge_tok, None
+
+        # Format B: JSON categories and samples/channels
+        data = resp.json()
+        for cat in data:
+            items = cat.get("samples", []) or cat.get("channels", [])
+            for s in items:
+                u_str = s.get("url", "")
+                drm = s.get("drm_license_uri", "")
+
+                if edge_tok is None and u_str:
+                    m_tok = re.search(r"/(tok_[^/]+)/", u_str)
+                    if m_tok:
+                        edge_tok = m_tok.group(1)
+
+                m = re.search(r"keyid=([a-zA-Z0-9_-]+)&(?:amp;)?key=([a-zA-Z0-9_-]+)", drm)
+                if not m:
                     continue
 
-                data = resp.json()
-                for cat in data:
-                    items = cat.get("samples", []) or cat.get("channels", [])
-                    for s in items:
-                        u_str = s.get("url", "")
-                        drm = s.get("drm_license_uri", "")
+                kid_hex = raw_to_hex(m.group(1))
+                key_hex = raw_to_hex(m.group(2))
+                combo = f"{kid_hex}:{key_hex}"
 
-                        if edge_token == DEFAULT_EDGE_TOKEN and u_str:
-                            m_tok = re.search(r"/(tok_[^/]+)/", u_str)
-                            if m_tok:
-                                edge_token = m_tok.group(1)
+                if "/live/" in u_str:
+                    p = normalize_path(u_str[u_str.find("/live/"):])
+                    if p not in channels:
+                        channels[p] = {
+                            "combo": combo,
+                            "tracker": t_name,
+                            "kid": kid_hex,
+                            "key": key_hex
+                        }
+        return channels, edge_tok, None
+    except Exception as e:
+        return {}, None, str(e)
 
-                        m = re.search(r"keyid=([a-zA-Z0-9_-]+)&(?:amp;)?key=([a-zA-Z0-9_-]+)", drm)
-                        if not m:
-                            continue
+def load_author_tracker_maps() -> tuple:
+    """
+    Downloads community trackers from GitHub with automatic failover to standby candidate sources.
+    Returns (active_author_maps: dict, edge_token: str, sources_status: dict)
+    """
+    author_maps = {}
+    sources_status = {}
+    edge_token = DEFAULT_EDGE_TOKEN
 
-                        kid_hex = raw_to_hex(m.group(1))
-                        key_hex = raw_to_hex(m.group(2))
-                        combo = f"{kid_hex}:{key_hex}"
+    # 1. Load Primary Sources
+    for author, urls in PRIMARY_SOURCES.items():
+        author_maps[author] = {}
+        author_errors = []
+        for url in urls:
+            ch_map, tok, err = fetch_single_tracker(url)
+            if err:
+                author_errors.append(f"{url.split('/')[-1]}: {err}")
+            else:
+                author_maps[author].update(ch_map)
+                if tok and edge_token == DEFAULT_EDGE_TOKEN:
+                    edge_token = tok
 
-                        if "/live/" in u_str:
-                            p = normalize_path(u_str[u_str.find("/live/"):])
-                            if p not in author_maps[author]:
-                                author_maps[author][p] = {
-                                    "combo": combo,
-                                    "tracker": t_name,
-                                    "kid": kid_hex,
-                                    "key": key_hex
-                                }
-            except Exception as e:
-                print(f"[WARN] Error loading tracker {t_name} from {author}: {e}")
+        count = len(author_maps[author])
+        if count > 0:
+            sources_status[author] = {"role": "primary", "status": "ONLINE", "channels": count}
+        else:
+            sources_status[author] = {"role": "primary", "status": "OFFLINE", "channels": 0, "errors": author_errors}
 
-    return author_maps, edge_token
+    # 2. Check if failover is needed (if fewer than 2 primary sources are healthy)
+    healthy_primaries = [a for a, s in sources_status.items() if s["status"] == "ONLINE"]
+
+    if len(healthy_primaries) < 2:
+        for s_author, s_urls in STANDBY_SOURCES.items():
+            standby_map = {}
+            for url in s_urls:
+                ch_map, tok, err = fetch_single_tracker(url)
+                if not err:
+                    standby_map.update(ch_map)
+                    if tok and edge_token == DEFAULT_EDGE_TOKEN:
+                        edge_token = tok
+
+            if len(standby_map) > 0:
+                print(f"[FAILOVER ACTIVO] Promoviendo candidata de reserva '{s_author}' ({len(standby_map)} canales) para sostener el consenso de 2 fuentes.")
+                author_maps[s_author] = standby_map
+                sources_status[s_author] = {"role": "promoted_standby", "status": "ONLINE", "channels": len(standby_map)}
+                healthy_primaries.append(s_author)
+                if len(healthy_primaries) >= 2:
+                    break
+
+    # Build active maps with up to 2 active sources
+    active_maps = {a: author_maps[a] for a in healthy_primaries[:2]}
+    return active_maps, edge_token, sources_status
 
 def load_rejected_kids() -> set:
     """Loads previously rejected (channel_id, proposed_kid) from flow_audit.log to avoid re-querying Flow."""
@@ -214,7 +307,7 @@ def verify_live_flow_kid(channel: dict, target_kid: str, edge_token: str) -> tup
         return False, str(e)
 
 def print_audit_stats():
-    """Reads flow_audit.log and prints community tracker reliability stats and semaphore health."""
+    """Reads flow_audit.log and prints community tracker reliability stats, semaphore health, and redundancy status."""
     is_green, count_last_hour, max_req = get_semaphore_status()
     color_str = "VERDE (Permitido)" if is_green else "ROJO (Circuit Breaker Activo)"
 
@@ -222,6 +315,26 @@ def print_audit_stats():
     print(f" FLOW AUDIT & SMART CONSENSUS REPORT")
     print(f" Safety Semaphore Status: {color_str} [{count_last_hour}/{max_req} peticiones a Flow en la última hora]")
     print("=" * 76)
+
+    # Check sources status
+    print("Estado de Fuentes Comunitarias:")
+    for a, urls in PRIMARY_SOURCES.items():
+        ch_total = 0
+        status_str = "ONLINE"
+        for u in urls:
+            ch_map, _, err = fetch_single_tracker(u)
+            if err:
+                status_str = f"PARCIAL ({err})"
+            ch_total += len(ch_map)
+        print(f" * {a:12} (Principal):        {status_str} ({ch_total} canales mapeados)")
+
+    for a, urls in STANDBY_SOURCES.items():
+        ch_total = 0
+        for u in urls:
+            ch_map, _, _ = fetch_single_tracker(u)
+            ch_total += len(ch_map)
+        print(f" * {a:12} (Candidata Suplente): LISTA / EN ESPERA ({ch_total} canales disponibles)")
+    print("-" * 76)
 
     if not os.path.exists(FLOW_AUDIT_LOG_PATH):
         print("[AUDIT REPORT] No events logged yet (0 requests, perfect zero-traffic state).\n")
@@ -302,8 +415,15 @@ def main():
     else:
         test_channels = dash_channels
 
-    # Load tracker maps from both independent authors
-    author_maps, edge_token = load_author_tracker_maps()
+    # Load tracker maps from active authors (with automatic failover to standby candidate)
+    author_maps, edge_token, sources_status = load_author_tracker_maps()
+    active_authors = list(author_maps.keys())
+
+    if len(active_authors) < 2:
+        print(f"[{timestamp_str}] [WARN] Menos de 2 fuentes disponibles ({active_authors}). Consenso suspendido temporalmente.")
+        return
+
+    author_a, author_b = active_authors[0], active_authors[1]
     rejected_kids = load_rejected_kids()
 
     updated_channels = []
@@ -318,27 +438,27 @@ def main():
         path = normalize_path(src[src.find("/live/"):])
         local_drm = ch.get("drm_key", "").strip().lower()
 
-        entry_dx = author_maps["dxrioacxta"].get(path)
-        entry_ch = author_maps["cheroga"].get(path)
+        entry_a = author_maps[author_a].get(path)
+        entry_b = author_maps[author_b].get(path)
 
-        drm_dx = entry_dx["combo"] if entry_dx else None
-        drm_ch = entry_ch["combo"] if entry_ch else None
+        drm_a = entry_a["combo"] if entry_a else None
+        drm_b = entry_b["combo"] if entry_b else None
 
         # Check: do both trackers match local_drm?
-        if (drm_dx == local_drm or drm_dx is None) and (drm_ch == local_drm or drm_ch is None):
+        if (drm_a == local_drm or drm_a is None) and (drm_b == local_drm or drm_b is None):
             continue
 
         # RULE 1: TWO-SOURCE CONSENSUS (Zero Flow requests)
-        # If both independent authors agree on a new key, apply immediately!
-        if drm_dx and drm_ch and drm_dx == drm_ch and drm_dx != local_drm:
-            new_kid = drm_dx.split(":")[0]
-            print(f"[{timestamp_str}] [CONSENSUS 2 FUENTES] dxrioacxta y cheroga coinciden en nueva key para {cname} ({cid}):")
+        # If both independent active authors agree on a new key, apply immediately!
+        if drm_a and drm_b and drm_a == drm_b and drm_a != local_drm:
+            new_kid = drm_a.split(":")[0]
+            print(f"[{timestamp_str}] [CONSENSO 2 FUENTES] {author_a} y {author_b} coinciden en nueva key para {cname} ({cid}):")
             print(f"  Local:     {local_drm}")
-            print(f"  Consenso:  {drm_dx}")
+            print(f"  Consenso:  {drm_a}")
             print(f"  Aplicando directamente a channels.json con CERO tráfico a Flow...")
 
-            log_event("CONSENSUS_UPDATE", cid, cname, "dxrioacxta+cheroga", new_kid, "N/A", "CONSENSUS_APPLIED", "KEY_UPDATED")
-            ch["drm_key"] = drm_dx
+            log_event("CONSENSUS_UPDATE", cid, cname, f"{author_a}+{author_b}", new_kid, "N/A", "CONSENSUS_APPLIED", "KEY_UPDATED")
+            ch["drm_key"] = drm_a
             updated_channels.append(cid)
             continue
 
@@ -347,12 +467,12 @@ def main():
         candidate_entry = None
         candidate_author = None
 
-        if drm_ch and drm_ch != local_drm:
-            candidate_entry = entry_ch
-            candidate_author = "cheroga"
-        elif drm_dx and drm_dx != local_drm:
-            candidate_entry = entry_dx
-            candidate_author = "dxrioacxta"
+        if drm_b and drm_b != local_drm:
+            candidate_entry = entry_b
+            candidate_author = author_b
+        elif drm_a and drm_a != local_drm:
+            candidate_entry = entry_a
+            candidate_author = author_a
 
         if not candidate_entry:
             continue
@@ -391,12 +511,11 @@ def main():
         else:
             # SUB-CASE B: CANALES COMUNES (Zero Flow Traffic Policy)
             # Non-football channels wait for second source consensus.
-            # print(f"[{timestamp_str}] [ESPERANDO CONSENSO] {cname}: {candidate_author} publicó key nueva, esperando segunda fuente (0 Flow).")
             pass
 
     if not updated_channels:
         # Compact single-line confirmation for cron log to prevent bloat
-        print(f"[{timestamp_str}] [OK] {mode_str}: Keys match trackers. Zero Flow requests made.")
+        print(f"[{timestamp_str}] [OK] {mode_str} [{author_a} + {author_b}]: Keys match trackers. Zero Flow requests made.")
         return
 
     # Bump version and save
