@@ -4,10 +4,10 @@ Flow Channel DRM Key Watchdog & Tracker-First Auto-Updater for LeichTV
 Runs autonomously on Raspberry Pi.
 - Architecture: TRACKER-FIRST (Zero traffic to Flow in standard operation).
 - Checks active community trackers on GitHub every 15 minutes.
-- Uses multi-author cascade: dxrioacxta (PlayPrem) and cheroga (CherogaTV), plus reserve mirrors.
-- If and ONLY if a tracker publishes a new/different DRM key for a channel:
-  Makes a single surgical verification request to Flow CDN to confirm the new KID
-  matches the live stream before applying the change.
+- Multi-Author Cascade: dxrioacxta (PlayPrem) and cheroga (CherogaTV).
+- Safety Semaphore (Circuit Breaker): Maximum 3 surgical requests to Flow per 60 minutes.
+  Guarantees mathematical safety against rate-limiting/bans on home IP.
+- Priority: Pack Fútbol (TNT Sports & ESPN Premium).
 - Rejection Memory: Remembers previously rejected keys from flow_audit.log so Flow is
   never queried twice for the same known bad key.
 - Updates channels.json and pushes automatically to GitHub.
@@ -21,12 +21,15 @@ import re
 import time
 import base64
 import subprocess
-from datetime import datetime
+from datetime import datetime, timedelta
 import requests
 
 REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHANNELS_JSON_PATH = os.path.join(REPO_DIR, "channels.json")
 FLOW_AUDIT_LOG_PATH = os.path.join(REPO_DIR, "flow_audit.log")
+
+# Safety Semaphore: Max surgical Flow requests allowed in any rolling 60-minute window
+MAX_FLOW_REQUESTS_PER_HOUR = 3
 
 # Multi-Author Community Trackers Cascade (Queried on GitHub, zero Flow traffic)
 COMMUNITY_TRACKER_URLS = [
@@ -38,13 +41,6 @@ COMMUNITY_TRACKER_URLS = [
     # Additional fallback feeds from Author 1
     "https://raw.githubusercontent.com/dxrioacxta/playprem/main/cvn.json",
     "https://raw.githubusercontent.com/dxrioacxta/playprem/main/fieratv.json",
-]
-
-# Known reserve mirrors (available in GitHub code search if main authors rotate)
-RESERVE_MIRRORS_INFO = [
-    "https://raw.githubusercontent.com/zokerpunk/iptv2/main/digital.m3u",
-    "https://raw.githubusercontent.com/elvioladordemark/cijefcji/main/fgerje9",
-    "https://raw.githubusercontent.com/Er2334/Er1/main/04",
 ]
 
 # Priority sports channels to check during high-frequency daytime runs
@@ -73,6 +69,32 @@ def raw_to_hex(val: str) -> str:
     except Exception:
         pass
     return val.lower().replace("-", "")
+
+def get_semaphore_status(max_per_hour: int = MAX_FLOW_REQUESTS_PER_HOUR) -> tuple:
+    """
+    Checks the rolling 60-minute Flow request window.
+    Returns (is_green: bool, count_in_last_hour: int, max_per_hour: int)
+    """
+    if not os.path.exists(FLOW_AUDIT_LOG_PATH):
+        return True, 0, max_per_hour
+
+    now = datetime.now()
+    one_hour_ago = now - timedelta(hours=1)
+    recent_count = 0
+
+    try:
+        with open(FLOW_AUDIT_LOG_PATH, "r", encoding="utf-8") as f:
+            for line in f:
+                m = re.search(r"\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\]", line)
+                if m:
+                    log_time = datetime.strptime(m.group(1), "%Y-%m-%d %H:%M:%S")
+                    if log_time > one_hour_ago:
+                        recent_count += 1
+    except Exception:
+        pass
+
+    is_green = (recent_count < max_per_hour)
+    return is_green, recent_count, max_per_hour
 
 def load_trackers_key_map() -> tuple:
     """
@@ -158,7 +180,7 @@ def log_flow_audit(cid: str, cname: str, tracker: str, proposed_kid: str, flow_k
 
 def verify_live_flow_kid(channel: dict, target_kid: str, edge_token: str) -> tuple:
     """
-    Surgical verification: ONLY called when a tracker publishes a new key.
+    Surgical verification: ONLY called when a tracker publishes a new key AND semaphore is GREEN.
     Sends 1 single GET to Flow MPD manifest to check if live stream actually uses target_kid.
     Returns (is_verified: bool, live_kid: str)
     """
@@ -190,21 +212,25 @@ def verify_live_flow_kid(channel: dict, target_kid: str, edge_token: str) -> tup
         return False, str(e)
 
 def print_audit_stats():
-    """Reads flow_audit.log and prints community tracker reliability stats."""
+    """Reads flow_audit.log and prints community tracker reliability stats and semaphore health."""
+    is_green, count_last_hour, max_req = get_semaphore_status()
+    color_str = "VERDE (Permitido)" if is_green else "ROJO (Circuit Breaker Activo)"
+
+    print("\n" + "=" * 76)
+    print(f" FLOW AUDIT & SAFETY SEMAPHORE REPORT")
+    print(f" Safety Semaphore Status: {color_str} [{count_last_hour}/{max_req} peticiones en la última hora]")
+    print("=" * 76)
+
     if not os.path.exists(FLOW_AUDIT_LOG_PATH):
-        print("\n[FLOW AUDIT REPORT] No requests have been made to Flow yet (0 requests, perfect zero-traffic state).")
+        print("[FLOW AUDIT REPORT] No requests have been made to Flow yet (0 requests, perfect zero-traffic state).\n")
         return
 
     with open(FLOW_AUDIT_LOG_PATH, "r", encoding="utf-8") as f:
         lines = [l.strip() for l in f if l.strip()]
 
     if not lines:
-        print("\n[FLOW AUDIT REPORT] Audit log is empty (0 requests made to Flow).")
+        print("[FLOW AUDIT REPORT] Audit log is empty (0 requests made to Flow).\n")
         return
-
-    print("\n" + "=" * 76)
-    print(f" FLOW AUDIT & COMMUNITY TRACKERS RELIABILITY REPORT ({len(lines)} requests logged)")
-    print("=" * 76)
 
     verified_count = 0
     rejected_count = 0
@@ -299,11 +325,18 @@ def main():
         if (cid, target_kid.lower()) in rejected_kids:
             continue
 
-        # Tracker has a newly proposed key!
+        # Check Safety Semaphore before making any request to Flow
+        is_green, count_last_hour, max_req = get_semaphore_status()
+        if not is_green:
+            print(f"[{timestamp_str}] [SEMAPHORE ROJO] Rate limit safety reached ({count_last_hour}/{max_req} in last 60m).")
+            print(f"  Aborting Flow request for {cname} to protect home IP. Will retry once cooled down.")
+            continue
+
+        # Semaphore is GREEN: Tracker has a newly proposed key!
         print(f"[{timestamp_str}] [CHANGE DETECTED] Tracker '{tracker_name}' published new key for {cname} ({cid}):")
         print(f"  Local:   {local_drm}")
         print(f"  Tracker: {tracker_drm}")
-        print(f"  Verifying surgically with Flow manifest (1 check)...")
+        print(f"  [SEMAPHORE VERDE ({count_last_hour}/{max_req})] Verifying surgically with Flow manifest...")
 
         is_verified, live_kid = verify_live_flow_kid(ch, target_kid, edge_token)
         if is_verified:
