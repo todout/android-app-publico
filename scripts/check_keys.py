@@ -1,17 +1,20 @@
 #!/usr/bin/env python3
 """
-Flow Channel DRM Key Watchdog & Tracker-First Auto-Updater for LeichTV
+Flow Channel DRM Key Watchdog & Smart Consensus Auto-Updater for LeichTV
 Runs autonomously on Raspberry Pi.
-- Architecture: TRACKER-FIRST (Zero traffic to Flow in standard operation).
-- Checks active community trackers on GitHub every 15 minutes.
-- Multi-Author Cascade: dxrioacxta (PlayPrem) and cheroga (CherogaTV).
-- Safety Semaphore (Circuit Breaker): Maximum 3 surgical requests to Flow per 60 minutes.
-  Guarantees mathematical safety against rate-limiting/bans on home IP.
-- Priority: Pack Fútbol (TNT Sports & ESPN Premium).
-- Rejection Memory: Remembers previously rejected keys from flow_audit.log so Flow is
-  never queried twice for the same known bad key.
-- Updates channels.json and pushes automatically to GitHub.
-- Run with --stats to display an audit and reliability report of community sources.
+- Architecture: TRACKER-FIRST + SMART TWO-SOURCE CONSENSUS
+- Multi-Author Tracking:
+    * Author A: dxrioacxta (PlayPrem / DxPanel - continuous ~20 min commit cadence)
+    * Author B: cheroga (CherogaTV - independent Cono Sur bot, ~3.3 hr commit cadence)
+- Two-Source Consensus: When Author A and Author B agree on a new key, it is applied
+  DIRECTLY to channels.json with ZERO requests sent to Flow.
+- Fast-Track for Pack Fútbol (TNT Sports & ESPN Premium): If only ONE author publishes a new key,
+  the script uses a surgical verification request against Flow (Semáforo permitting) so we never
+  have to wait 24h for consensus on a match day.
+- Safety Semaphore: Maximum 3 Flow verification requests in any rolling 60-minute window.
+- Non-football channels NEVER make requests to Flow (they require consensus or manual review).
+- Rejection Memory: Remembers previously rejected keys from flow_audit.log.
+- Run with --stats to display reliability breakdown and semaphore status.
 """
 
 import os
@@ -31,19 +34,20 @@ FLOW_AUDIT_LOG_PATH = os.path.join(REPO_DIR, "flow_audit.log")
 # Safety Semaphore: Max surgical Flow requests allowed in any rolling 60-minute window
 MAX_FLOW_REQUESTS_PER_HOUR = 3
 
-# Multi-Author Community Trackers Cascade (Queried on GitHub, zero Flow traffic)
-COMMUNITY_TRACKER_URLS = [
-    # Author 1: dxrioacxta (PlayPrem / DxPanel - 5500+ commits, active 24/7)
-    "https://raw.githubusercontent.com/dxrioacxta/playprem/main/tv1.json",
-    "https://raw.githubusercontent.com/dxrioacxta/playprem/main/canales.json",
-    # Author 2: cheroga (CherogaTV - Independent automated bot, updated daily)
-    "https://raw.githubusercontent.com/cheroga/cheroga.github.io/master/canales_cache.json",
-    # Additional fallback feeds from Author 1
-    "https://raw.githubusercontent.com/dxrioacxta/playprem/main/cvn.json",
-    "https://raw.githubusercontent.com/dxrioacxta/playprem/main/fieratv.json",
-]
+# Multi-Author Independent Community Sources
+COMMUNITY_SOURCES = {
+    "dxrioacxta": [
+        "https://raw.githubusercontent.com/dxrioacxta/playprem/main/tv1.json",
+        "https://raw.githubusercontent.com/dxrioacxta/playprem/main/canales.json",
+        "https://raw.githubusercontent.com/dxrioacxta/playprem/main/cvn.json",
+        "https://raw.githubusercontent.com/dxrioacxta/playprem/main/fieratv.json",
+    ],
+    "cheroga": [
+        "https://raw.githubusercontent.com/cheroga/cheroga.github.io/master/canales_cache.json"
+    ]
+}
 
-# Priority sports channels to check during high-frequency daytime runs
+# Priority sports channels allowed to use Flow surgical verification (Vía Rápida)
 PRIORITY_CHANNEL_IDS = ["tnt_sports_1", "espn_premium_1"]
 
 DEFAULT_EDGE_TOKEN = (
@@ -85,71 +89,69 @@ def get_semaphore_status(max_per_hour: int = MAX_FLOW_REQUESTS_PER_HOUR) -> tupl
     try:
         with open(FLOW_AUDIT_LOG_PATH, "r", encoding="utf-8") as f:
             for line in f:
-                m = re.search(r"\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\]", line)
-                if m:
-                    log_time = datetime.strptime(m.group(1), "%Y-%m-%d %H:%M:%S")
-                    if log_time > one_hour_ago:
-                        recent_count += 1
+                # Only count lines that actually hit Flow (FLOW_REQUEST)
+                if "FLOW_REQUEST" in line:
+                    m = re.search(r"\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\]", line)
+                    if m:
+                        log_time = datetime.strptime(m.group(1), "%Y-%m-%d %H:%M:%S")
+                        if log_time > one_hour_ago:
+                            recent_count += 1
     except Exception:
         pass
 
     is_green = (recent_count < max_per_hour)
     return is_green, recent_count, max_per_hour
 
-def load_trackers_key_map() -> tuple:
+def load_author_tracker_maps() -> tuple:
     """
-    Downloads community trackers from GitHub (cache-busted).
-    Returns (by_path, by_kid, fresh_edge_token)
+    Downloads community trackers from GitHub grouped by author.
+    Returns (author_maps: dict, fresh_edge_token: str)
     """
-    by_path = {}
-    by_kid = {}
+    author_maps = {"dxrioacxta": {}, "cheroga": {}}
     edge_token = DEFAULT_EDGE_TOKEN
 
-    for url in COMMUNITY_TRACKER_URLS:
-        t_name = url.split("/")[-1]
-        try:
-            bust_url = f"{url}?t={int(time.time())}"
-            resp = requests.get(bust_url, timeout=10)
-            if resp.status_code != 200:
-                continue
+    for author, urls in COMMUNITY_SOURCES.items():
+        for url in urls:
+            t_name = url.split("/")[-1]
+            try:
+                bust_url = f"{url}?t={int(time.time())}"
+                resp = requests.get(bust_url, timeout=10)
+                if resp.status_code != 200:
+                    continue
 
-            data = resp.json()
-            for cat in data:
-                # Support both samples and channels keys (used by different authors)
-                items = cat.get("samples", []) or cat.get("channels", [])
-                for s in items:
-                    u_str = s.get("url", "")
-                    drm = s.get("drm_license_uri", "")
+                data = resp.json()
+                for cat in data:
+                    items = cat.get("samples", []) or cat.get("channels", [])
+                    for s in items:
+                        u_str = s.get("url", "")
+                        drm = s.get("drm_license_uri", "")
 
-                    if edge_token == DEFAULT_EDGE_TOKEN and u_str:
-                        m_tok = re.search(r"/(tok_[^/]+)/", u_str)
-                        if m_tok:
-                            edge_token = m_tok.group(1)
+                        if edge_token == DEFAULT_EDGE_TOKEN and u_str:
+                            m_tok = re.search(r"/(tok_[^/]+)/", u_str)
+                            if m_tok:
+                                edge_token = m_tok.group(1)
 
-                    m = re.search(r"keyid=([a-zA-Z0-9_-]+)&(?:amp;)?key=([a-zA-Z0-9_-]+)", drm)
-                    if not m:
-                        continue
+                        m = re.search(r"keyid=([a-zA-Z0-9_-]+)&(?:amp;)?key=([a-zA-Z0-9_-]+)", drm)
+                        if not m:
+                            continue
 
-                    kid_hex = raw_to_hex(m.group(1))
-                    key_hex = raw_to_hex(m.group(2))
-                    combo = f"{kid_hex}:{key_hex}"
+                        kid_hex = raw_to_hex(m.group(1))
+                        key_hex = raw_to_hex(m.group(2))
+                        combo = f"{kid_hex}:{key_hex}"
 
-                    if kid_hex not in by_kid:
-                        by_kid[kid_hex] = combo
+                        if "/live/" in u_str:
+                            p = normalize_path(u_str[u_str.find("/live/"):])
+                            if p not in author_maps[author]:
+                                author_maps[author][p] = {
+                                    "combo": combo,
+                                    "tracker": t_name,
+                                    "kid": kid_hex,
+                                    "key": key_hex
+                                }
+            except Exception as e:
+                print(f"[WARN] Error loading tracker {t_name} from {author}: {e}")
 
-                    if "/live/" in u_str:
-                        p = normalize_path(u_str[u_str.find("/live/"):])
-                        if p not in by_path:
-                            by_path[p] = {
-                                "combo": combo,
-                                "tracker": t_name,
-                                "kid": kid_hex,
-                                "key": key_hex
-                            }
-        except Exception as e:
-            print(f"[WARN] Error loading tracker {t_name}: {e}")
-
-    return by_path, by_kid, edge_token
+    return author_maps, edge_token
 
 def load_rejected_kids() -> set:
     """Loads previously rejected (channel_id, proposed_kid) from flow_audit.log to avoid re-querying Flow."""
@@ -168,10 +170,10 @@ def load_rejected_kids() -> set:
         pass
     return rejected
 
-def log_flow_audit(cid: str, cname: str, tracker: str, proposed_kid: str, flow_kid: str, result: str, action: str):
-    """Logs surgical Flow verification requests for reliability analytics."""
+def log_event(event_type: str, cid: str, cname: str, tracker: str, proposed_kid: str, flow_kid: str, result: str, action: str):
+    """Logs verification requests and consensus updates for audit analytics."""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    line = f"[{timestamp}] CHANNEL: {cid} ({cname}) | TRACKER: {tracker} | PROPOSED_KID: {proposed_kid} | FLOW_KID: {flow_kid} | RESULT: {result} | ACTION: {action}\n"
+    line = f"[{timestamp}] {event_type} | CHANNEL: {cid} ({cname}) | TRACKER: {tracker} | PROPOSED_KID: {proposed_kid} | FLOW_KID: {flow_kid} | RESULT: {result} | ACTION: {action}\n"
     try:
         with open(FLOW_AUDIT_LOG_PATH, "a", encoding="utf-8") as f:
             f.write(line)
@@ -180,7 +182,7 @@ def log_flow_audit(cid: str, cname: str, tracker: str, proposed_kid: str, flow_k
 
 def verify_live_flow_kid(channel: dict, target_kid: str, edge_token: str) -> tuple:
     """
-    Surgical verification: ONLY called when a tracker publishes a new key AND semaphore is GREEN.
+    Surgical verification: ONLY called when a single source proposes a new football key.
     Sends 1 single GET to Flow MPD manifest to check if live stream actually uses target_kid.
     Returns (is_verified: bool, live_kid: str)
     """
@@ -217,53 +219,61 @@ def print_audit_stats():
     color_str = "VERDE (Permitido)" if is_green else "ROJO (Circuit Breaker Activo)"
 
     print("\n" + "=" * 76)
-    print(f" FLOW AUDIT & SAFETY SEMAPHORE REPORT")
-    print(f" Safety Semaphore Status: {color_str} [{count_last_hour}/{max_req} peticiones en la última hora]")
+    print(f" FLOW AUDIT & SMART CONSENSUS REPORT")
+    print(f" Safety Semaphore Status: {color_str} [{count_last_hour}/{max_req} peticiones a Flow en la última hora]")
     print("=" * 76)
 
     if not os.path.exists(FLOW_AUDIT_LOG_PATH):
-        print("[FLOW AUDIT REPORT] No requests have been made to Flow yet (0 requests, perfect zero-traffic state).\n")
+        print("[AUDIT REPORT] No events logged yet (0 requests, perfect zero-traffic state).\n")
         return
 
     with open(FLOW_AUDIT_LOG_PATH, "r", encoding="utf-8") as f:
         lines = [l.strip() for l in f if l.strip()]
 
     if not lines:
-        print("[FLOW AUDIT REPORT] Audit log is empty (0 requests made to Flow).\n")
+        print("[AUDIT REPORT] Audit log is empty.\n")
         return
 
-    verified_count = 0
-    rejected_count = 0
+    flow_requests = 0
+    flow_verified = 0
+    flow_rejected = 0
+    consensus_applied = 0
     tracker_stats = {}
 
     for line in lines:
+        is_flow = "FLOW_REQUEST" in line
         m_t = re.search(r"TRACKER:\s*([^\s\|]+)", line)
         m_res = re.search(r"RESULT:\s*([^\s\|]+)", line)
         t_name = m_t.group(1) if m_t else "unknown"
         res = m_res.group(1) if m_res else "unknown"
 
-        if t_name not in tracker_stats:
-            tracker_stats[t_name] = {"verified": 0, "rejected": 0, "total": 0}
+        if is_flow:
+            flow_requests += 1
+            if t_name not in tracker_stats:
+                tracker_stats[t_name] = {"verified": 0, "rejected": 0, "total": 0}
+            tracker_stats[t_name]["total"] += 1
+            if res == "VERIFIED":
+                flow_verified += 1
+                tracker_stats[t_name]["verified"] += 1
+            else:
+                flow_rejected += 1
+                tracker_stats[t_name]["rejected"] += 1
+        elif "CONSENSUS" in res:
+            consensus_applied += 1
 
-        tracker_stats[t_name]["total"] += 1
-        if res == "VERIFIED":
-            verified_count += 1
-            tracker_stats[t_name]["verified"] += 1
-        else:
-            rejected_count += 1
-            tracker_stats[t_name]["rejected"] += 1
-
-    print(f"Total Flow verification requests: {len(lines)}")
-    print(f" - Verified & Applied:           {verified_count}")
-    print(f" - Rejected (Prevented bad key): {rejected_count}")
+    print(f"Total Flow verification requests: {flow_requests}")
+    print(f" - Flow Verified & Applied:      {flow_verified}")
+    print(f" - Flow Rejected (Bad keys):     {flow_rejected}")
+    print(f"Total Consensus Applied (0 Flow):{consensus_applied}")
     print("-" * 76)
-    print("Tracker Reliability Breakdown:")
-    for t_name, s in tracker_stats.items():
-        acc = (s["verified"] / s["total"] * 100) if s["total"] > 0 else 0
-        print(f" * {t_name:20}: {s['verified']} verified / {s['rejected']} rejected ({acc:.1f}% accuracy)")
+    if tracker_stats:
+        print("Tracker Verification Accuracy:")
+        for t_name, s in tracker_stats.items():
+            acc = (s["verified"] / s["total"] * 100) if s["total"] > 0 else 0
+            print(f" * {t_name:20}: {s['verified']} verified / {s['rejected']} rejected ({acc:.1f}% accuracy)")
+        print("-" * 76)
 
-    print("-" * 76)
-    print("Recent Flow Requests History (last 5):")
+    print("Recent Audit Events (last 5):")
     for l in lines[-5:]:
         print(f"  {l}")
     print("=" * 76 + "\n")
@@ -292,8 +302,8 @@ def main():
     else:
         test_channels = dash_channels
 
-    # Fetch community trackers from GitHub (0 traffic to Flow)
-    by_path, by_kid, edge_token = load_trackers_key_map()
+    # Load tracker maps from both independent authors
+    author_maps, edge_token = load_author_tracker_maps()
     rejected_kids = load_rejected_kids()
 
     updated_channels = []
@@ -307,47 +317,82 @@ def main():
 
         path = normalize_path(src[src.find("/live/"):])
         local_drm = ch.get("drm_key", "").strip().lower()
-        tracker_entry = by_path.get(path)
 
-        if not tracker_entry:
+        entry_dx = author_maps["dxrioacxta"].get(path)
+        entry_ch = author_maps["cheroga"].get(path)
+
+        drm_dx = entry_dx["combo"] if entry_dx else None
+        drm_ch = entry_ch["combo"] if entry_ch else None
+
+        # Check: do both trackers match local_drm?
+        if (drm_dx == local_drm or drm_dx is None) and (drm_ch == local_drm or drm_ch is None):
             continue
 
-        tracker_drm = tracker_entry["combo"]
-        tracker_name = tracker_entry["tracker"]
+        # RULE 1: TWO-SOURCE CONSENSUS (Zero Flow requests)
+        # If both independent authors agree on a new key, apply immediately!
+        if drm_dx and drm_ch and drm_dx == drm_ch and drm_dx != local_drm:
+            new_kid = drm_dx.split(":")[0]
+            print(f"[{timestamp_str}] [CONSENSUS 2 FUENTES] dxrioacxta y cheroga coinciden en nueva key para {cname} ({cid}):")
+            print(f"  Local:     {local_drm}")
+            print(f"  Consenso:  {drm_dx}")
+            print(f"  Aplicando directamente a channels.json con CERO tráfico a Flow...")
 
-        if tracker_drm == local_drm:
-            # Matches perfectly! 0 requests to Flow.
+            log_event("CONSENSUS_UPDATE", cid, cname, "dxrioacxta+cheroga", new_kid, "N/A", "CONSENSUS_APPLIED", "KEY_UPDATED")
+            ch["drm_key"] = drm_dx
+            updated_channels.append(cid)
             continue
 
-        target_kid = tracker_entry["kid"]
+        # RULE 2: SINGLE-SOURCE NEW KEY PROPOSAL
+        # One source has a new key, but the other has not updated yet.
+        candidate_entry = None
+        candidate_author = None
 
-        # Check rejection memory: if this tracker key was already tested and rejected by Flow, skip it
+        if drm_ch and drm_ch != local_drm:
+            candidate_entry = entry_ch
+            candidate_author = "cheroga"
+        elif drm_dx and drm_dx != local_drm:
+            candidate_entry = entry_dx
+            candidate_author = "dxrioacxta"
+
+        if not candidate_entry:
+            continue
+
+        candidate_drm = candidate_entry["combo"]
+        target_kid = candidate_entry["kid"]
+        t_name = candidate_entry["tracker"]
+
+        # Check rejection memory: if this key was already tested and rejected by Flow, skip it
         if (cid, target_kid.lower()) in rejected_kids:
             continue
 
-        # Check Safety Semaphore before making any request to Flow
-        is_green, count_last_hour, max_req = get_semaphore_status()
-        if not is_green:
-            print(f"[{timestamp_str}] [SEMAPHORE ROJO] Rate limit safety reached ({count_last_hour}/{max_req} in last 60m).")
-            print(f"  Aborting Flow request for {cname} to protect home IP. Will retry once cooled down.")
-            continue
+        # SUB-CASE A: PACK FÚTBOL (Vía Rápida para no perder primicias)
+        if cid in PRIORITY_CHANNEL_IDS:
+            is_green, count_last_hour, max_req = get_semaphore_status()
+            if not is_green:
+                print(f"[{timestamp_str}] [SEMAPHORE ROJO] Rate limit safety reached ({count_last_hour}/{max_req} in last 60m).")
+                print(f"  Aborting Flow request for football channel {cname} to protect home IP.")
+                continue
 
-        # Semaphore is GREEN: Tracker has a newly proposed key!
-        print(f"[{timestamp_str}] [CHANGE DETECTED] Tracker '{tracker_name}' published new key for {cname} ({cid}):")
-        print(f"  Local:   {local_drm}")
-        print(f"  Tracker: {tracker_drm}")
-        print(f"  [SEMAPHORE VERDE ({count_last_hour}/{max_req})] Verifying surgically with Flow manifest...")
+            print(f"[{timestamp_str}] [PRIMICIA FÚTBOL] Autor '{candidate_author}' ({t_name}) publicó nueva key para {cname}:")
+            print(f"  Local:     {local_drm}")
+            print(f"  Candidata: {candidate_drm}")
+            print(f"  [SEMAPHORE VERDE ({count_last_hour}/{max_req})] Verificando quirúrgicamente con Flow (1 petición)...")
 
-        is_verified, live_kid = verify_live_flow_kid(ch, target_kid, edge_token)
-        if is_verified:
-            print(f"  [VERIFIED] Flow stream confirmed live KID {live_kid}! Applying new key...")
-            log_flow_audit(cid, cname, tracker_name, target_kid, live_kid, "VERIFIED", "KEY_UPDATED")
-            ch["drm_key"] = tracker_drm
-            updated_channels.append(cid)
+            is_verified, live_kid = verify_live_flow_kid(ch, target_kid, edge_token)
+            if is_verified:
+                print(f"  [VERIFIED] Stream de Flow confirmó live KID {live_kid}! Aplicando nueva key...")
+                log_event("FLOW_REQUEST", cid, cname, f"{candidate_author}:{t_name}", target_kid, live_kid, "VERIFIED", "KEY_UPDATED")
+                ch["drm_key"] = candidate_drm
+                updated_channels.append(cid)
+            else:
+                print(f"  [REJECTED] Flow live stream KID es {live_kid} (esperado {target_kid}). Preservando local key.")
+                log_event("FLOW_REQUEST", cid, cname, f"{candidate_author}:{t_name}", target_kid, live_kid, "REJECTED", "PRESERVED_LOCAL")
+                rejected_kids.add((cid, target_kid.lower()))
         else:
-            print(f"  [REJECTED] Flow live stream KID is {live_kid} (expected {target_kid}). Preserving local key.")
-            log_flow_audit(cid, cname, tracker_name, target_kid, live_kid, "REJECTED", "PRESERVED_LOCAL")
-            rejected_kids.add((cid, target_kid.lower()))
+            # SUB-CASE B: CANALES COMUNES (Zero Flow Traffic Policy)
+            # Non-football channels wait for second source consensus.
+            # print(f"[{timestamp_str}] [ESPERANDO CONSENSO] {cname}: {candidate_author} publicó key nueva, esperando segunda fuente (0 Flow).")
+            pass
 
     if not updated_channels:
         # Compact single-line confirmation for cron log to prevent bloat
