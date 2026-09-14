@@ -7,7 +7,9 @@ Runs autonomously on Raspberry Pi.
 - If and ONLY if a tracker publishes a new/different DRM key for a channel:
   Makes a single surgical verification request to Flow CDN to confirm the new KID
   matches the live stream before applying the change.
+- Logs every Flow request to flow_audit.log to track community source reliability.
 - Updates channels.json and pushes automatically to GitHub.
+- Run with --stats to display an audit and reliability report of community sources.
 """
 
 import os
@@ -22,6 +24,7 @@ import requests
 
 REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHANNELS_JSON_PATH = os.path.join(REPO_DIR, "channels.json")
+FLOW_AUDIT_LOG_PATH = os.path.join(REPO_DIR, "flow_audit.log")
 
 # Community trackers cascade (queried on GitHub, zero Flow traffic)
 COMMUNITY_TRACKER_URLS = [
@@ -100,11 +103,26 @@ def load_trackers_key_map() -> tuple:
                     if "/live/" in u_str:
                         p = normalize_path(u_str[u_str.find("/live/"):])
                         if p not in by_path:
-                            by_path[p] = combo
+                            by_path[p] = {
+                                "combo": combo,
+                                "tracker": t_name,
+                                "kid": kid_hex,
+                                "key": key_hex
+                            }
         except Exception as e:
             print(f"[WARN] Error loading tracker {t_name}: {e}")
 
     return by_path, by_kid, edge_token
+
+def log_flow_audit(cid: str, cname: str, tracker: str, proposed_kid: str, flow_kid: str, result: str, action: str):
+    """Logs surgical Flow verification requests for reliability analytics."""
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    line = f"[{timestamp}] CHANNEL: {cid} ({cname}) | TRACKER: {tracker} | PROPOSED_KID: {proposed_kid} | FLOW_KID: {flow_kid} | RESULT: {result} | ACTION: {action}\n"
+    try:
+        with open(FLOW_AUDIT_LOG_PATH, "a", encoding="utf-8") as f:
+            f.write(line)
+    except Exception as e:
+        print(f"[ERROR] Could not write to audit log: {e}")
 
 def verify_live_flow_kid(channel: dict, target_kid: str, edge_token: str) -> tuple:
     """
@@ -139,13 +157,70 @@ def verify_live_flow_kid(channel: dict, target_kid: str, edge_token: str) -> tup
     except Exception as e:
         return False, str(e)
 
+def print_audit_stats():
+    """Reads flow_audit.log and prints community tracker reliability stats."""
+    if not os.path.exists(FLOW_AUDIT_LOG_PATH):
+        print("\n[FLOW AUDIT REPORT] No requests have been made to Flow yet (0 requests, perfect zero-traffic state).")
+        return
+
+    with open(FLOW_AUDIT_LOG_PATH, "r", encoding="utf-8") as f:
+        lines = [l.strip() for l in f if l.strip()]
+
+    if not lines:
+        print("\n[FLOW AUDIT REPORT] Audit log is empty (0 requests made to Flow).")
+        return
+
+    print("\n" + "=" * 76)
+    print(f" FLOW AUDIT & COMMUNITY TRACKERS RELIABILITY REPORT ({len(lines)} requests logged)")
+    print("=" * 76)
+
+    verified_count = 0
+    rejected_count = 0
+    tracker_stats = {}
+
+    for line in lines:
+        m_t = re.search(r"TRACKER:\s*([^\s\|]+)", line)
+        m_res = re.search(r"RESULT:\s*([^\s\|]+)", line)
+        t_name = m_t.group(1) if m_t else "unknown"
+        res = m_res.group(1) if m_res else "unknown"
+
+        if t_name not in tracker_stats:
+            tracker_stats[t_name] = {"verified": 0, "rejected": 0, "total": 0}
+
+        tracker_stats[t_name]["total"] += 1
+        if res == "VERIFIED":
+            verified_count += 1
+            tracker_stats[t_name]["verified"] += 1
+        else:
+            rejected_count += 1
+            tracker_stats[t_name]["rejected"] += 1
+
+    print(f"Total Flow verification requests: {len(lines)}")
+    print(f" - Verified & Applied:           {verified_count}")
+    print(f" - Rejected (Prevented bad key): {rejected_count}")
+    print("-" * 76)
+    print("Tracker Reliability Breakdown:")
+    for t_name, s in tracker_stats.items():
+        acc = (s["verified"] / s["total"] * 100) if s["total"] > 0 else 0
+        print(f" * {t_name:16}: {s['verified']} verified / {s['rejected']} rejected ({acc:.1f}% accuracy)")
+
+    print("-" * 76)
+    print("Recent Flow Requests History (last 5):")
+    for l in lines[-5:]:
+        print(f"  {l}")
+    print("=" * 76 + "\n")
+
 def main():
+    if "--stats" in sys.argv:
+        print_audit_stats()
+        return
+
     priority_only = "--priority-only" in sys.argv
     mode_str = "PRIORITY (TNT Sports & ESPN Premium)" if priority_only else "FULL (All channels)"
-    print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Tracker-First Watchdog ({mode_str})...")
+    timestamp_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     if not os.path.exists(CHANNELS_JSON_PATH):
-        print(f"[ERROR] channels.json not found at {CHANNELS_JSON_PATH}")
+        print(f"[{timestamp_str}] [ERROR] channels.json not found at {CHANNELS_JSON_PATH}")
         sys.exit(1)
 
     with open(CHANNELS_JSON_PATH, "r", encoding="utf-8") as f:
@@ -161,7 +236,6 @@ def main():
 
     # Fetch community trackers from GitHub (0 traffic to Flow)
     by_path, by_kid, edge_token = load_trackers_key_map()
-    print(f"Community trackers loaded. Total unique KIDs available: {len(by_kid)}.")
 
     updated_channels = []
 
@@ -174,18 +248,21 @@ def main():
 
         path = normalize_path(src[src.find("/live/"):])
         local_drm = ch.get("drm_key", "").strip().lower()
-        tracker_drm = by_path.get(path)
+        tracker_entry = by_path.get(path)
 
-        if not tracker_drm:
+        if not tracker_entry:
             continue
+
+        tracker_drm = tracker_entry["combo"]
+        tracker_name = tracker_entry["tracker"]
 
         if tracker_drm == local_drm:
             # Matches perfectly! 0 requests to Flow.
             continue
 
         # Tracker has a different key!
-        target_kid = tracker_drm.split(":")[0]
-        print(f"[CHANGE DETECTED] Tracker published new key for {cname} ({cid}):")
+        target_kid = tracker_entry["kid"]
+        print(f"[{timestamp_str}] [CHANGE DETECTED] Tracker '{tracker_name}' published new key for {cname} ({cid}):")
         print(f"  Local:   {local_drm}")
         print(f"  Tracker: {tracker_drm}")
         print(f"  Verifying surgically with Flow manifest (1 check)...")
@@ -193,13 +270,16 @@ def main():
         is_verified, live_kid = verify_live_flow_kid(ch, target_kid, edge_token)
         if is_verified:
             print(f"  [VERIFIED] Flow stream confirmed live KID {live_kid}! Applying new key...")
+            log_flow_audit(cid, cname, tracker_name, target_kid, live_kid, "VERIFIED", "KEY_UPDATED")
             ch["drm_key"] = tracker_drm
             updated_channels.append(cid)
         else:
             print(f"  [REJECTED] Flow live stream KID is {live_kid} (expected {target_kid}). Preserving local key.")
+            log_flow_audit(cid, cname, tracker_name, target_kid, live_kid, "REJECTED", "PRESERVED_LOCAL")
 
     if not updated_channels:
-        print("[SUCCESS] All channels are up-to-date with trackers. Zero requests sent to Flow.")
+        # Compact single-line confirmation for cron log to prevent bloat
+        print(f"[{timestamp_str}] [OK] {mode_str}: Keys match trackers. Zero Flow requests made.")
         return
 
     # Bump version and save
@@ -207,21 +287,21 @@ def main():
     with open(CHANNELS_JSON_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-    print(f"channels.json updated to version {data['version']}.")
+    print(f"[{timestamp_str}] channels.json updated to version {data['version']}.")
 
     # Git commit and push to GitHub repository
     try:
-        subprocess.run(["git", "add", "channels.json"], cwd=REPO_DIR, check=True)
+        subprocess.run(["git", "add", "channels.json", "flow_audit.log"], cwd=REPO_DIR, check=True)
         commit_msg = f"Auto-update Flow keys ({', '.join(updated_channels)}) [v{data['version']}]"
         subprocess.run(["git", "commit", "-m", commit_msg], cwd=REPO_DIR, check=True)
-        print(f"Committed: {commit_msg}")
+        print(f"[{timestamp_str}] Committed: {commit_msg}")
         push_res = subprocess.run(["git", "push", "origin", "main"], cwd=REPO_DIR, capture_output=True, text=True)
         if push_res.returncode == 0:
-            print("[SUCCESS] Pushed to GitHub repository successfully!")
+            print(f"[{timestamp_str}] [SUCCESS] Pushed to GitHub repository successfully!")
         else:
-            print(f"[ERROR] git push failed:\n{push_res.stderr}")
+            print(f"[{timestamp_str}] [ERROR] git push failed:\n{push_res.stderr}")
     except Exception as e:
-        print(f"[ERROR] Git operation failed: {e}")
+        print(f"[{timestamp_str}] [ERROR] Git operation failed: {e}")
 
 if __name__ == "__main__":
     main()
