@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Flow Channel DRM Key Watchdog & Stealth Auto-Updater for LeichTV
+Flow Channel DRM Key Watchdog & Tracker-First Auto-Updater for LeichTV
 Runs autonomously on Raspberry Pi.
-- Supports --priority-only for stealth daytime hourly checks (TNT Sports & ESPN Premium).
-- Nightly full check for all 42 channels.
-- Zero-impact: requests are human-spaced (sequential with jitter), avoiding CDN rate-limits.
-- Cascading fallback across multiple active community trackers (tv1.json, canales.json, cvn.json, fieratv.json).
-- Trackers are only fetched if a key mismatch/rotation is actually detected.
-- Updates channels.json and pushes automatically to GitHub repository.
+- Architecture: TRACKER-FIRST (Zero traffic to Flow in standard operation).
+- Checks active community trackers on GitHub every 15 minutes.
+- If and ONLY if a tracker publishes a new/different DRM key for a channel:
+  Makes a single surgical verification request to Flow CDN to confirm the new KID
+  matches the live stream before applying the change.
+- Updates channels.json and pushes automatically to GitHub.
 """
 
 import os
@@ -23,7 +23,7 @@ import requests
 REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHANNELS_JSON_PATH = os.path.join(REPO_DIR, "channels.json")
 
-# Multi-tracker cascade (checked in order if a rotation is detected)
+# Community trackers cascade (queried on GitHub, zero Flow traffic)
 COMMUNITY_TRACKER_URLS = [
     "https://raw.githubusercontent.com/dxrioacxta/playprem/main/tv1.json",
     "https://raw.githubusercontent.com/dxrioacxta/playprem/main/canales.json",
@@ -31,7 +31,7 @@ COMMUNITY_TRACKER_URLS = [
     "https://raw.githubusercontent.com/dxrioacxta/playprem/main/fieratv.json",
 ]
 
-# Priority sports channels that rotate DRM keys frequently
+# Priority sports channels to check during high-frequency daytime runs
 PRIORITY_CHANNEL_IDS = ["tnt_sports_1", "espn_premium_1"]
 
 DEFAULT_EDGE_TOKEN = (
@@ -58,35 +58,63 @@ def raw_to_hex(val: str) -> str:
         pass
     return val.lower().replace("-", "")
 
-def fetch_fresh_token() -> str:
-    """Extract freshest edge token found across available community trackers."""
+def load_trackers_key_map() -> tuple:
+    """
+    Downloads community trackers from GitHub (cache-busted).
+    Returns (by_path, by_kid, fresh_edge_token)
+    """
+    by_path = {}
+    by_kid = {}
+    edge_token = DEFAULT_EDGE_TOKEN
+
     for url in COMMUNITY_TRACKER_URLS:
+        t_name = url.split("/")[-1]
         try:
-            resp = requests.get(url, timeout=8)
-            if resp.status_code == 200:
-                data = resp.json()
-                for cat in data:
-                    for s in cat.get("samples", []):
-                        u = s.get("url", "")
-                        m = re.search(r"/(tok_[^/]+)/", u)
-                        if m:
-                            return m.group(1)
-        except Exception:
-            continue
-    return DEFAULT_EDGE_TOKEN
+            bust_url = f"{url}?t={int(time.time())}"
+            resp = requests.get(bust_url, timeout=10)
+            if resp.status_code != 200:
+                continue
 
-def check_channel_manifest(channel: dict, edge_token: str) -> tuple:
+            data = resp.json()
+            for cat in data:
+                for s in cat.get("samples", []):
+                    u_str = s.get("url", "")
+                    drm = s.get("drm_license_uri", "")
+
+                    if edge_token == DEFAULT_EDGE_TOKEN and u_str:
+                        m_tok = re.search(r"/(tok_[^/]+)/", u_str)
+                        if m_tok:
+                            edge_token = m_tok.group(1)
+
+                    m = re.search(r"keyid=([a-zA-Z0-9_-]+)&(?:amp;)?key=([a-zA-Z0-9_-]+)", drm)
+                    if not m:
+                        continue
+
+                    kid_hex = raw_to_hex(m.group(1))
+                    key_hex = raw_to_hex(m.group(2))
+                    combo = f"{kid_hex}:{key_hex}"
+
+                    if kid_hex not in by_kid:
+                        by_kid[kid_hex] = combo
+
+                    if "/live/" in u_str:
+                        p = normalize_path(u_str[u_str.find("/live/"):])
+                        if p not in by_path:
+                            by_path[p] = combo
+        except Exception as e:
+            print(f"[WARN] Error loading tracker {t_name}: {e}")
+
+    return by_path, by_kid, edge_token
+
+def verify_live_flow_kid(channel: dict, target_kid: str, edge_token: str) -> tuple:
     """
-    Downloads MPD manifest from Flow edge CDN and extracts cenc:default_KID.
-    Returns (channel_id, status, live_kid, error_msg)
+    Surgical verification: ONLY called when a tracker publishes a new key.
+    Sends 1 single GET to Flow MPD manifest to check if live stream actually uses target_kid.
+    Returns (is_verified: bool, live_kid: str)
     """
-    cid = channel["id"]
     source_url = channel.get("source_url", "")
-    current_drm = channel.get("drm_key", "")
-    current_kid = current_drm.split(":")[0].replace("-", "").lower() if current_drm else ""
-
     if not source_url or "/live/" not in source_url:
-        return cid, "SKIP", current_kid, None
+        return False, "NO_PATH"
 
     path_part = source_url[source_url.find("/live/"):]
     mpd_url = f"https://edge-live16-hr.cvattv.com.ar/{edge_token}{path_part}"
@@ -100,73 +128,21 @@ def check_channel_manifest(channel: dict, edge_token: str) -> tuple:
     try:
         resp = requests.get(mpd_url, headers=headers, timeout=6)
         if resp.status_code != 200:
-            return cid, "HTTP_ERROR", current_kid, f"HTTP {resp.status_code}"
+            return False, f"HTTP {resp.status_code}"
 
         m = re.search(r'default_KID="([^"]+)"', resp.text)
         if not m:
-            return cid, "NO_KID", current_kid, "No default_KID found in MPD"
+            return False, "NO_KID"
 
         live_kid = m.group(1).replace("-", "").lower()
-        if live_kid == current_kid:
-            return cid, "OK", current_kid, None
-        else:
-            return cid, "MISMATCH", live_kid, f"Live KID {live_kid} != Stored KID {current_kid}"
-
+        return (live_kid == target_kid.lower()), live_kid
     except Exception as e:
-        return cid, "EXCEPTION", current_kid, str(e)
-
-def build_multi_tracker_key_map() -> tuple:
-    """
-    Queries community trackers in cascading order.
-    Returns (by_path, by_kid, trackers_loaded)
-    """
-    by_path = {}
-    by_kid = {}
-    trackers_loaded = 0
-
-    for url in COMMUNITY_TRACKER_URLS:
-        t_name = url.split("/")[-1]
-        try:
-            resp = requests.get(url, timeout=10)
-            if resp.status_code != 200:
-                continue
-
-            data = resp.json()
-            trackers_loaded += 1
-            added_for_tracker = 0
-
-            for cat in data:
-                for s in cat.get("samples", []):
-                    stream_url = s.get("url", "")
-                    drm = s.get("drm_license_uri", "")
-                    m = re.search(r"keyid=([a-zA-Z0-9_-]+)&(?:amp;)?key=([a-zA-Z0-9_-]+)", drm)
-                    if not m:
-                        continue
-
-                    kid_hex = raw_to_hex(m.group(1))
-                    key_hex = raw_to_hex(m.group(2))
-                    combo = f"{kid_hex}:{key_hex}"
-
-                    if kid_hex not in by_kid:
-                        by_kid[kid_hex] = combo
-                        added_for_tracker += 1
-
-                    if "/live/" in stream_url:
-                        path_part = stream_url[stream_url.find("/live/"):].strip()
-                        norm_p = normalize_path(path_part)
-                        if norm_p not in by_path:
-                            by_path[norm_p] = combo
-
-            print(f"[TRACKER] Loaded {t_name}: +{added_for_tracker} keys (total unique: {len(by_kid)})")
-        except Exception as e:
-            print(f"[WARN] Could not fetch tracker {t_name}: {e}")
-
-    return by_path, by_kid, trackers_loaded
+        return False, str(e)
 
 def main():
     priority_only = "--priority-only" in sys.argv
-    mode_str = "PRIORITY (Stealth 2 channels)" if priority_only else "FULL (All channels)"
-    print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Starting Flow Key Watchdog ({mode_str})...")
+    mode_str = "PRIORITY (TNT Sports & ESPN Premium)" if priority_only else "FULL (All channels)"
+    print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Tracker-First Watchdog ({mode_str})...")
 
     if not os.path.exists(CHANNELS_JSON_PATH):
         print(f"[ERROR] channels.json not found at {CHANNELS_JSON_PATH}")
@@ -183,71 +159,47 @@ def main():
     else:
         test_channels = dash_channels
 
-    print(f"Testing {len(test_channels)} channels sequentially (stealth spacing)...")
-
-    edge_token = DEFAULT_EDGE_TOKEN
-    token_refreshed = False
-
-    mismatches = []
-    ok_count = 0
-    err_count = 0
-
-    for i, ch in enumerate(test_channels):
-        cid, status, live_kid, msg = check_channel_manifest(ch, edge_token)
-
-        # If token expired on first channel, refresh once from trackers and retry
-        if status == "HTTP_ERROR" and not token_refreshed:
-            print("[INFO] Token expired or invalid HTTP. Refreshing edge token from tracker...")
-            edge_token = fetch_fresh_token()
-            token_refreshed = True
-            cid, status, live_kid, msg = check_channel_manifest(ch, edge_token)
-
-        if status == "OK":
-            ok_count += 1
-        elif status == "MISMATCH":
-            print(f"[ALERT] {cid}: {msg}")
-            mismatches.append((cid, live_kid))
-        else:
-            err_count += 1
-
-        # Human-like delay between requests (1s for priority, 0.5s for full check)
-        if i < len(test_channels) - 1:
-            delay = 1.0 if priority_only else 0.5
-            time.sleep(delay)
-
-    print(f"Check results: {ok_count} OK, {len(mismatches)} KEY ROTATED, {err_count} network warnings.")
-
-    if not mismatches:
-        print("[SUCCESS] All checked channel keys are valid. No update needed.")
-        return
-
-    # Only load multi-tracker cascade when a key rotation actually occurred
-    print("[ROTATION DETECTED] Querying community tracker cascade for replacement keys...")
-    by_path, by_kid, trackers_count = build_multi_tracker_key_map()
-    print(f"Total keys pool available across {trackers_count} trackers: {len(by_kid)} KIDs.")
+    # Fetch community trackers from GitHub (0 traffic to Flow)
+    by_path, by_kid, edge_token = load_trackers_key_map()
+    print(f"Community trackers loaded. Total unique KIDs available: {len(by_kid)}.")
 
     updated_channels = []
-    channel_map = {c["id"]: c for c in channels}
 
-    for cid, live_kid in mismatches:
-        ch = channel_map.get(cid)
-        if not ch:
+    for ch in test_channels:
+        cid = ch["id"]
+        cname = ch["name"]
+        src = ch.get("source_url", "")
+        if not src or "/live/" not in src:
             continue
 
-        src = ch.get("source_url", "")
-        norm_p = normalize_path(src[src.find("/live/"):]) if "/live/" in src else ""
+        path = normalize_path(src[src.find("/live/"):])
+        local_drm = ch.get("drm_key", "").strip().lower()
+        tracker_drm = by_path.get(path)
 
-        new_combo = by_kid.get(live_kid) or by_path.get(norm_p)
-        if new_combo:
-            old_drm = ch.get("drm_key", "")
-            ch["drm_key"] = new_combo
-            print(f"[UPDATED] {cid}: {old_drm} -> {new_combo}")
+        if not tracker_drm:
+            continue
+
+        if tracker_drm == local_drm:
+            # Matches perfectly! 0 requests to Flow.
+            continue
+
+        # Tracker has a different key!
+        target_kid = tracker_drm.split(":")[0]
+        print(f"[CHANGE DETECTED] Tracker published new key for {cname} ({cid}):")
+        print(f"  Local:   {local_drm}")
+        print(f"  Tracker: {tracker_drm}")
+        print(f"  Verifying surgically with Flow manifest (1 check)...")
+
+        is_verified, live_kid = verify_live_flow_kid(ch, target_kid, edge_token)
+        if is_verified:
+            print(f"  [VERIFIED] Flow stream confirmed live KID {live_kid}! Applying new key...")
+            ch["drm_key"] = tracker_drm
             updated_channels.append(cid)
         else:
-            print(f"[WARNING] No replacement key found across all {trackers_count} trackers for {cid} (KID: {live_kid})")
+            print(f"  [REJECTED] Flow live stream KID is {live_kid} (expected {target_kid}). Preserving local key.")
 
     if not updated_channels:
-        print("[INFO] No keys could be automatically matched from trackers. Exiting.")
+        print("[SUCCESS] All channels are up-to-date with trackers. Zero requests sent to Flow.")
         return
 
     # Bump version and save
