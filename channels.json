@@ -1,6 +1,6 @@
 {
-  "version": 15,
-  "updated_at": "2026-09-13",
+  "version": 16,
+  "updated_at": "2026-09-14",
   "channels": [
     {
       "id": "tnt_sports_1",
@@ -241,6 +241,36 @@
       "source_url": "https://cdn.cvattv.com.ar/live/c6eds/CNN_en_Espanol/SA_Live_dash_enc/CNN_en_Espanol.mpd",
       "referer": "https://portal.app.flow.com.ar/",
       "drm_key": "c63f6550cfa1dd89e607e6d10e0cd8e1:30e26cc32d090bd86ad1e350fed5ce68"
+    },
+    {
+      "id": "c5n",
+      "name": "C5N",
+      "category": "NOTICIAS",
+      "logo": "https://cdn.bo.flow.com.ar/images/content/60/40/ZknRLNGxolx2xY8zTN3suA?tags=CH_LOGO",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c7eds/C5N/SA_Live_dash_enc/C5N.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "ef98ad3a4a5b9f6edae885e8bf450d3c:861873c6c69eb66df0afc3034a02a796"
+    },
+    {
+      "id": "cronica_hd",
+      "name": "Crónica HD",
+      "category": "NOTICIAS",
+      "logo": "https://cdn.bo.flow.com.ar/images/content/60/40/SbhpLG6w5bpnevDhqf9b9w?tags=CH_LOGO",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c7eds/CronicaTV/SA_Live_dash_enc/CronicaTV.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "33ded37fefaa6c3d6878e0d555dfaffd:9e024c10af20f240a1ea35b94d147f28"
+    },
+    {
+      "id": "a24",
+      "name": "A24",
+      "category": "NOTICIAS",
+      "logo": "https://cdn.bo.flow.com.ar/images/content/60/40/S1H5miC70xaoxaRogPiNUQ?tags=CH_LOGO",
+      "source_type": "dash",
+      "source_url": "https://cdn.cvattv.com.ar/live/c7eds/America24/SA_Live_dash_enc/America24.mpd",
+      "referer": "https://portal.app.flow.com.ar/",
+      "drm_key": "71133ea8e1941323a21acb5090c5c469:f46178e47581d410008a505eeed759fe"
     },
     {
       "id": "star_channel",
