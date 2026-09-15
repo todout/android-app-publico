@@ -43,8 +43,6 @@ PRIMARY_SOURCES = {
     "dxrioacxta": [
         "https://raw.githubusercontent.com/dxrioacxta/playprem/main/tv1.json",
         "https://raw.githubusercontent.com/dxrioacxta/playprem/main/canales.json",
-        "https://raw.githubusercontent.com/dxrioacxta/playprem/main/cvn.json",
-        "https://raw.githubusercontent.com/dxrioacxta/playprem/main/fieratv.json",
     ],
     "cheroga": [
         "https://raw.githubusercontent.com/cheroga/cheroga.github.io/master/canales_cache.json"
@@ -53,6 +51,10 @@ PRIMARY_SOURCES = {
 
 # Standby Candidate Sources (Promoted automatically if any primary source goes offline/404)
 STANDBY_SOURCES = {
+    "dxrioacxta_backup": [
+        "https://raw.githubusercontent.com/dxrioacxta/playprem/main/canales.json",
+        "https://raw.githubusercontent.com/dxrioacxta/playprem/main/fieratv.json",
+    ],
     "mazurikian": [
         "https://raw.githubusercontent.com/mazurikian/iptv/main/playlist.m3u"
     ]
