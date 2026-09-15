@@ -1,0 +1,7 @@
+{
+  "versionCode": 2,
+  "versionName": "1.1",
+  "apkUrl": "https://raw.githubusercontent.com/todout/android-app-publico/main/LeichTVPlus_v1.1.apk",
+  "releaseNotes": "• Botón OK en directo abre lista de canales sin pausar\n• D-Pad levanta barra inferior\n• Rebobinado continuo sin mover selector entre botones\n• Botones de salto 15s/30s y sistema de auto-actualización",
+  "updated_at": "2026-09-14"
+}

@@ -13,10 +13,10 @@ Puedes descargar los archivos APK directamente o ingresarlos en **Downloader**:
   `https://raw.githubusercontent.com/todout/android-app-publico/main/LeichTV_v1.1.apk`
 - Ideal para un uso tradicional de televisión (subir y bajar canales de inmediato con el D-Pad).
 
-### 2. ⚡ LeichTV+ v1.0 (Modo Avanzado con DVR / Timeshift)
+### 2. ⚡ LeichTV+ v1.1 (Modo Avanzado con DVR / Timeshift)
 - **URL directa para Downloader (Raw)**:
-  `https://raw.githubusercontent.com/todout/android-app-publico/main/LeichTVPlus_v1.0.apk`
-- Incluye pausa en vivo, retroceso y avance de 30 segundos, barra de tiempo flotante y botón para volver al En Vivo.
+  `https://raw.githubusercontent.com/todout/android-app-publico/main/LeichTVPlus_v1.1.apk`
+- Incluye pausa en vivo, retroceso y avance con saltos de 15/30s o rebobinado acelerado continuo, apertura de lista de canales con OK sin pausar directo, barra de tiempo flotante y auto-actualizaciones.
 - **Se puede instalar en paralelo con LeichTV sin pisarse** (package `com.leichtvplus.tv`).
 
 ---
