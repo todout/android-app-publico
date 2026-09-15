@@ -513,6 +513,24 @@ def main():
             # Non-football channels wait for second source consensus.
             pass
 
+    # Autonomous EPG maintenance for Raspberry Pi (updates epg.json every 6 hours)
+    epg_file = os.path.join(REPO_DIR, "epg.json")
+    if not os.path.exists(epg_file) or (time.time() - os.path.getmtime(epg_file)) > (6 * 3600):
+        try:
+            sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+            from update_epg import generate_epg
+            print(f"[{timestamp_str}] [EPG] Datos de EPG superan 6 horas. Actualizando epg.json...")
+            if generate_epg(auto_push=False):
+                subprocess.run(["git", "add", "epg.json"], cwd=REPO_DIR, check=True)
+                diff_res = subprocess.run(["git", "diff", "--staged", "--name-only"], cwd=REPO_DIR, capture_output=True, text=True)
+                if "epg.json" in diff_res.stdout:
+                    commit_msg = f"Auto-update EPG [{datetime.now().strftime('%Y-%m-%d %H:%M')}]"
+                    subprocess.run(["git", "commit", "-m", commit_msg], cwd=REPO_DIR, check=True)
+                    subprocess.run(["git", "push", "origin", "main"], cwd=REPO_DIR, check=True)
+                    print(f"[{timestamp_str}] [EPG] [SUCCESS] epg.json actualizado y subido a GitHub!")
+        except Exception as e:
+            print(f"[{timestamp_str}] [EPG] Aviso: no se pudo actualizar EPG: {e}")
+
     if not updated_channels:
         # Compact single-line confirmation for cron log to prevent bloat
         print(f"[{timestamp_str}] [OK] {mode_str} [{author_a} + {author_b}]: Keys match trackers. Zero Flow requests made.")

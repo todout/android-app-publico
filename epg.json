@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-15T02:20:08.576517+00:00",
+  "updated_at": "2026-09-15T03:08:27.736191+00:00",
   "channels": {
     "el_trece": [
       {
@@ -123,19 +123,141 @@
         "end": 1789528500000
       }
     ],
+    "america_tv": [
+      {
+        "title": "América Noticias",
+        "desc": "",
+        "start": 1789418700000,
+        "end": 1789423200000
+      },
+      {
+        "title": "Sálvese Quien Pueda",
+        "desc": "",
+        "start": 1789423200000,
+        "end": 1789426800000
+      },
+      {
+        "title": "LAM",
+        "desc": "",
+        "start": 1789426800000,
+        "end": 1789434000000
+      },
+      {
+        "title": "BTV, Buena Televisión",
+        "desc": "",
+        "start": 1789434000000,
+        "end": 1789437600000
+      },
+      {
+        "title": "Paso en América",
+        "desc": "",
+        "start": 1789437600000,
+        "end": 1789441200000
+      },
+      {
+        "title": "Polémica en El Bar",
+        "desc": "",
+        "start": 1789441200000,
+        "end": 1789444800000
+      },
+      {
+        "title": "Intrusos",
+        "desc": "",
+        "start": 1789444800000,
+        "end": 1789452000000
+      },
+      {
+        "title": "El diario de Mariana",
+        "desc": "",
+        "start": 1789452000000,
+        "end": 1789457400000
+      },
+      {
+        "title": "Primicias YA",
+        "desc": "",
+        "start": 1789457400000,
+        "end": 1789462800000
+      },
+      {
+        "title": "Arriba América",
+        "desc": "",
+        "start": 1789462800000,
+        "end": 1789470000000
+      },
+      {
+        "title": "Desayuno Americano",
+        "desc": "",
+        "start": 1789470000000,
+        "end": 1789477200000
+      },
+      {
+        "title": "La mañana de Lape",
+        "desc": "",
+        "start": 1789477200000,
+        "end": 1789484400000
+      },
+      {
+        "title": "Lape Club social informativo",
+        "desc": "",
+        "start": 1789484400000,
+        "end": 1789488000000
+      },
+      {
+        "title": "Intrusos",
+        "desc": "",
+        "start": 1789488000000,
+        "end": 1789495200000
+      },
+      {
+        "title": "El diario de Mariana",
+        "desc": "",
+        "start": 1789495200000,
+        "end": 1789500600000
+      },
+      {
+        "title": "Primicias YA",
+        "desc": "",
+        "start": 1789500600000,
+        "end": 1789505100000
+      },
+      {
+        "title": "América Noticias",
+        "desc": "",
+        "start": 1789505100000,
+        "end": 1789509600000
+      },
+      {
+        "title": "Sálvese Quien Pueda",
+        "desc": "",
+        "start": 1789509600000,
+        "end": 1789513200000
+      },
+      {
+        "title": "LAM",
+        "desc": "",
+        "start": 1789513200000,
+        "end": 1789520400000
+      },
+      {
+        "title": "BTV, Buena Televisión",
+        "desc": "",
+        "start": 1789520400000,
+        "end": 1789524000000
+      },
+      {
+        "title": "Paso en América",
+        "desc": "",
+        "start": 1789524000000,
+        "end": 1789527600000
+      },
+      {
+        "title": "Polémica en El Bar",
+        "desc": "",
+        "start": 1789527600000,
+        "end": 1789531200000
+      }
+    ],
     "cnn_espanol": [
-      {
-        "title": "Deportes CNN",
-        "desc": "",
-        "start": 1789416000000,
-        "end": 1789417800000
-      },
-      {
-        "title": "Conexión Global",
-        "desc": "",
-        "start": 1789417800000,
-        "end": 1789419600000
-      },
       {
         "title": "Directo USA con Juan Lopez",
         "desc": "",
@@ -303,15 +425,15 @@
         "desc": "",
         "start": 1789524000000,
         "end": 1789527600000
+      },
+      {
+        "title": "Perspectivas desde Mexico",
+        "desc": "",
+        "start": 1789527600000,
+        "end": 1789531200000
       }
     ],
     "cartoon_network": [
-      {
-        "title": "Canal no disponible",
-        "desc": "",
-        "start": 1789405200000,
-        "end": 1789419600000
-      },
       {
         "title": "Canal no disponible",
         "desc": "",
@@ -454,18 +576,6 @@
       }
     ],
     "disney_channel": [
-      {
-        "title": "Gravity Falls: Un Verano de Misterios",
-        "desc": "Los hermanos gemelos Dipper y Mabel Pines se encuentran en una aventura inesperada cuando pasan el verano con su tío abuelo en la misteriosa ciudad de Gravity Falls. A su llegada, el tío abuelo de Dipper y Mabel, también conocido como Grunkle Stan, solicita la ayuda de los hermanos para dirigir The Mystery Shack, una divertida trampa turística que cobra demasiado a los clientes desprevenidos. Aunque Dipper y Mabe descubren rápidamente que The Mystery Shack es un engaño, sienten que hay algo extraño en su nueva ciudad y juntos comienzan a descubrir los secretos de Gravity Falls.",
-        "start": 1789415940000,
-        "end": 1789417740000
-      },
-      {
-        "title": "Miraculous Las aventuras de Ladybug",
-        "desc": "",
-        "start": 1789417740000,
-        "end": 1789419600000
-      },
       {
         "title": "Los Vecinos Green",
         "desc": "¡Cricket Green se mudará a la gran ciudad! Junto con su hermana mayor, Tilly, su padre Bill y la salvaje abuela Alice, estos simples campesinos deben aprender a vivir en una metrópolis bulliciosa. La curiosidad y el entusiasmo de Cricket llevan a su familia salvajemente fuera de lugar en viajes épicos y en los corazones de sus nuevos vecinos. ¡Nunca hay un día aburrido para una familia pequeña que puede encontrar grandes aventuras sin importar dónde se encuentren!",
@@ -861,15 +971,21 @@
         "desc": "",
         "start": 1789524000000,
         "end": 1789525860000
+      },
+      {
+        "title": "Vampirina Una Vampirina adolescente",
+        "desc": "",
+        "start": 1789525860000,
+        "end": 1789527600000
+      },
+      {
+        "title": "Amphibia",
+        "desc": "Anfibilandia narra las aventuras cómicas de Anne Boonchuy, de 13 años, quien después de robar una misteriosa caja de música, es transportada mágicamente al mundo de Anfibilandia, un pantano salvaje lleno de ranas parlantes. Con la ayuda de una joven rana aventurera y curiosa llamada Sprig, Anne se transformará de monstruo a héroe y descubrirá la primera amistad verdadera de su vida.",
+        "start": 1789527600000,
+        "end": 1789529340000
       }
     ],
     "espn_1": [
-      {
-        "title": "Fútbol Serie A",
-        "desc": "",
-        "start": 1789410600000,
-        "end": 1789418400000
-      },
       {
         "title": "ESPN F360",
         "desc": "",
@@ -1001,15 +1117,15 @@
         "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
         "start": 1789520400000,
         "end": 1789525800000
+      },
+      {
+        "title": "ESPN F10",
+        "desc": "",
+        "start": 1789525800000,
+        "end": 1789529400000
       }
     ],
     "espn_2": [
-      {
-        "title": "Leeds United FC vs. Newcastle United FC",
-        "desc": "",
-        "start": 1789411800000,
-        "end": 1789419600000
-      },
       {
         "title": "ESPN Compact",
         "desc": "",
@@ -1189,15 +1305,15 @@
         "desc": "",
         "start": 1789516800000,
         "end": 1789527600000
+      },
+      {
+        "title": "Fútbol Conmebol Copa Sudamericana",
+        "desc": "",
+        "start": 1789527600000,
+        "end": 1789534800000
       }
     ],
     "espn_3": [
-      {
-        "title": "Villarreal CF vs. Real Betis Balompié",
-        "desc": "",
-        "start": 1789411800000,
-        "end": 1789419600000
-      },
       {
         "title": "RC Celta de Vigo vs. Málaga CF",
         "desc": "",
@@ -1317,6 +1433,350 @@
         "desc": "",
         "start": 1789520400000,
         "end": 1789527600000
+      },
+      {
+        "title": "SSC Napoli vs. Bologna FC 1909",
+        "desc": "",
+        "start": 1789527600000,
+        "end": 1789534800000
+      }
+    ],
+    "el_gourmet": [
+      {
+        "title": "Estefi dulce",
+        "desc": "",
+        "start": 1789419600000,
+        "end": 1789421400000
+      },
+      {
+        "title": "Los imperdibles Buenos Aires",
+        "desc": "",
+        "start": 1789421400000,
+        "end": 1789423200000
+      },
+      {
+        "title": "Hermana Verónica",
+        "desc": "",
+        "start": 1789423200000,
+        "end": 1789425000000
+      },
+      {
+        "title": "La cocina de los recuerd",
+        "desc": "",
+        "start": 1789425000000,
+        "end": 1789426800000
+      },
+      {
+        "title": "La ruta de los insectos",
+        "desc": "",
+        "start": 1789426800000,
+        "end": 1789428600000
+      },
+      {
+        "title": "Celebrando juntos con Jamie T",
+        "desc": "",
+        "start": 1789428600000,
+        "end": 1789432200000
+      },
+      {
+        "title": "Simplemente Pia",
+        "desc": "",
+        "start": 1789432200000,
+        "end": 1789434000000
+      },
+      {
+        "title": "Días de campo c/ los Petersen",
+        "desc": "",
+        "start": 1789434000000,
+        "end": 1789435800000
+      },
+      {
+        "title": "Cocina de mercado",
+        "desc": "",
+        "start": 1789435800000,
+        "end": 1789437600000
+      },
+      {
+        "title": "Me voy a comer el mundo",
+        "desc": "",
+        "start": 1789437600000,
+        "end": 1789441200000
+      },
+      {
+        "title": "Maestros del taco",
+        "desc": "",
+        "start": 1789441200000,
+        "end": 1789443000000
+      },
+      {
+        "title": "Celebrando juntos con Jamie T",
+        "desc": "",
+        "start": 1789443000000,
+        "end": 1789446600000
+      },
+      {
+        "title": "Los favoritos de Margarita B",
+        "desc": "",
+        "start": 1789446600000,
+        "end": 1789448400000
+      },
+      {
+        "title": "Días de campo c/ los Petersen",
+        "desc": "",
+        "start": 1789448400000,
+        "end": 1789450200000
+      },
+      {
+        "title": "Pueblos para comerselos Méx",
+        "desc": "",
+        "start": 1789450200000,
+        "end": 1789452000000
+      },
+      {
+        "title": "Amigos con mucho gusto",
+        "desc": "",
+        "start": 1789452000000,
+        "end": 1789453800000
+      },
+      {
+        "title": "Cocina de mar Pacifico",
+        "desc": "",
+        "start": 1789453800000,
+        "end": 1789455600000
+      },
+      {
+        "title": "Ruta 40",
+        "desc": "",
+        "start": 1789455600000,
+        "end": 1789457400000
+      },
+      {
+        "title": "Parrilla a la mexicana",
+        "desc": "",
+        "start": 1789457400000,
+        "end": 1789459200000
+      },
+      {
+        "title": "Fogones tradicionales México",
+        "desc": "",
+        "start": 1789459200000,
+        "end": 1789461000000
+      },
+      {
+        "title": "Maestros del taco",
+        "desc": "",
+        "start": 1789461000000,
+        "end": 1789462800000
+      },
+      {
+        "title": "Abuela querida",
+        "desc": "",
+        "start": 1789462800000,
+        "end": 1789464600000
+      },
+      {
+        "title": "Los nuevos panes de Juan",
+        "desc": "",
+        "start": 1789464600000,
+        "end": 1789466400000
+      },
+      {
+        "title": "México en una tortilla",
+        "desc": "",
+        "start": 1789466400000,
+        "end": 1789468200000
+      },
+      {
+        "title": "Maestros del ceviche",
+        "desc": "",
+        "start": 1789468200000,
+        "end": 1789470000000
+      },
+      {
+        "title": "Menú para todos los días",
+        "desc": "",
+        "start": 1789470000000,
+        "end": 1789471800000
+      },
+      {
+        "title": "Alta cocina en B.C.",
+        "desc": "",
+        "start": 1789471800000,
+        "end": 1789473600000
+      },
+      {
+        "title": "Con solo una olla",
+        "desc": "",
+        "start": 1789473600000,
+        "end": 1789475400000
+      },
+      {
+        "title": "Guardianes de tradición Méx",
+        "desc": "",
+        "start": 1789475400000,
+        "end": 1789477200000
+      },
+      {
+        "title": "Blanca cocina con Air Fryer T",
+        "desc": "",
+        "start": 1789477200000,
+        "end": 1789479000000
+      },
+      {
+        "title": "Cocina de mercado",
+        "desc": "",
+        "start": 1789479000000,
+        "end": 1789480800000
+      },
+      {
+        "title": "Devuélveme los tápers Ar",
+        "desc": "",
+        "start": 1789480800000,
+        "end": 1789482600000
+      },
+      {
+        "title": "Amigos con mucho gusto",
+        "desc": "",
+        "start": 1789482600000,
+        "end": 1789484400000
+      },
+      {
+        "title": "Guardianes de tradición Méx",
+        "desc": "",
+        "start": 1789484400000,
+        "end": 1789486200000
+      },
+      {
+        "title": "Menú para todos los días",
+        "desc": "",
+        "start": 1789486200000,
+        "end": 1789488000000
+      },
+      {
+        "title": "Blanca cocina con Air Fryer T",
+        "desc": "",
+        "start": 1789488000000,
+        "end": 1789489800000
+      },
+      {
+        "title": "Las Mejores Recetas de Zahie",
+        "desc": "",
+        "start": 1789489800000,
+        "end": 1789491600000
+      },
+      {
+        "title": "Los nuevos panes de Juan",
+        "desc": "",
+        "start": 1789491600000,
+        "end": 1789493400000
+      },
+      {
+        "title": "Fogones tradicionales México",
+        "desc": "",
+        "start": 1789493400000,
+        "end": 1789495200000
+      },
+      {
+        "title": "Estefi dulce",
+        "desc": "",
+        "start": 1789495200000,
+        "end": 1789497000000
+      },
+      {
+        "title": "Cocina de mercado",
+        "desc": "",
+        "start": 1789497000000,
+        "end": 1789498800000
+      },
+      {
+        "title": "Abuela querida",
+        "desc": "",
+        "start": 1789498800000,
+        "end": 1789500600000
+      },
+      {
+        "title": "Simplemente Pia",
+        "desc": "",
+        "start": 1789500600000,
+        "end": 1789502400000
+      },
+      {
+        "title": "Parrilla para todos los días",
+        "desc": "",
+        "start": 1789502400000,
+        "end": 1789504200000
+      },
+      {
+        "title": "Alta cocina en B.C.",
+        "desc": "",
+        "start": 1789504200000,
+        "end": 1789506000000
+      },
+      {
+        "title": "Estefi dulce",
+        "desc": "",
+        "start": 1789506000000,
+        "end": 1789507800000
+      },
+      {
+        "title": "Meriendas de Buenos Aires",
+        "desc": "",
+        "start": 1789507800000,
+        "end": 1789509600000
+      },
+      {
+        "title": "Hermana Verónica",
+        "desc": "",
+        "start": 1789509600000,
+        "end": 1789511400000
+      },
+      {
+        "title": "La cocina de los recuerd",
+        "desc": "",
+        "start": 1789511400000,
+        "end": 1789513200000
+      },
+      {
+        "title": "La ruta del chile",
+        "desc": "",
+        "start": 1789513200000,
+        "end": 1789515000000
+      },
+      {
+        "title": "Rico y saludable con Jami",
+        "desc": "",
+        "start": 1789515000000,
+        "end": 1789518600000
+      },
+      {
+        "title": "Simplemente Pia",
+        "desc": "",
+        "start": 1789518600000,
+        "end": 1789520400000
+      },
+      {
+        "title": "Los Petersen en La Patagonia",
+        "desc": "",
+        "start": 1789520400000,
+        "end": 1789522200000
+      },
+      {
+        "title": "Cocina de mercado",
+        "desc": "",
+        "start": 1789522200000,
+        "end": 1789524000000
+      },
+      {
+        "title": "Me voy a comer el mundo",
+        "desc": "",
+        "start": 1789524000000,
+        "end": 1789527600000
+      },
+      {
+        "title": "Maestros del taco",
+        "desc": "",
+        "start": 1789527600000,
+        "end": 1789529400000
       }
     ],
     "space": [
@@ -1549,15 +2009,15 @@
         "desc": "",
         "start": 1789523400000,
         "end": 1789526400000
+      },
+      {
+        "title": "El meme maldito",
+        "desc": "",
+        "start": 1789526400000,
+        "end": 1789533600000
       }
     ],
     "tnt": [
-      {
-        "title": "Pasante de moda",
-        "desc": "",
-        "start": 1789410960000,
-        "end": 1789419180000
-      },
       {
         "title": "Una Esposa de Mentira",
         "desc": "Un cirujano plástico trata de seducir a una maestra de escuela mucho más joven que él, para lograrlo recluta a su fiel asistente para que finja ser su ex esposa, con el fin de encubrir una mentira sin importancia. Cuando más mentiras aparecen, los hijos de su asistente se ven involucrados y todo el mundo se dirige a un fin de semana en Hawái que cambiará la vida de todos.",
@@ -1689,6 +2149,334 @@
         "desc": "",
         "start": 1789520400000,
         "end": 1789527540000
+      },
+      {
+        "title": "Emmy Awards 2026",
+        "desc": "",
+        "start": 1789527540000,
+        "end": 1789527720000
+      },
+      {
+        "title": "Dale duro",
+        "desc": "",
+        "start": 1789527720000,
+        "end": 1789534380000
+      }
+    ],
+    "telefe": [
+      {
+        "title": "Historias de corazón",
+        "desc": "",
+        "start": 1789418700000,
+        "end": 1789426800000
+      },
+      {
+        "title": "Telefe Noticias",
+        "desc": "",
+        "start": 1789426800000,
+        "end": 1789432200000
+      },
+      {
+        "title": "Popstars",
+        "desc": "",
+        "start": 1789432200000,
+        "end": 1789434900000
+      },
+      {
+        "title": "Gran Hermano",
+        "desc": "",
+        "start": 1789434900000,
+        "end": 1789441200000
+      },
+      {
+        "title": "DIRECTV y DGO presentan: Espiando la casa",
+        "desc": "",
+        "start": 1789441200000,
+        "end": 1789442100000
+      },
+      {
+        "title": "Staff",
+        "desc": "",
+        "start": 1789442100000,
+        "end": 1789443000000
+      },
+      {
+        "title": "Staff",
+        "desc": "",
+        "start": 1789443000000,
+        "end": 1789444500000
+      },
+      {
+        "title": "Intuiciones",
+        "desc": "",
+        "start": 1789444500000,
+        "end": 1789444800000
+      },
+      {
+        "title": "El Valor de Tus Joyas",
+        "desc": "",
+        "start": 1789444800000,
+        "end": 1789446600000
+      },
+      {
+        "title": "Gran Hermano",
+        "desc": "",
+        "start": 1789446600000,
+        "end": 1789450200000
+      },
+      {
+        "title": "DIRECTV y DGO presentan: Espiando la casa",
+        "desc": "",
+        "start": 1789450200000,
+        "end": 1789452000000
+      },
+      {
+        "title": "Ariel en su salsa",
+        "desc": "",
+        "start": 1789452000000,
+        "end": 1789455600000
+      },
+      {
+        "title": "A la Barbarossa",
+        "desc": "",
+        "start": 1789455600000,
+        "end": 1789462800000
+      },
+      {
+        "title": "Disney Junior",
+        "desc": "",
+        "start": 1789462800000,
+        "end": 1789465500000
+      },
+      {
+        "title": "#Tt",
+        "desc": "",
+        "start": 1789465500000,
+        "end": 1789466400000
+      },
+      {
+        "title": "Buen Telefe",
+        "desc": "",
+        "start": 1789466400000,
+        "end": 1789475400000
+      },
+      {
+        "title": "A la Barbarossa",
+        "desc": "",
+        "start": 1789475400000,
+        "end": 1789483500000
+      },
+      {
+        "title": "Ariel en su salsa",
+        "desc": "",
+        "start": 1789483500000,
+        "end": 1789486200000
+      },
+      {
+        "title": "Ariel en su salsa",
+        "desc": "",
+        "start": 1789486200000,
+        "end": 1789488000000
+      },
+      {
+        "title": "El noticiero de la gente",
+        "desc": "",
+        "start": 1789488000000,
+        "end": 1789493400000
+      },
+      {
+        "title": "Cortá Por Lozano",
+        "desc": "",
+        "start": 1789493400000,
+        "end": 1789500600000
+      },
+      {
+        "title": "DIRECTV y DGO presentan: Espiando la casa",
+        "desc": "",
+        "start": 1789500600000,
+        "end": 1789504200000
+      },
+      {
+        "title": "Historias de corazón",
+        "desc": "",
+        "start": 1789504200000,
+        "end": 1789508700000
+      },
+      {
+        "title": "Fútbol: Previa",
+        "desc": "",
+        "start": 1789508700000,
+        "end": 1789509600000
+      },
+      {
+        "title": "Fútbol Conmebol Copa Libertadores",
+        "desc": "",
+        "start": 1789509600000,
+        "end": 1789515900000
+      },
+      {
+        "title": "Fútbol: Post",
+        "desc": "",
+        "start": 1789515900000,
+        "end": 1789516800000
+      },
+      {
+        "title": "Telefe Noticias",
+        "desc": "",
+        "start": 1789516800000,
+        "end": 1789518600000
+      },
+      {
+        "title": "Popstars",
+        "desc": "",
+        "start": 1789518600000,
+        "end": 1789521300000
+      },
+      {
+        "title": "Gran Hermano",
+        "desc": "",
+        "start": 1789521300000,
+        "end": 1789527600000
+      },
+      {
+        "title": "DIRECTV y DGO presentan: Espiando la casa",
+        "desc": "",
+        "start": 1789527600000,
+        "end": 1789528500000
+      }
+    ],
+    "tv_publica": [
+      {
+        "title": "Iluminadas",
+        "desc": "",
+        "start": 1789416000000,
+        "end": 1789423200000
+      },
+      {
+        "title": "Televisión Pública Noticias",
+        "desc": "",
+        "start": 1789423200000,
+        "end": 1789428600000
+      },
+      {
+        "title": "Premios Hugo",
+        "desc": "",
+        "start": 1789428600000,
+        "end": 1789434000000
+      },
+      {
+        "title": "Lo mejor de: Se siente Argentina",
+        "desc": "",
+        "start": 1789434000000,
+        "end": 1789437600000
+      },
+      {
+        "title": "La casa de Chicho y Tomi",
+        "desc": "",
+        "start": 1789437600000,
+        "end": 1789441200000
+      },
+      {
+        "title": "Televisión Pública Noticias",
+        "desc": "",
+        "start": 1789441200000,
+        "end": 1789443000000
+      },
+      {
+        "title": "Feliz vida",
+        "desc": "",
+        "start": 1789443000000,
+        "end": 1789444800000
+      },
+      {
+        "title": "Fuera del aire",
+        "desc": "",
+        "start": 1789444800000,
+        "end": 1789465500000
+      },
+      {
+        "title": "Aires de campo",
+        "desc": "",
+        "start": 1789465500000,
+        "end": 1789466400000
+      },
+      {
+        "title": "Televisión Pública Noticias",
+        "desc": "",
+        "start": 1789466400000,
+        "end": 1789470000000
+      },
+      {
+        "title": "Aire nacional",
+        "desc": "",
+        "start": 1789470000000,
+        "end": 1789473600000
+      },
+      {
+        "title": "ADN, buena salud",
+        "desc": "",
+        "start": 1789473600000,
+        "end": 1789477200000
+      },
+      {
+        "title": "Las mañanas con Andino",
+        "desc": "",
+        "start": 1789477200000,
+        "end": 1789484400000
+      },
+      {
+        "title": "Televisión Pública Noticias",
+        "desc": "",
+        "start": 1789484400000,
+        "end": 1789489800000
+      },
+      {
+        "title": "Mediodía bien arriba",
+        "desc": "",
+        "start": 1789489800000,
+        "end": 1789495200000
+      },
+      {
+        "title": "Estamos en una",
+        "desc": "",
+        "start": 1789495200000,
+        "end": 1789502400000
+      },
+      {
+        "title": "Iluminadas",
+        "desc": "",
+        "start": 1789502400000,
+        "end": 1789509600000
+      },
+      {
+        "title": "Televisión Pública Noticias",
+        "desc": "",
+        "start": 1789509600000,
+        "end": 1789515000000
+      },
+      {
+        "title": "La noche es nuestra",
+        "desc": "",
+        "start": 1789515000000,
+        "end": 1789520400000
+      },
+      {
+        "title": "Lo mejor de: Se siente Argentina",
+        "desc": "",
+        "start": 1789520400000,
+        "end": 1789524000000
+      },
+      {
+        "title": "Hay grip",
+        "desc": "",
+        "start": 1789524000000,
+        "end": 1789527600000
+      },
+      {
+        "title": "Televisión Pública Noticias",
+        "desc": "",
+        "start": 1789527600000,
+        "end": 1789529400000
       }
     ],
     "tyc_sports": [
@@ -1793,22 +2581,1164 @@
         "desc": "",
         "start": 1789518600000,
         "end": 1789525800000
+      },
+      {
+        "title": "La noche de TyC Sports",
+        "desc": "",
+        "start": 1789525800000,
+        "end": 1789531200000
       }
     ],
     "tnt_sports_1": [
       {
+        "title": "Lo Mejor de la Fecha",
+        "desc": "Resumen de los partidos de la Liga Profesional",
+        "start": 1789354800000,
+        "end": 1789380000000
+      },
+      {
+        "title": "TNT Sports Noticias",
+        "desc": "Toda la actualidad del fútbol argentino",
+        "start": 1789380000000,
+        "end": 1789390800000
+      },
+      {
+        "title": "Pelota Parada",
+        "desc": "Información al instante de todos los clubes",
+        "start": 1789390800000,
+        "end": 1789401600000
+      },
+      {
+        "title": "Halcones y Palomas",
+        "desc": "Debate y análisis de la fecha",
+        "start": 1789401600000,
+        "end": 1789412400000
+      },
+      {
+        "title": "TNT Data Sports",
+        "desc": "Estadísticas, números y previa de los encuentros",
+        "start": 1789412400000,
+        "end": 1789423200000
+      },
+      {
         "title": "TNT Sports Mundial",
-        "desc": "Transmisión en vivo y análisis del fútbol argentino",
-        "start": 1789437008553,
-        "end": 1789444208553
+        "desc": "Actualidad internacional y análisis",
+        "start": 1789423200000,
+        "end": 1789432200000
+      },
+      {
+        "title": "Fútbol en Vivo / Liga Profesional",
+        "desc": "Transmisión en vivo y seguimiento de los partidos",
+        "start": 1789432200000,
+        "end": 1789439400000
+      },
+      {
+        "title": "Todos Somos Técnicos",
+        "desc": "Análisis táctico y las polémicas de la jornada",
+        "start": 1789439400000,
+        "end": 1789441200000
+      },
+      {
+        "title": "Lo Mejor de la Fecha",
+        "desc": "Resumen de los partidos de la Liga Profesional",
+        "start": 1789441200000,
+        "end": 1789466400000
+      },
+      {
+        "title": "TNT Sports Noticias",
+        "desc": "Toda la actualidad del fútbol argentino",
+        "start": 1789466400000,
+        "end": 1789477200000
+      },
+      {
+        "title": "Pelota Parada",
+        "desc": "Información al instante de todos los clubes",
+        "start": 1789477200000,
+        "end": 1789488000000
+      },
+      {
+        "title": "Halcones y Palomas",
+        "desc": "Debate y análisis de la fecha",
+        "start": 1789488000000,
+        "end": 1789498800000
+      },
+      {
+        "title": "TNT Data Sports",
+        "desc": "Estadísticas, números y previa de los encuentros",
+        "start": 1789498800000,
+        "end": 1789509600000
+      },
+      {
+        "title": "TNT Sports Mundial",
+        "desc": "Actualidad internacional y análisis",
+        "start": 1789509600000,
+        "end": 1789518600000
+      },
+      {
+        "title": "Fútbol en Vivo / Liga Profesional",
+        "desc": "Transmisión en vivo y seguimiento de los partidos",
+        "start": 1789518600000,
+        "end": 1789525800000
+      },
+      {
+        "title": "Todos Somos Técnicos",
+        "desc": "Análisis táctico y las polémicas de la jornada",
+        "start": 1789525800000,
+        "end": 1789527600000
+      },
+      {
+        "title": "Lo Mejor de la Fecha",
+        "desc": "Resumen de los partidos de la Liga Profesional",
+        "start": 1789527600000,
+        "end": 1789552800000
+      },
+      {
+        "title": "TNT Sports Noticias",
+        "desc": "Toda la actualidad del fútbol argentino",
+        "start": 1789552800000,
+        "end": 1789563600000
+      },
+      {
+        "title": "Pelota Parada",
+        "desc": "Información al instante de todos los clubes",
+        "start": 1789563600000,
+        "end": 1789574400000
+      },
+      {
+        "title": "Halcones y Palomas",
+        "desc": "Debate y análisis de la fecha",
+        "start": 1789574400000,
+        "end": 1789585200000
+      },
+      {
+        "title": "TNT Data Sports",
+        "desc": "Estadísticas, números y previa de los encuentros",
+        "start": 1789585200000,
+        "end": 1789596000000
+      },
+      {
+        "title": "TNT Sports Mundial",
+        "desc": "Actualidad internacional y análisis",
+        "start": 1789596000000,
+        "end": 1789605000000
+      },
+      {
+        "title": "Fútbol en Vivo / Liga Profesional",
+        "desc": "Transmisión en vivo y seguimiento de los partidos",
+        "start": 1789605000000,
+        "end": 1789612200000
+      },
+      {
+        "title": "Todos Somos Técnicos",
+        "desc": "Análisis táctico y las polémicas de la jornada",
+        "start": 1789612200000,
+        "end": 1789614000000
       }
     ],
     "espn_premium_1": [
       {
-        "title": "Fútbol 1 en ESPN",
-        "desc": "Cobertura en vivo de la Liga Profesional",
-        "start": 1789436108553,
-        "end": 1789443308553
+        "title": "Repeticiones y Resúmenes",
+        "desc": "Lo mejor de la Liga Profesional de Fútbol",
+        "start": 1789354800000,
+        "end": 1789380000000
+      },
+      {
+        "title": "SportsCenter",
+        "desc": "Noticias del deporte y fútbol local",
+        "start": 1789380000000,
+        "end": 1789398000000
+      },
+      {
+        "title": "ESPN F12",
+        "desc": "Conducción de Mariano Closs y debate del mediodía",
+        "start": 1789398000000,
+        "end": 1789405200000
+      },
+      {
+        "title": "ESPN F90",
+        "desc": "Sebastián Vignolo y el análisis de la jornada",
+        "start": 1789405200000,
+        "end": 1789412400000
+      },
+      {
+        "title": "ESPN F360",
+        "desc": "Actualidad deportiva con Gustavo López",
+        "start": 1789412400000,
+        "end": 1789421400000
+      },
+      {
+        "title": "ESPN FShow",
+        "desc": "Información y debate de la tarde",
+        "start": 1789421400000,
+        "end": 1789428600000
+      },
+      {
+        "title": "Equipo F",
+        "desc": "El debate del fútbol con las principales figuras",
+        "start": 1789428600000,
+        "end": 1789432200000
+      },
+      {
+        "title": "Fútbol 1 en ESPN Premium",
+        "desc": "Transmisión en vivo de la Liga Profesional",
+        "start": 1789432200000,
+        "end": 1789439400000
+      },
+      {
+        "title": "SportsCenter Noche",
+        "desc": "Goles, jugadas y testimonios de los protagonistas",
+        "start": 1789439400000,
+        "end": 1789441200000
+      },
+      {
+        "title": "Repeticiones y Resúmenes",
+        "desc": "Lo mejor de la Liga Profesional de Fútbol",
+        "start": 1789441200000,
+        "end": 1789466400000
+      },
+      {
+        "title": "SportsCenter",
+        "desc": "Noticias del deporte y fútbol local",
+        "start": 1789466400000,
+        "end": 1789484400000
+      },
+      {
+        "title": "ESPN F12",
+        "desc": "Conducción de Mariano Closs y debate del mediodía",
+        "start": 1789484400000,
+        "end": 1789491600000
+      },
+      {
+        "title": "ESPN F90",
+        "desc": "Sebastián Vignolo y el análisis de la jornada",
+        "start": 1789491600000,
+        "end": 1789498800000
+      },
+      {
+        "title": "ESPN F360",
+        "desc": "Actualidad deportiva con Gustavo López",
+        "start": 1789498800000,
+        "end": 1789507800000
+      },
+      {
+        "title": "ESPN FShow",
+        "desc": "Información y debate de la tarde",
+        "start": 1789507800000,
+        "end": 1789515000000
+      },
+      {
+        "title": "Equipo F",
+        "desc": "El debate del fútbol con las principales figuras",
+        "start": 1789515000000,
+        "end": 1789518600000
+      },
+      {
+        "title": "Fútbol 1 en ESPN Premium",
+        "desc": "Transmisión en vivo de la Liga Profesional",
+        "start": 1789518600000,
+        "end": 1789525800000
+      },
+      {
+        "title": "SportsCenter Noche",
+        "desc": "Goles, jugadas y testimonios de los protagonistas",
+        "start": 1789525800000,
+        "end": 1789527600000
+      },
+      {
+        "title": "Repeticiones y Resúmenes",
+        "desc": "Lo mejor de la Liga Profesional de Fútbol",
+        "start": 1789527600000,
+        "end": 1789552800000
+      },
+      {
+        "title": "SportsCenter",
+        "desc": "Noticias del deporte y fútbol local",
+        "start": 1789552800000,
+        "end": 1789570800000
+      },
+      {
+        "title": "ESPN F12",
+        "desc": "Conducción de Mariano Closs y debate del mediodía",
+        "start": 1789570800000,
+        "end": 1789578000000
+      },
+      {
+        "title": "ESPN F90",
+        "desc": "Sebastián Vignolo y el análisis de la jornada",
+        "start": 1789578000000,
+        "end": 1789585200000
+      },
+      {
+        "title": "ESPN F360",
+        "desc": "Actualidad deportiva con Gustavo López",
+        "start": 1789585200000,
+        "end": 1789594200000
+      },
+      {
+        "title": "ESPN FShow",
+        "desc": "Información y debate de la tarde",
+        "start": 1789594200000,
+        "end": 1789601400000
+      },
+      {
+        "title": "Equipo F",
+        "desc": "El debate del fútbol con las principales figuras",
+        "start": 1789601400000,
+        "end": 1789605000000
+      },
+      {
+        "title": "Fútbol 1 en ESPN Premium",
+        "desc": "Transmisión en vivo de la Liga Profesional",
+        "start": 1789605000000,
+        "end": 1789612200000
+      },
+      {
+        "title": "SportsCenter Noche",
+        "desc": "Goles, jugadas y testimonios de los protagonistas",
+        "start": 1789612200000,
+        "end": 1789614000000
+      }
+    ],
+    "golf_channel": [
+      {
+        "title": "Golf de Noche",
+        "desc": "Lo mejor de los torneos de golf del mundo",
+        "start": 1789354800000,
+        "end": 1789380000000
+      },
+      {
+        "title": "Golf Central",
+        "desc": "Noticias y cobertura de las principales giras",
+        "start": 1789380000000,
+        "end": 1789394400000
+      },
+      {
+        "title": "PGA Tour: Cobertura en Vivo",
+        "desc": "Transmisión en directo del PGA Tour",
+        "start": 1789394400000,
+        "end": 1789408800000
+      },
+      {
+        "title": "European Tour & Majors",
+        "desc": "Torneo en vivo y seguimiento de hoyos",
+        "start": 1789408800000,
+        "end": 1789423200000
+      },
+      {
+        "title": "Highlights & Análisis del Día",
+        "desc": "Resumen de la jornada y mejores golpes",
+        "start": 1789423200000,
+        "end": 1789434000000
+      },
+      {
+        "title": "Golf Central Noche",
+        "desc": "Entrevistas, tablas y análisis en profundidad",
+        "start": 1789434000000,
+        "end": 1789441200000
+      },
+      {
+        "title": "Golf de Noche",
+        "desc": "Lo mejor de los torneos de golf del mundo",
+        "start": 1789441200000,
+        "end": 1789466400000
+      },
+      {
+        "title": "Golf Central",
+        "desc": "Noticias y cobertura de las principales giras",
+        "start": 1789466400000,
+        "end": 1789480800000
+      },
+      {
+        "title": "PGA Tour: Cobertura en Vivo",
+        "desc": "Transmisión en directo del PGA Tour",
+        "start": 1789480800000,
+        "end": 1789495200000
+      },
+      {
+        "title": "European Tour & Majors",
+        "desc": "Torneo en vivo y seguimiento de hoyos",
+        "start": 1789495200000,
+        "end": 1789509600000
+      },
+      {
+        "title": "Highlights & Análisis del Día",
+        "desc": "Resumen de la jornada y mejores golpes",
+        "start": 1789509600000,
+        "end": 1789520400000
+      },
+      {
+        "title": "Golf Central Noche",
+        "desc": "Entrevistas, tablas y análisis en profundidad",
+        "start": 1789520400000,
+        "end": 1789527600000
+      },
+      {
+        "title": "Golf de Noche",
+        "desc": "Lo mejor de los torneos de golf del mundo",
+        "start": 1789527600000,
+        "end": 1789552800000
+      },
+      {
+        "title": "Golf Central",
+        "desc": "Noticias y cobertura de las principales giras",
+        "start": 1789552800000,
+        "end": 1789567200000
+      },
+      {
+        "title": "PGA Tour: Cobertura en Vivo",
+        "desc": "Transmisión en directo del PGA Tour",
+        "start": 1789567200000,
+        "end": 1789581600000
+      },
+      {
+        "title": "European Tour & Majors",
+        "desc": "Torneo en vivo y seguimiento de hoyos",
+        "start": 1789581600000,
+        "end": 1789596000000
+      },
+      {
+        "title": "Highlights & Análisis del Día",
+        "desc": "Resumen de la jornada y mejores golpes",
+        "start": 1789596000000,
+        "end": 1789606800000
+      },
+      {
+        "title": "Golf Central Noche",
+        "desc": "Entrevistas, tablas y análisis en profundidad",
+        "start": 1789606800000,
+        "end": 1789614000000
+      }
+    ],
+    "fox_sports_1": [
+      {
+        "title": "FOX Sports Resumen",
+        "desc": "Lo mejor del deporte y competiciones",
+        "start": 1789354800000,
+        "end": 1789383600000
+      },
+      {
+        "title": "FOX Sports Radio",
+        "desc": "Noticias y debate deportivo",
+        "start": 1789383600000,
+        "end": 1789398000000
+      },
+      {
+        "title": "La Vuelta",
+        "desc": "Actualidad del automovilismo y fútbol",
+        "start": 1789398000000,
+        "end": 1789408800000
+      },
+      {
+        "title": "FOX Sports Noticias",
+        "desc": "Actualidad de los clubes y Copa Libertadores",
+        "start": 1789408800000,
+        "end": 1789419600000
+      },
+      {
+        "title": "La Jugada Perfecta",
+        "desc": "Análisis previo a las transmisiones",
+        "start": 1789419600000,
+        "end": 1789430400000
+      },
+      {
+        "title": "Fútbol & Deportes en Vivo",
+        "desc": "Transmisión de eventos en directo",
+        "start": 1789430400000,
+        "end": 1789441200000
+      },
+      {
+        "title": "FOX Sports Resumen",
+        "desc": "Lo mejor del deporte y competiciones",
+        "start": 1789441200000,
+        "end": 1789470000000
+      },
+      {
+        "title": "FOX Sports Radio",
+        "desc": "Noticias y debate deportivo",
+        "start": 1789470000000,
+        "end": 1789484400000
+      },
+      {
+        "title": "La Vuelta",
+        "desc": "Actualidad del automovilismo y fútbol",
+        "start": 1789484400000,
+        "end": 1789495200000
+      },
+      {
+        "title": "FOX Sports Noticias",
+        "desc": "Actualidad de los clubes y Copa Libertadores",
+        "start": 1789495200000,
+        "end": 1789506000000
+      },
+      {
+        "title": "La Jugada Perfecta",
+        "desc": "Análisis previo a las transmisiones",
+        "start": 1789506000000,
+        "end": 1789516800000
+      },
+      {
+        "title": "Fútbol & Deportes en Vivo",
+        "desc": "Transmisión de eventos en directo",
+        "start": 1789516800000,
+        "end": 1789527600000
+      },
+      {
+        "title": "FOX Sports Resumen",
+        "desc": "Lo mejor del deporte y competiciones",
+        "start": 1789527600000,
+        "end": 1789556400000
+      },
+      {
+        "title": "FOX Sports Radio",
+        "desc": "Noticias y debate deportivo",
+        "start": 1789556400000,
+        "end": 1789570800000
+      },
+      {
+        "title": "La Vuelta",
+        "desc": "Actualidad del automovilismo y fútbol",
+        "start": 1789570800000,
+        "end": 1789581600000
+      },
+      {
+        "title": "FOX Sports Noticias",
+        "desc": "Actualidad de los clubes y Copa Libertadores",
+        "start": 1789581600000,
+        "end": 1789592400000
+      },
+      {
+        "title": "La Jugada Perfecta",
+        "desc": "Análisis previo a las transmisiones",
+        "start": 1789592400000,
+        "end": 1789603200000
+      },
+      {
+        "title": "Fútbol & Deportes en Vivo",
+        "desc": "Transmisión de eventos en directo",
+        "start": 1789603200000,
+        "end": 1789614000000
+      }
+    ],
+    "tn": [
+      {
+        "title": "Replay Noticias",
+        "desc": "Resumen de las noticias de la madrugada",
+        "start": 1789354800000,
+        "end": 1789376400000
+      },
+      {
+        "title": "TN Tempraneros",
+        "desc": "El arranque del día con las primeras noticias",
+        "start": 1789376400000,
+        "end": 1789390800000
+      },
+      {
+        "title": "TN Mañanas",
+        "desc": "Información en vivo y móviles en la calle",
+        "start": 1789390800000,
+        "end": 1789401600000
+      },
+      {
+        "title": "Nuestra Tarde",
+        "desc": "El noticiero de la tarde con todo el panorama",
+        "start": 1789401600000,
+        "end": 1789412400000
+      },
+      {
+        "title": "Está Pasando",
+        "desc": "Actualidad política, económica y social",
+        "start": 1789412400000,
+        "end": 1789419600000
+      },
+      {
+        "title": "TN Central",
+        "desc": "El noticiero central con el análisis del día",
+        "start": 1789419600000,
+        "end": 1789426800000
+      },
+      {
+        "title": "Sólo una Vuelta Más",
+        "desc": "Debate político y económico",
+        "start": 1789426800000,
+        "end": 1789434000000
+      },
+      {
+        "title": "A Dos Voces / Desde el Llano",
+        "desc": "Entrevistas en profundidad y opinión",
+        "start": 1789434000000,
+        "end": 1789441200000
+      },
+      {
+        "title": "Replay Noticias",
+        "desc": "Resumen de las noticias de la madrugada",
+        "start": 1789441200000,
+        "end": 1789462800000
+      },
+      {
+        "title": "TN Tempraneros",
+        "desc": "El arranque del día con las primeras noticias",
+        "start": 1789462800000,
+        "end": 1789477200000
+      },
+      {
+        "title": "TN Mañanas",
+        "desc": "Información en vivo y móviles en la calle",
+        "start": 1789477200000,
+        "end": 1789488000000
+      },
+      {
+        "title": "Nuestra Tarde",
+        "desc": "El noticiero de la tarde con todo el panorama",
+        "start": 1789488000000,
+        "end": 1789498800000
+      },
+      {
+        "title": "Está Pasando",
+        "desc": "Actualidad política, económica y social",
+        "start": 1789498800000,
+        "end": 1789506000000
+      },
+      {
+        "title": "TN Central",
+        "desc": "El noticiero central con el análisis del día",
+        "start": 1789506000000,
+        "end": 1789513200000
+      },
+      {
+        "title": "Sólo una Vuelta Más",
+        "desc": "Debate político y económico",
+        "start": 1789513200000,
+        "end": 1789520400000
+      },
+      {
+        "title": "A Dos Voces / Desde el Llano",
+        "desc": "Entrevistas en profundidad y opinión",
+        "start": 1789520400000,
+        "end": 1789527600000
+      },
+      {
+        "title": "Replay Noticias",
+        "desc": "Resumen de las noticias de la madrugada",
+        "start": 1789527600000,
+        "end": 1789549200000
+      },
+      {
+        "title": "TN Tempraneros",
+        "desc": "El arranque del día con las primeras noticias",
+        "start": 1789549200000,
+        "end": 1789563600000
+      },
+      {
+        "title": "TN Mañanas",
+        "desc": "Información en vivo y móviles en la calle",
+        "start": 1789563600000,
+        "end": 1789574400000
+      },
+      {
+        "title": "Nuestra Tarde",
+        "desc": "El noticiero de la tarde con todo el panorama",
+        "start": 1789574400000,
+        "end": 1789585200000
+      },
+      {
+        "title": "Está Pasando",
+        "desc": "Actualidad política, económica y social",
+        "start": 1789585200000,
+        "end": 1789592400000
+      },
+      {
+        "title": "TN Central",
+        "desc": "El noticiero central con el análisis del día",
+        "start": 1789592400000,
+        "end": 1789599600000
+      },
+      {
+        "title": "Sólo una Vuelta Más",
+        "desc": "Debate político y económico",
+        "start": 1789599600000,
+        "end": 1789606800000
+      },
+      {
+        "title": "A Dos Voces / Desde el Llano",
+        "desc": "Entrevistas en profundidad y opinión",
+        "start": 1789606800000,
+        "end": 1789614000000
+      }
+    ],
+    "ln_mas": [
+      {
+        "title": "Resumen LN+",
+        "desc": "Las noticias destacadas de la jornada",
+        "start": 1789354800000,
+        "end": 1789376400000
+      },
+      {
+        "title": "Buen Día Nación",
+        "desc": "Primeras noticias y estado de los servicios",
+        "start": 1789376400000,
+        "end": 1789390800000
+      },
+      {
+        "title": "8 AM / Nación Central",
+        "desc": "Información económica y actualidad",
+        "start": 1789390800000,
+        "end": 1789401600000
+      },
+      {
+        "title": "El Noticiero",
+        "desc": "Información con el equipo de LN+",
+        "start": 1789401600000,
+        "end": 1789412400000
+      },
+      {
+        "title": "Crónicas de la Tarde",
+        "desc": "Seguimiento de la agenda nacional",
+        "start": 1789412400000,
+        "end": 1789419600000
+      },
+      {
+        "title": "Hora 18",
+        "desc": "Panorama político y económico",
+        "start": 1789419600000,
+        "end": 1789426800000
+      },
+      {
+        "title": "Más Realidad",
+        "desc": "Análisis de fondo y debate editorial",
+        "start": 1789426800000,
+        "end": 1789434000000
+      },
+      {
+        "title": "Odisea Argentina / La Cornisa",
+        "desc": "Investigaciones e informes especiales",
+        "start": 1789434000000,
+        "end": 1789441200000
+      },
+      {
+        "title": "Resumen LN+",
+        "desc": "Las noticias destacadas de la jornada",
+        "start": 1789441200000,
+        "end": 1789462800000
+      },
+      {
+        "title": "Buen Día Nación",
+        "desc": "Primeras noticias y estado de los servicios",
+        "start": 1789462800000,
+        "end": 1789477200000
+      },
+      {
+        "title": "8 AM / Nación Central",
+        "desc": "Información económica y actualidad",
+        "start": 1789477200000,
+        "end": 1789488000000
+      },
+      {
+        "title": "El Noticiero",
+        "desc": "Información con el equipo de LN+",
+        "start": 1789488000000,
+        "end": 1789498800000
+      },
+      {
+        "title": "Crónicas de la Tarde",
+        "desc": "Seguimiento de la agenda nacional",
+        "start": 1789498800000,
+        "end": 1789506000000
+      },
+      {
+        "title": "Hora 18",
+        "desc": "Panorama político y económico",
+        "start": 1789506000000,
+        "end": 1789513200000
+      },
+      {
+        "title": "Más Realidad",
+        "desc": "Análisis de fondo y debate editorial",
+        "start": 1789513200000,
+        "end": 1789520400000
+      },
+      {
+        "title": "Odisea Argentina / La Cornisa",
+        "desc": "Investigaciones e informes especiales",
+        "start": 1789520400000,
+        "end": 1789527600000
+      },
+      {
+        "title": "Resumen LN+",
+        "desc": "Las noticias destacadas de la jornada",
+        "start": 1789527600000,
+        "end": 1789549200000
+      },
+      {
+        "title": "Buen Día Nación",
+        "desc": "Primeras noticias y estado de los servicios",
+        "start": 1789549200000,
+        "end": 1789563600000
+      },
+      {
+        "title": "8 AM / Nación Central",
+        "desc": "Información económica y actualidad",
+        "start": 1789563600000,
+        "end": 1789574400000
+      },
+      {
+        "title": "El Noticiero",
+        "desc": "Información con el equipo de LN+",
+        "start": 1789574400000,
+        "end": 1789585200000
+      },
+      {
+        "title": "Crónicas de la Tarde",
+        "desc": "Seguimiento de la agenda nacional",
+        "start": 1789585200000,
+        "end": 1789592400000
+      },
+      {
+        "title": "Hora 18",
+        "desc": "Panorama político y económico",
+        "start": 1789592400000,
+        "end": 1789599600000
+      },
+      {
+        "title": "Más Realidad",
+        "desc": "Análisis de fondo y debate editorial",
+        "start": 1789599600000,
+        "end": 1789606800000
+      },
+      {
+        "title": "Odisea Argentina / La Cornisa",
+        "desc": "Investigaciones e informes especiales",
+        "start": 1789606800000,
+        "end": 1789614000000
+      }
+    ],
+    "c5n": [
+      {
+        "title": "Resumen C5N",
+        "desc": "Noticias de la noche y madrugada",
+        "start": 1789354800000,
+        "end": 1789376400000
+      },
+      {
+        "title": "Mañanas Argentinas",
+        "desc": "El inicio del día con las noticias más relevantes",
+        "start": 1789376400000,
+        "end": 1789390800000
+      },
+      {
+        "title": "Nos Vemos",
+        "desc": "Información en vivo y actualidad social",
+        "start": 1789390800000,
+        "end": 1789401600000
+      },
+      {
+        "title": "El Diario",
+        "desc": "Noticias, economía y política",
+        "start": 1789401600000,
+        "end": 1789416000000
+      },
+      {
+        "title": "Minuto Uno",
+        "desc": "Análisis y debate con Gustavo Sylvestre",
+        "start": 1789416000000,
+        "end": 1789426800000
+      },
+      {
+        "title": "Duro de Domar",
+        "desc": "Debate de actualidad e invitados especiales",
+        "start": 1789426800000,
+        "end": 1789434000000
+      },
+      {
+        "title": "Desiguales / Sobredosis de TV",
+        "desc": "Informes y análisis político",
+        "start": 1789434000000,
+        "end": 1789441200000
+      },
+      {
+        "title": "Resumen C5N",
+        "desc": "Noticias de la noche y madrugada",
+        "start": 1789441200000,
+        "end": 1789462800000
+      },
+      {
+        "title": "Mañanas Argentinas",
+        "desc": "El inicio del día con las noticias más relevantes",
+        "start": 1789462800000,
+        "end": 1789477200000
+      },
+      {
+        "title": "Nos Vemos",
+        "desc": "Información en vivo y actualidad social",
+        "start": 1789477200000,
+        "end": 1789488000000
+      },
+      {
+        "title": "El Diario",
+        "desc": "Noticias, economía y política",
+        "start": 1789488000000,
+        "end": 1789502400000
+      },
+      {
+        "title": "Minuto Uno",
+        "desc": "Análisis y debate con Gustavo Sylvestre",
+        "start": 1789502400000,
+        "end": 1789513200000
+      },
+      {
+        "title": "Duro de Domar",
+        "desc": "Debate de actualidad e invitados especiales",
+        "start": 1789513200000,
+        "end": 1789520400000
+      },
+      {
+        "title": "Desiguales / Sobredosis de TV",
+        "desc": "Informes y análisis político",
+        "start": 1789520400000,
+        "end": 1789527600000
+      },
+      {
+        "title": "Resumen C5N",
+        "desc": "Noticias de la noche y madrugada",
+        "start": 1789527600000,
+        "end": 1789549200000
+      },
+      {
+        "title": "Mañanas Argentinas",
+        "desc": "El inicio del día con las noticias más relevantes",
+        "start": 1789549200000,
+        "end": 1789563600000
+      },
+      {
+        "title": "Nos Vemos",
+        "desc": "Información en vivo y actualidad social",
+        "start": 1789563600000,
+        "end": 1789574400000
+      },
+      {
+        "title": "El Diario",
+        "desc": "Noticias, economía y política",
+        "start": 1789574400000,
+        "end": 1789588800000
+      },
+      {
+        "title": "Minuto Uno",
+        "desc": "Análisis y debate con Gustavo Sylvestre",
+        "start": 1789588800000,
+        "end": 1789599600000
+      },
+      {
+        "title": "Duro de Domar",
+        "desc": "Debate de actualidad e invitados especiales",
+        "start": 1789599600000,
+        "end": 1789606800000
+      },
+      {
+        "title": "Desiguales / Sobredosis de TV",
+        "desc": "Informes y análisis político",
+        "start": 1789606800000,
+        "end": 1789614000000
+      }
+    ],
+    "cronica_hd": [
+      {
+        "title": "Crónica de Madrugada",
+        "desc": "Noticias al instante",
+        "start": 1789354800000,
+        "end": 1789376400000
+      },
+      {
+        "title": "Es Muy Temprano",
+        "desc": "Móviles en vivo y transporte",
+        "start": 1789376400000,
+        "end": 1789390800000
+      },
+      {
+        "title": "Tiempo Real",
+        "desc": "Casos policiales y reclamos sociales",
+        "start": 1789390800000,
+        "end": 1789401600000
+      },
+      {
+        "title": "Santo Día",
+        "desc": "Información con el estilo característico de Crónica",
+        "start": 1789401600000,
+        "end": 1789416000000
+      },
+      {
+        "title": "El Noticiero de Crónica",
+        "desc": "Toda la verdad al instante",
+        "start": 1789416000000,
+        "end": 1789430400000
+      },
+      {
+        "title": "Crónica Central",
+        "desc": "Debate de noche y casos resonantes",
+        "start": 1789430400000,
+        "end": 1789441200000
+      },
+      {
+        "title": "Crónica de Madrugada",
+        "desc": "Noticias al instante",
+        "start": 1789441200000,
+        "end": 1789462800000
+      },
+      {
+        "title": "Es Muy Temprano",
+        "desc": "Móviles en vivo y transporte",
+        "start": 1789462800000,
+        "end": 1789477200000
+      },
+      {
+        "title": "Tiempo Real",
+        "desc": "Casos policiales y reclamos sociales",
+        "start": 1789477200000,
+        "end": 1789488000000
+      },
+      {
+        "title": "Santo Día",
+        "desc": "Información con el estilo característico de Crónica",
+        "start": 1789488000000,
+        "end": 1789502400000
+      },
+      {
+        "title": "El Noticiero de Crónica",
+        "desc": "Toda la verdad al instante",
+        "start": 1789502400000,
+        "end": 1789516800000
+      },
+      {
+        "title": "Crónica Central",
+        "desc": "Debate de noche y casos resonantes",
+        "start": 1789516800000,
+        "end": 1789527600000
+      },
+      {
+        "title": "Crónica de Madrugada",
+        "desc": "Noticias al instante",
+        "start": 1789527600000,
+        "end": 1789549200000
+      },
+      {
+        "title": "Es Muy Temprano",
+        "desc": "Móviles en vivo y transporte",
+        "start": 1789549200000,
+        "end": 1789563600000
+      },
+      {
+        "title": "Tiempo Real",
+        "desc": "Casos policiales y reclamos sociales",
+        "start": 1789563600000,
+        "end": 1789574400000
+      },
+      {
+        "title": "Santo Día",
+        "desc": "Información con el estilo característico de Crónica",
+        "start": 1789574400000,
+        "end": 1789588800000
+      },
+      {
+        "title": "El Noticiero de Crónica",
+        "desc": "Toda la verdad al instante",
+        "start": 1789588800000,
+        "end": 1789603200000
+      },
+      {
+        "title": "Crónica Central",
+        "desc": "Debate de noche y casos resonantes",
+        "start": 1789603200000,
+        "end": 1789614000000
+      }
+    ],
+    "canal_26": [
+      {
+        "title": "26 Noticias Noche",
+        "desc": "Resumen de las noticias mundiales",
+        "start": 1789354800000,
+        "end": 1789380000000
+      },
+      {
+        "title": "La Mañana de 26",
+        "desc": "Información internacional y mercados",
+        "start": 1789380000000,
+        "end": 1789398000000
+      },
+      {
+        "title": "26 Noticias Tarde",
+        "desc": "Geopolítica, guerras y panorama global",
+        "start": 1789398000000,
+        "end": 1789416000000
+      },
+      {
+        "title": "26 Global",
+        "desc": "Informes especiales y corresponsales",
+        "start": 1789416000000,
+        "end": 1789430400000
+      },
+      {
+        "title": "Noche 26",
+        "desc": "Análisis de la actualidad internacional",
+        "start": 1789430400000,
+        "end": 1789441200000
+      },
+      {
+        "title": "26 Noticias Noche",
+        "desc": "Resumen de las noticias mundiales",
+        "start": 1789441200000,
+        "end": 1789466400000
+      },
+      {
+        "title": "La Mañana de 26",
+        "desc": "Información internacional y mercados",
+        "start": 1789466400000,
+        "end": 1789484400000
+      },
+      {
+        "title": "26 Noticias Tarde",
+        "desc": "Geopolítica, guerras y panorama global",
+        "start": 1789484400000,
+        "end": 1789502400000
+      },
+      {
+        "title": "26 Global",
+        "desc": "Informes especiales y corresponsales",
+        "start": 1789502400000,
+        "end": 1789516800000
+      },
+      {
+        "title": "Noche 26",
+        "desc": "Análisis de la actualidad internacional",
+        "start": 1789516800000,
+        "end": 1789527600000
+      },
+      {
+        "title": "26 Noticias Noche",
+        "desc": "Resumen de las noticias mundiales",
+        "start": 1789527600000,
+        "end": 1789552800000
+      },
+      {
+        "title": "La Mañana de 26",
+        "desc": "Información internacional y mercados",
+        "start": 1789552800000,
+        "end": 1789570800000
+      },
+      {
+        "title": "26 Noticias Tarde",
+        "desc": "Geopolítica, guerras y panorama global",
+        "start": 1789570800000,
+        "end": 1789588800000
+      },
+      {
+        "title": "26 Global",
+        "desc": "Informes especiales y corresponsales",
+        "start": 1789588800000,
+        "end": 1789603200000
+      },
+      {
+        "title": "Noche 26",
+        "desc": "Análisis de la actualidad internacional",
+        "start": 1789603200000,
+        "end": 1789614000000
       }
     ]
   }
