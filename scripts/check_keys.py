@@ -4,11 +4,13 @@ Flow Channel DRM Key Watchdog & Smart Consensus Auto-Updater for LeichTV
 Runs autonomously on Raspberry Pi.
 - Architecture: TRACKER-FIRST + SMART TWO-SOURCE CONSENSUS + AUTOMATIC FAILOVER
 - Multi-Author Tracking:
-    * Author 1: dxrioacxta (PlayPrem / DxPanel - continuous ~20 min commit cadence)
-    * Author 2: cheroga (CherogaTV - independent Cono Sur bot, ~3.3 hr commit cadence)
-    * Author 3 (Candidata de Reserva / Standby): mazurikian (155 canales Flow, M3U con tokens diarios)
-- Automatic Failover: Si Author 1 o Author 2 deja de responder o es dado de baja, mazurikian
-  es promovido automáticamente al par activo para sostener el consenso de 2 fuentes sin interrupción.
+    * Author 1 (Primary): cheroga (CherogaTV - Cono Sur tracker, ~3.3 hr commit cadence)
+    * Author 2 (Primary): puntoplay (PuntoPlay TV tracker mirror, ~1 hr commit cadence)
+    * Author 3 (Reserva / Standby): dxrioacxta (PlayPrem / DxPanel - con descifrado XOR transparente)
+    * Author 4 (Reserva / Standby): tapego (Tapego mirror, ~15 min commit cadence)
+    * Author 5 (Reserva / Standby): mazurikian (155 canales Flow, M3U con tokens diarios)
+- Automatic Failover: Si alguna de las fuentes principales cae o deja de responder,
+  las candidatas de reserva son promovidas automáticamente al par activo para sostener el consenso.
 - Two-Source Consensus: Cuando las 2 fuentes activas coinciden en una nueva key, se aplica
   DIRECTAMENTE a channels.json con CERO peticiones a Flow.
 - Fast-Track para Pack Fútbol (TNT Sports & ESPN Premium): Si solo UNA fuente publica una nueva key,
@@ -38,22 +40,43 @@ FLOW_AUDIT_LOG_PATH = os.path.join(REPO_DIR, "flow_audit.log")
 # Safety Semaphore: Max surgical Flow requests allowed in any rolling 60-minute window
 MAX_FLOW_REQUESTS_PER_HOUR = 3
 
+# XOR key used by DxPanel / PlayPrem for obfuscating URLs and DRM URIs
+DX_XOR_KEY = b"e72dxpro1py"
+
+def decode_dx_str(val: str) -> str:
+    """Decodes Base64+XOR obfuscated URLs and DRM license URIs from DxPanel if needed."""
+    if not val or not isinstance(val, str):
+        return ""
+    val = val.strip()
+    if val.startswith("http://") or val.startswith("https://") or "keyid=" in val:
+        return val
+    try:
+        raw = base64.b64decode(val)
+        dec = bytes([b ^ DX_XOR_KEY[i % len(DX_XOR_KEY)] for i, b in enumerate(raw)]).decode("utf-8", errors="ignore")
+        if dec.startswith("http://") or dec.startswith("https://") or "keyid=" in dec:
+            return dec
+    except Exception:
+        pass
+    return val
+
 # Primary Independent Community Sources (Active Consensus Pair)
 PRIMARY_SOURCES = {
-    "dxrioacxta": [
-        "https://raw.githubusercontent.com/dxrioacxta/playprem/main/tv1.json",
-        "https://raw.githubusercontent.com/dxrioacxta/playprem/main/canales.json",
-    ],
     "cheroga": [
         "https://raw.githubusercontent.com/cheroga/cheroga.github.io/master/canales_cache.json"
+    ],
+    "puntoplay": [
+        "https://raw.githubusercontent.com/cheroga/cheroga.github.io/puntoplay/canales.json"
     ]
 }
 
 # Standby Candidate Sources (Promoted automatically if any primary source goes offline/404)
 STANDBY_SOURCES = {
-    "dxrioacxta_backup": [
+    "dxrioacxta": [
+        "https://raw.githubusercontent.com/dxrioacxta/playprem/main/tv1.json",
         "https://raw.githubusercontent.com/dxrioacxta/playprem/main/canales.json",
-        "https://raw.githubusercontent.com/dxrioacxta/playprem/main/fieratv.json",
+    ],
+    "tapego": [
+        "https://raw.githubusercontent.com/cheroga/cheroga.github.io/canales/nocache_channel.json"
     ],
     "mazurikian": [
         "https://raw.githubusercontent.com/mazurikian/iptv/main/playlist.m3u"
@@ -166,8 +189,8 @@ def fetch_single_tracker(url: str) -> tuple:
         for cat in data:
             items = cat.get("samples", []) or cat.get("channels", [])
             for s in items:
-                u_str = s.get("url", "")
-                drm = s.get("drm_license_uri", "")
+                u_str = decode_dx_str(s.get("url", ""))
+                drm = decode_dx_str(s.get("drm_license_uri", ""))
 
                 if edge_tok is None and u_str:
                     m_tok = re.search(r"/(tok_[^/]+)/", u_str)
