@@ -1,13 +1,7 @@
 {
-  "updated_at": "2026-09-19T21:15:07.805249+00:00",
+  "updated_at": "2026-09-20T03:30:08.943159+00:00",
   "channels": {
     "el_trece": [
-      {
-        "title": "La familia Ingalls",
-        "desc": "",
-        "start": 1789826400000,
-        "end": 1789851600000
-      },
       {
         "title": "Película",
         "desc": "",
@@ -85,15 +79,39 @@
         "desc": "",
         "start": 1789935300000,
         "end": 1789939800000
+      },
+      {
+        "title": "Película",
+        "desc": "",
+        "start": 1789939800000,
+        "end": 1789947000000
+      },
+      {
+        "title": "Película",
+        "desc": "",
+        "start": 1789947000000,
+        "end": 1789952400000
+      },
+      {
+        "title": "Película",
+        "desc": "",
+        "start": 1789952400000,
+        "end": 1789958700000
+      },
+      {
+        "title": "Pasión por el Fútbol",
+        "desc": "",
+        "start": 1789958700000,
+        "end": 1789961400000
+      },
+      {
+        "title": "Cucinare",
+        "desc": "",
+        "start": 1789961400000,
+        "end": 1789963200000
       }
     ],
     "america_tv": [
-      {
-        "title": "Modo selfie",
-        "desc": "",
-        "start": 1789830000000,
-        "end": 1789833600000
-      },
       {
         "title": "Pasión de Sábado",
         "desc": "",
@@ -195,63 +213,39 @@
         "desc": "",
         "start": 1789936200000,
         "end": 1789939800000
+      },
+      {
+        "title": "Infama",
+        "desc": "",
+        "start": 1789939800000,
+        "end": 1789945200000
+      },
+      {
+        "title": "GPS",
+        "desc": "",
+        "start": 1789945200000,
+        "end": 1789952400000
+      },
+      {
+        "title": "Un especial de Mauro Szeta",
+        "desc": "",
+        "start": 1789952400000,
+        "end": 1789956000000
+      },
+      {
+        "title": "Entrevistas de película",
+        "desc": "",
+        "start": 1789956000000,
+        "end": 1789959600000
+      },
+      {
+        "title": "Modo selfie",
+        "desc": "",
+        "start": 1789959600000,
+        "end": 1789963200000
       }
     ],
     "cnn_espanol": [
-      {
-        "title": "Perspectivas desde Mexico",
-        "desc": "",
-        "start": 1789830000000,
-        "end": 1789833600000
-      },
-      {
-        "title": "Directo USA con Juan Lopez",
-        "desc": "",
-        "start": 1789833600000,
-        "end": 1789837200000
-      },
-      {
-        "title": "GloboEconomía",
-        "desc": "",
-        "start": 1789837200000,
-        "end": 1789839000000
-      },
-      {
-        "title": "El mundo maravilloso de Quest",
-        "desc": "",
-        "start": 1789839000000,
-        "end": 1789840800000
-      },
-      {
-        "title": "La historia completa",
-        "desc": "",
-        "start": 1789840800000,
-        "end": 1789844400000
-      },
-      {
-        "title": "Conclusiones",
-        "desc": "",
-        "start": 1789844400000,
-        "end": 1789848000000
-      },
-      {
-        "title": "Aristegui",
-        "desc": "",
-        "start": 1789848000000,
-        "end": 1789849800000
-      },
-      {
-        "title": "Deportes CNNEn Vivo",
-        "desc": "",
-        "start": 1789849800000,
-        "end": 1789851600000
-      },
-      {
-        "title": "GloboEconomía",
-        "desc": "",
-        "start": 1789851600000,
-        "end": 1789853400000
-      },
       {
         "title": "Vive la salud",
         "desc": "",
@@ -467,21 +461,51 @@
         "desc": "",
         "start": 1789938000000,
         "end": 1789941600000
+      },
+      {
+        "title": "Mirador Mundial",
+        "desc": "",
+        "start": 1789941600000,
+        "end": 1789945200000
+      },
+      {
+        "title": "Choque de Opiniones",
+        "desc": "",
+        "start": 1789945200000,
+        "end": 1789948800000
+      },
+      {
+        "title": "La historia completa",
+        "desc": "",
+        "start": 1789948800000,
+        "end": 1789952400000
+      },
+      {
+        "title": "Oppenheimer presenta",
+        "desc": "",
+        "start": 1789952400000,
+        "end": 1789956000000
+      },
+      {
+        "title": "México Opina",
+        "desc": "",
+        "start": 1789956000000,
+        "end": 1789959600000
+      },
+      {
+        "title": "Mirador Mundial",
+        "desc": "",
+        "start": 1789959600000,
+        "end": 1789961400000
+      },
+      {
+        "title": "Deportes CNN",
+        "desc": "",
+        "start": 1789961400000,
+        "end": 1789963200000
       }
     ],
     "cartoon_network": [
-      {
-        "title": "Canal no disponible",
-        "desc": "",
-        "start": 1789822800000,
-        "end": 1789837200000
-      },
-      {
-        "title": "Canal no disponible",
-        "desc": "",
-        "start": 1789837200000,
-        "end": 1789851600000
-      },
       {
         "title": "Canal no disponible",
         "desc": "",
@@ -523,21 +547,15 @@
         "desc": "",
         "start": 1789938000000,
         "end": 1789952400000
+      },
+      {
+        "title": "Canal no disponible",
+        "desc": "",
+        "start": 1789952400000,
+        "end": 1789966800000
       }
     ],
     "cinecanal": [
-      {
-        "title": "Doctor Dolittle",
-        "desc": "",
-        "start": 1789829280000,
-        "end": 1789840500000
-      },
-      {
-        "title": "Ciudades de papel",
-        "desc": "",
-        "start": 1789840500000,
-        "end": 1789848720000
-      },
       {
         "title": "En sus zapatos",
         "desc": "",
@@ -597,75 +615,21 @@
         "desc": "El agente especial del FBI, Sarah Asburn (Sandra Bullock) y la mal humorada policía de Boston, Shannon Mullins (Melissa McCarthy), no podrían ser más incompatibles. Pero cuando unen sus fuerzas para derrocar a un despiadado capo de la droga, se convierten en algo que nadie hubiera esperado… convertirse en amigas.",
         "start": 1789936680000,
         "end": 1789945380000
+      },
+      {
+        "title": "Nueve Meses",
+        "desc": "",
+        "start": 1789945380000,
+        "end": 1789952340000
+      },
+      {
+        "title": "La Forma del Agua",
+        "desc": "La forma del agua – una fábula de otro mundo, con el trasfondo de la guerra fría de América del año 1962. En el laboratorio gubernamental de alta seguridad oculto donde trabaja, la solitaria Elisa (Sally Hawkins) está atrapada en una vida aisladamente. La vida de Elisa cambiará para siempre cuando ella y su compañera de trabajo Zelda (Octavia Spencer) descubren un experimento secreto clasificado.",
+        "start": 1789952340000,
+        "end": 1789961520000
       }
     ],
     "disney_channel": [
-      {
-        "title": "Un chiflado encantador",
-        "desc": "",
-        "start": 1789830000000,
-        "end": 1789836240000
-      },
-      {
-        "title": "Star vs. Las Fuerzas del Mal",
-        "desc": "Después de algunas peleas audaces con monstruos de otro mundo, la princesa adolescente mágica Star Butterfly, amante de la diversión, es enviada por sus padres de la realeza a vivir con la familia Díaz en la Tierra, trayendo su propio estilo interdimensional único a su nuevo planeta. Con Marco, el hijo adolescente de la familia Diaz, esta estudiante de intercambio de otra dimensión se embarca en nuevas aventuras luchando contra villanos malvados en todo el multiverso y en la escuela secundaria, todo en un esfuerzo por proteger a su poderosa varita mágica que todavía está descubriendo cómo utilizar.",
-        "start": 1789836240000,
-        "end": 1789836960000
-      },
-      {
-        "title": "Star vs. Las Fuerzas del Mal",
-        "desc": "Después de algunas peleas audaces con monstruos de otro mundo, la princesa adolescente mágica Star Butterfly, amante de la diversión, es enviada por sus padres de la realeza a vivir con la familia Díaz en la Tierra, trayendo su propio estilo interdimensional único a su nuevo planeta. Con Marco, el hijo adolescente de la familia Diaz, esta estudiante de intercambio de otra dimensión se embarca en nuevas aventuras luchando contra villanos malvados en todo el multiverso y en la escuela secundaria, todo en un esfuerzo por proteger a su poderosa varita mágica que todavía está descubriendo cómo utilizar.",
-        "start": 1789836960000,
-        "end": 1789838700000
-      },
-      {
-        "title": "Star vs. Las Fuerzas del Mal",
-        "desc": "Después de algunas peleas audaces con monstruos de otro mundo, la princesa adolescente mágica Star Butterfly, amante de la diversión, es enviada por sus padres de la realeza a vivir con la familia Díaz en la Tierra, trayendo su propio estilo interdimensional único a su nuevo planeta. Con Marco, el hijo adolescente de la familia Diaz, esta estudiante de intercambio de otra dimensión se embarca en nuevas aventuras luchando contra villanos malvados en todo el multiverso y en la escuela secundaria, todo en un esfuerzo por proteger a su poderosa varita mágica que todavía está descubriendo cómo utilizar.",
-        "start": 1789838700000,
-        "end": 1789840320000
-      },
-      {
-        "title": "Star vs. Las Fuerzas del Mal",
-        "desc": "Después de algunas peleas audaces con monstruos de otro mundo, la princesa adolescente mágica Star Butterfly, amante de la diversión, es enviada por sus padres de la realeza a vivir con la familia Díaz en la Tierra, trayendo su propio estilo interdimensional único a su nuevo planeta. Con Marco, el hijo adolescente de la familia Diaz, esta estudiante de intercambio de otra dimensión se embarca en nuevas aventuras luchando contra villanos malvados en todo el multiverso y en la escuela secundaria, todo en un esfuerzo por proteger a su poderosa varita mágica que todavía está descubriendo cómo utilizar.",
-        "start": 1789840320000,
-        "end": 1789842000000
-      },
-      {
-        "title": "Star vs. Las Fuerzas del Mal",
-        "desc": "Después de algunas peleas audaces con monstruos de otro mundo, la princesa adolescente mágica Star Butterfly, amante de la diversión, es enviada por sus padres de la realeza a vivir con la familia Díaz en la Tierra, trayendo su propio estilo interdimensional único a su nuevo planeta. Con Marco, el hijo adolescente de la familia Diaz, esta estudiante de intercambio de otra dimensión se embarca en nuevas aventuras luchando contra villanos malvados en todo el multiverso y en la escuela secundaria, todo en un esfuerzo por proteger a su poderosa varita mágica que todavía está descubriendo cómo utilizar.",
-        "start": 1789842000000,
-        "end": 1789843620000
-      },
-      {
-        "title": "Star vs. Las Fuerzas del Mal",
-        "desc": "Después de algunas peleas audaces con monstruos de otro mundo, la princesa adolescente mágica Star Butterfly, amante de la diversión, es enviada por sus padres de la realeza a vivir con la familia Díaz en la Tierra, trayendo su propio estilo interdimensional único a su nuevo planeta. Con Marco, el hijo adolescente de la familia Diaz, esta estudiante de intercambio de otra dimensión se embarca en nuevas aventuras luchando contra villanos malvados en todo el multiverso y en la escuela secundaria, todo en un esfuerzo por proteger a su poderosa varita mágica que todavía está descubriendo cómo utilizar.",
-        "start": 1789843620000,
-        "end": 1789845240000
-      },
-      {
-        "title": "Star vs. Las Fuerzas del Mal",
-        "desc": "Después de algunas peleas audaces con monstruos de otro mundo, la princesa adolescente mágica Star Butterfly, amante de la diversión, es enviada por sus padres de la realeza a vivir con la familia Díaz en la Tierra, trayendo su propio estilo interdimensional único a su nuevo planeta. Con Marco, el hijo adolescente de la familia Diaz, esta estudiante de intercambio de otra dimensión se embarca en nuevas aventuras luchando contra villanos malvados en todo el multiverso y en la escuela secundaria, todo en un esfuerzo por proteger a su poderosa varita mágica que todavía está descubriendo cómo utilizar.",
-        "start": 1789845240000,
-        "end": 1789846860000
-      },
-      {
-        "title": "Acampados",
-        "desc": "",
-        "start": 1789846860000,
-        "end": 1789848180000
-      },
-      {
-        "title": "Los Vecinos Green",
-        "desc": "¡Cricket Green se mudará a la gran ciudad! Junto con su hermana mayor, Tilly, su padre Bill y la salvaje abuela Alice, estos simples campesinos deben aprender a vivir en una metrópolis bulliciosa. La curiosidad y el entusiasmo de Cricket llevan a su familia salvajemente fuera de lugar en viajes épicos y en los corazones de sus nuevos vecinos. ¡Nunca hay un día aburrido para una familia pequeña que puede encontrar grandes aventuras sin importar dónde se encuentren!",
-        "start": 1789848180000,
-        "end": 1789849860000
-      },
-      {
-        "title": "Miraculous Las aventuras de Ladybug",
-        "desc": "",
-        "start": 1789849860000,
-        "end": 1789851600000
-      },
       {
         "title": "Camp Rock 2 The Final Jam",
         "desc": "",
@@ -941,21 +905,51 @@
         "desc": "",
         "start": 1789938000000,
         "end": 1789944000000
+      },
+      {
+        "title": "Zapped",
+        "desc": "",
+        "start": 1789944000000,
+        "end": 1789952400000
+      },
+      {
+        "title": "Dragon Striker",
+        "desc": "",
+        "start": 1789952400000,
+        "end": 1789954200000
+      },
+      {
+        "title": "Star vs. Las Fuerzas del Mal",
+        "desc": "Después de algunas peleas audaces con monstruos de otro mundo, la princesa adolescente mágica Star Butterfly, amante de la diversión, es enviada por sus padres de la realeza a vivir con la familia Díaz en la Tierra, trayendo su propio estilo interdimensional único a su nuevo planeta. Con Marco, el hijo adolescente de la familia Diaz, esta estudiante de intercambio de otra dimensión se embarca en nuevas aventuras luchando contra villanos malvados en todo el multiverso y en la escuela secundaria, todo en un esfuerzo por proteger a su poderosa varita mágica que todavía está descubriendo cómo utilizar.",
+        "start": 1789954200000,
+        "end": 1789955100000
+      },
+      {
+        "title": "Selenkay",
+        "desc": "",
+        "start": 1789955100000,
+        "end": 1789957800000
+      },
+      {
+        "title": "Secretos en Sulphur Springs",
+        "desc": "",
+        "start": 1789957800000,
+        "end": 1789959600000
+      },
+      {
+        "title": "Hannah Montana",
+        "desc": "",
+        "start": 1789959600000,
+        "end": 1789961400000
+      },
+      {
+        "title": "Jonas",
+        "desc": "",
+        "start": 1789961400000,
+        "end": 1789963200000
       }
     ],
     "espn_1": [
-      {
-        "title": "Brighton & Hove Albion vs. Arsenal",
-        "desc": "",
-        "start": 1789825800000,
-        "end": 1789833300000
-      },
-      {
-        "title": "Fútbol Serie A",
-        "desc": "",
-        "start": 1789833300000,
-        "end": 1789840500000
-      },
       {
         "title": "SportsCenter+",
         "desc": "",
@@ -1057,33 +1051,33 @@
         "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
         "start": 1789933200000,
         "end": 1789941600000
+      },
+      {
+        "title": "Fútbol argentino Primera División",
+        "desc": "",
+        "start": 1789941600000,
+        "end": 1789949400000
+      },
+      {
+        "title": "SportsCenter",
+        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
+        "start": 1789949400000,
+        "end": 1789952400000
+      },
+      {
+        "title": "ESPN Fútbol 1",
+        "desc": "",
+        "start": 1789952400000,
+        "end": 1789959600000
+      },
+      {
+        "title": "SportsCenter",
+        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
+        "start": 1789959600000,
+        "end": 1789963200000
       }
     ],
     "espn_2": [
-      {
-        "title": "Newcastle United FC vs. Hull City AFC",
-        "desc": "",
-        "start": 1789826100000,
-        "end": 1789833300000
-      },
-      {
-        "title": "SportsCenter+",
-        "desc": "",
-        "start": 1789833300000,
-        "end": 1789834800000
-      },
-      {
-        "title": "Nottingham Forest FC vs. Coventry City FC",
-        "desc": "",
-        "start": 1789834800000,
-        "end": 1789842600000
-      },
-      {
-        "title": "Venezia FC vs. SS Lazio",
-        "desc": "",
-        "start": 1789842600000,
-        "end": 1789850700000
-      },
       {
         "title": "Campeonato mundial de MotoGP",
         "desc": "",
@@ -1197,39 +1191,33 @@
         "desc": "",
         "start": 1789937100000,
         "end": 1789944300000
+      },
+      {
+        "title": "Barcelona campeón",
+        "desc": "",
+        "start": 1789944300000,
+        "end": 1789945200000
+      },
+      {
+        "title": "Atlético de Madrid vs. Real Madrid",
+        "desc": "Desde el estadio Vicente Calderón ubicado en la ciudad de Madrid, España, se enfrentan los equipos Club Atlético de Madrid versus el Real Madrid Club de Fútbol.",
+        "start": 1789945200000,
+        "end": 1789948800000
+      },
+      {
+        "title": "Futbol Americano NFL",
+        "desc": "",
+        "start": 1789948800000,
+        "end": 1789961400000
+      },
+      {
+        "title": "El Show de la Copa Libertadores",
+        "desc": "",
+        "start": 1789961400000,
+        "end": 1789963200000
       }
     ],
     "espn_3": [
-      {
-        "title": "Golf DP World Tour",
-        "desc": "",
-        "start": 1789815600000,
-        "end": 1789835400000
-      },
-      {
-        "title": "Futbol Internacional",
-        "desc": "",
-        "start": 1789835400000,
-        "end": 1789836600000
-      },
-      {
-        "title": "Rugby Top 14 de Francia",
-        "desc": "",
-        "start": 1789836600000,
-        "end": 1789843800000
-      },
-      {
-        "title": "Rugby Top 14 de Francia",
-        "desc": "",
-        "start": 1789843800000,
-        "end": 1789851600000
-      },
-      {
-        "title": "Carabao Cup Highlights",
-        "desc": "",
-        "start": 1789851600000,
-        "end": 1789853400000
-      },
       {
         "title": "Futbol Internacional",
         "desc": "",
@@ -1319,81 +1307,39 @@
         "desc": "",
         "start": 1789937700000,
         "end": 1789941600000
+      },
+      {
+        "title": "Skiing Winter News",
+        "desc": "",
+        "start": 1789941600000,
+        "end": 1789943400000
+      },
+      {
+        "title": "Béisbol Esta Noche",
+        "desc": "",
+        "start": 1789943400000,
+        "end": 1789945200000
+      },
+      {
+        "title": "Milwaukee Brewers vs. Baltimore Orioles",
+        "desc": "",
+        "start": 1789945200000,
+        "end": 1789956000000
+      },
+      {
+        "title": "Equitación",
+        "desc": "",
+        "start": 1789956000000,
+        "end": 1789959600000
+      },
+      {
+        "title": "Atlético de Madrid vs. Real Madrid",
+        "desc": "Desde el estadio Vicente Calderón ubicado en la ciudad de Madrid, España, se enfrentan los equipos Club Atlético de Madrid versus el Real Madrid Club de Fútbol.",
+        "start": 1789959600000,
+        "end": 1789963200000
       }
     ],
     "el_gourmet": [
-      {
-        "title": "Panes y postres al fuego",
-        "desc": "",
-        "start": 1789830000000,
-        "end": 1789831800000
-      },
-      {
-        "title": "Menú para todos los días",
-        "desc": "",
-        "start": 1789831800000,
-        "end": 1789833600000
-      },
-      {
-        "title": "Mapa de los sabores de México",
-        "desc": "",
-        "start": 1789833600000,
-        "end": 1789835400000
-      },
-      {
-        "title": "Asado de obra",
-        "desc": "",
-        "start": 1789835400000,
-        "end": 1789837200000
-      },
-      {
-        "title": "Blanca cocina con Air Fryer T",
-        "desc": "",
-        "start": 1789837200000,
-        "end": 1789839000000
-      },
-      {
-        "title": "Cocina de mercado",
-        "desc": "",
-        "start": 1789839000000,
-        "end": 1789840800000
-      },
-      {
-        "title": "Dulces con historia",
-        "desc": "",
-        "start": 1789840800000,
-        "end": 1789842600000
-      },
-      {
-        "title": "Simplemente Pia",
-        "desc": "",
-        "start": 1789842600000,
-        "end": 1789844400000
-      },
-      {
-        "title": "Me voy a comer el Mundo, esp",
-        "desc": "",
-        "start": 1789844400000,
-        "end": 1789848000000
-      },
-      {
-        "title": "Hermana Verónica",
-        "desc": "",
-        "start": 1789848000000,
-        "end": 1789849800000
-      },
-      {
-        "title": "Destino México",
-        "desc": "",
-        "start": 1789849800000,
-        "end": 1789851600000
-      },
-      {
-        "title": "Estefi dulce",
-        "desc": "",
-        "start": 1789851600000,
-        "end": 1789853400000
-      },
       {
         "title": "Los imperdibles CDMX",
         "desc": "",
@@ -1669,27 +1615,81 @@
         "desc": "",
         "start": 1789938000000,
         "end": 1789939800000
+      },
+      {
+        "title": "Los imperdibles CDMX",
+        "desc": "",
+        "start": 1789939800000,
+        "end": 1789941600000
+      },
+      {
+        "title": "Cocina de mercado",
+        "desc": "",
+        "start": 1789941600000,
+        "end": 1789943400000
+      },
+      {
+        "title": "Simplemente Pia",
+        "desc": "",
+        "start": 1789943400000,
+        "end": 1789945200000
+      },
+      {
+        "title": "Los Petersen en México",
+        "desc": "",
+        "start": 1789945200000,
+        "end": 1789947000000
+      },
+      {
+        "title": "Pueblos para comerselos Méx",
+        "desc": "",
+        "start": 1789947000000,
+        "end": 1789948800000
+      },
+      {
+        "title": "Estefi dulce",
+        "desc": "",
+        "start": 1789948800000,
+        "end": 1789950600000
+      },
+      {
+        "title": "Los favoritos de Osuna en Qro",
+        "desc": "",
+        "start": 1789950600000,
+        "end": 1789952400000
+      },
+      {
+        "title": "Hermana Verónica",
+        "desc": "",
+        "start": 1789952400000,
+        "end": 1789954200000
+      },
+      {
+        "title": "Los imperdibles CDMX",
+        "desc": "",
+        "start": 1789954200000,
+        "end": 1789956000000
+      },
+      {
+        "title": "Me voy a comer el mundo",
+        "desc": "",
+        "start": 1789956000000,
+        "end": 1789959600000
+      },
+      {
+        "title": "La ruta del chile",
+        "desc": "",
+        "start": 1789959600000,
+        "end": 1789961400000
+      },
+      {
+        "title": "Simplemente Pia",
+        "desc": "",
+        "start": 1789961400000,
+        "end": 1789963200000
       }
     ],
     "space": [
-      {
-        "title": "Linterna verde",
-        "desc": "",
-        "start": 1789824180000,
-        "end": 1789831920000
-      },
-      {
-        "title": "Agente Salt",
-        "desc": "",
-        "start": 1789831920000,
-        "end": 1789839180000
-      },
-      {
-        "title": "Mujer Maravilla",
-        "desc": "Antes de que fuera la Mujer Maravilla, era Diana (Gal Gadot), princesa de las Amazonas, entrenada para ser una guerrera invencible. Cuando un piloto americano se estrella en sus costas, ella salta al agua para rescatar al piloto llamado Steve Trevor (Chris Pine). Cuando las Amazonas se dan cuenta que están siendo invadidas, el aviador y ellas entran en combate contra ellos. Steve es interrogado por la reina Hippolyta (Connie Nielsen), y él le responde que está allí para evitar la guerra de guerras. Diana toma la decisión de salir al mundo para evitar que este sea destruido. Diana descubrirá sus plenos poderes … y su verdadero destino.",
-        "start": 1789839180000,
-        "end": 1789849140000
-      },
       {
         "title": "Mujer Maravilla 1984",
         "desc": "Sinopsis no disponible.",
@@ -1761,21 +1761,21 @@
         "desc": "Antes de que fuera la Mujer Maravilla, era Diana (Gal Gadot), princesa de las Amazonas, entrenada para ser una guerrera invencible. Cuando un piloto americano se estrella en sus costas, ella salta al agua para rescatar al piloto llamado Steve Trevor (Chris Pine). Cuando las Amazonas se dan cuenta que están siendo invadidas, el aviador y ellas entran en combate contra ellos. Steve es interrogado por la reina Hippolyta (Connie Nielsen), y él le responde que está allí para evitar la guerra de guerras. Diana toma la decisión de salir al mundo para evitar que este sea destruido. Diana descubrirá sus plenos poderes … y su verdadero destino.",
         "start": 1789933320000,
         "end": 1789943820000
+      },
+      {
+        "title": "Mujer Maravilla 1984",
+        "desc": "Sinopsis no disponible.",
+        "start": 1789943820000,
+        "end": 1789956000000
+      },
+      {
+        "title": "Aquaman y el Reino Perdido",
+        "desc": "Al no poder derrotar a Aquaman (Jason Momoa) la primera vez, Black Manta (Yahya Abdul-Mateen II), todavía impulsado por la necesidad de vengar la muerte de su padre, no se detendrá ante nada para acabar con Aquaman de una vez por todas. Esta vez Black Manta es más formidable que nunca y ejerce el poder del mítico Tridente Negro, que desata una fuerza antigua y malévola. Para derrotarlo, Aquaman recurrirá a su hermano encarcelado Orm (Patrick Wilson), el ex rey de la Atlántida, para forjar una alianza improbable. Juntos, deben dejar de lado sus diferencias para proteger su reino y salvar a la familia de Aquaman y al mundo de una destrucción irreversible.",
+        "start": 1789956000000,
+        "end": 1789964940000
       }
     ],
     "star_channel": [
-      {
-        "title": "El quinto poder",
-        "desc": "",
-        "start": 1789829940000,
-        "end": 1789839480000
-      },
-      {
-        "title": "Maze Runner: La Cura Mortal",
-        "desc": "En el final épico de la saga Maze Runner, Thomas (Dylan O'Brien) dirige a su grupo de corredores escapados en su última y más peligrosa misión. Para salvar a sus amigos, deben irrumpir en la legendaria Ciudad Perdida, un laberinto controlado por la WCKD que puede llegar a ser el laberinto más mortífero de todos. Cualquiera que salga vivo recibirá respuestas a las preguntas que los corredores han estado haciéndose desde que llegaron al laberinto.",
-        "start": 1789839480000,
-        "end": 1789850340000
-      },
       {
         "title": "Este cuerpo no es mío",
         "desc": "",
@@ -1871,33 +1871,39 @@
         "desc": "",
         "start": 1789938360000,
         "end": 1789941660000
+      },
+      {
+        "title": "Asfixiados",
+        "desc": "",
+        "start": 1789941660000,
+        "end": 1789948680000
+      },
+      {
+        "title": "Los Simpson",
+        "desc": "",
+        "start": 1789948680000,
+        "end": 1789950480000
+      },
+      {
+        "title": "Los Simpson",
+        "desc": "",
+        "start": 1789950480000,
+        "end": 1789952400000
+      },
+      {
+        "title": "Homo Argentum",
+        "desc": "",
+        "start": 1789952400000,
+        "end": 1789958340000
+      },
+      {
+        "title": "Night Shift",
+        "desc": "",
+        "start": 1789958340000,
+        "end": 1789965780000
       }
     ],
     "tnt": [
-      {
-        "title": "El origen",
-        "desc": "",
-        "start": 1789822680000,
-        "end": 1789832520000
-      },
-      {
-        "title": "Sully",
-        "desc": "",
-        "start": 1789832520000,
-        "end": 1789839120000
-      },
-      {
-        "title": "Lo mejor de Emmy Awards 2026",
-        "desc": "",
-        "start": 1789839120000,
-        "end": 1789839300000
-      },
-      {
-        "title": "Karate kid",
-        "desc": "",
-        "start": 1789839300000,
-        "end": 1789848900000
-      },
       {
         "title": "Bad Boys Dos policías rebeldes",
         "desc": "",
@@ -1993,15 +1999,27 @@
         "desc": "",
         "start": 1789932300000,
         "end": 1789941300000
+      },
+      {
+        "title": "Troya",
+        "desc": "",
+        "start": 1789941300000,
+        "end": 1789952400000
+      },
+      {
+        "title": "El Justiciero (The Equalizer)",
+        "desc": "McCall (Denzel Washington), un hombre que ha dejado atrás su vida misteriosa en el pasado y ahora vive una nueva y tranquila vida. Pero todo esto está por cambiar cuando conoce a Teri (Chloë Grace Moretz), una chica controlada por unos mafiosos rusos, que hace que cambie de opinión sobre su vida tranquila. Armado con habilidades ocultas lo ayudaran a vengar a todo aquel que maltrate al inocente, McCall sale de su descanso para encontrar su deseo de justicia.",
+        "start": 1789952400000,
+        "end": 1789960500000
+      },
+      {
+        "title": "Destino final",
+        "desc": "",
+        "start": 1789960500000,
+        "end": 1789966800000
       }
     ],
     "telefe": [
-      {
-        "title": "Los Simpson",
-        "desc": "",
-        "start": 1789826400000,
-        "end": 1789848000000
-      },
       {
         "title": "Escape Perfecto",
         "desc": "",
@@ -2085,39 +2103,39 @@
         "desc": "",
         "start": 1789934400000,
         "end": 1789942500000
+      },
+      {
+        "title": "Escape Perfecto",
+        "desc": "",
+        "start": 1789942500000,
+        "end": 1789944300000
+      },
+      {
+        "title": "Pasapalabra",
+        "desc": "",
+        "start": 1789944300000,
+        "end": 1789953300000
+      },
+      {
+        "title": "Gran Hermano",
+        "desc": "",
+        "start": 1789953300000,
+        "end": 1789958700000
+      },
+      {
+        "title": "Juego chino",
+        "desc": "",
+        "start": 1789958700000,
+        "end": 1789960500000
+      },
+      {
+        "title": "Gran Hermano",
+        "desc": "",
+        "start": 1789960500000,
+        "end": 1789965000000
       }
     ],
     "tv_publica": [
-      {
-        "title": "Lo mejor de: Se siente Argentina",
-        "desc": "",
-        "start": 1789830000000,
-        "end": 1789837200000
-      },
-      {
-        "title": "Hay grip",
-        "desc": "",
-        "start": 1789837200000,
-        "end": 1789840800000
-      },
-      {
-        "title": "ADN, buena salud",
-        "desc": "",
-        "start": 1789840800000,
-        "end": 1789844400000
-      },
-      {
-        "title": "Las mañanas con Andino",
-        "desc": "",
-        "start": 1789844400000,
-        "end": 1789848000000
-      },
-      {
-        "title": "Televisión Pública Noticias Internacional",
-        "desc": "",
-        "start": 1789848000000,
-        "end": 1789851600000
-      },
       {
         "title": "Televisión Pública Noticias",
         "desc": "",
@@ -2255,39 +2273,45 @@
         "desc": "",
         "start": 1789938000000,
         "end": 1789941600000
+      },
+      {
+        "title": "Encuentro en el estudio",
+        "desc": "",
+        "start": 1789941600000,
+        "end": 1789945200000
+      },
+      {
+        "title": "Se siente Argentina",
+        "desc": "",
+        "start": 1789945200000,
+        "end": 1789949700000
+      },
+      {
+        "title": "Sorteo Quini 6",
+        "desc": "",
+        "start": 1789949700000,
+        "end": 1789950600000
+      },
+      {
+        "title": "Hay música siempre",
+        "desc": "",
+        "start": 1789950600000,
+        "end": 1789957800000
+      },
+      {
+        "title": "Historias de fantasmas",
+        "desc": "",
+        "start": 1789957800000,
+        "end": 1789959600000
+      },
+      {
+        "title": "Fuera del aire",
+        "desc": "",
+        "start": 1789959600000,
+        "end": 1789983000000
       }
     ],
     "tyc_sports": [
-      {
-        "title": "Hay Equipo",
-        "desc": "",
-        "start": 1789830000000,
-        "end": 1789833600000
-      },
-      {
-        "title": "Los Especiales de TyC Sports",
-        "desc": "",
-        "start": 1789833600000,
-        "end": 1789837200000
-      },
-      {
-        "title": "Líbero",
-        "desc": "",
-        "start": 1789837200000,
-        "end": 1789838700000
-      },
-      {
-        "title": "Gimnasia (LP) vs. Banfield",
-        "desc": "",
-        "start": 1789838700000,
-        "end": 1789846200000
-      },
-      {
-        "title": "Líbero",
-        "desc": "",
-        "start": 1789846200000,
-        "end": 1789846800000
-      },
       {
         "title": "Unión (SF) vs. Independiente",
         "desc": "",
@@ -2401,57 +2425,39 @@
         "desc": "",
         "start": 1789934100000,
         "end": 1789941600000
+      },
+      {
+        "title": "Líbero",
+        "desc": "",
+        "start": 1789941600000,
+        "end": 1789942200000
+      },
+      {
+        "title": "Belgrano vs. Estudiantes (RC)",
+        "desc": "",
+        "start": 1789942200000,
+        "end": 1789949700000
+      },
+      {
+        "title": "Líbero",
+        "desc": "",
+        "start": 1789949700000,
+        "end": 1789950300000
+      },
+      {
+        "title": "Vélez Sarsfield vs. Tigre",
+        "desc": "",
+        "start": 1789950300000,
+        "end": 1789957800000
+      },
+      {
+        "title": "Paso a Paso",
+        "desc": "",
+        "start": 1789957800000,
+        "end": 1789965000000
       }
     ],
     "tnt_sports_1": [
-      {
-        "title": "Lo Mejor de la Fecha",
-        "desc": "Resumen de los partidos de la Liga Profesional",
-        "start": 1789700400000,
-        "end": 1789725600000
-      },
-      {
-        "title": "TNT Sports Noticias",
-        "desc": "Toda la actualidad del fútbol argentino",
-        "start": 1789725600000,
-        "end": 1789736400000
-      },
-      {
-        "title": "Pelota Parada",
-        "desc": "Información al instante de todos los clubes",
-        "start": 1789736400000,
-        "end": 1789747200000
-      },
-      {
-        "title": "Halcones y Palomas",
-        "desc": "Debate y análisis de la fecha",
-        "start": 1789747200000,
-        "end": 1789758000000
-      },
-      {
-        "title": "TNT Data Sports",
-        "desc": "Estadísticas, números y previa de los encuentros",
-        "start": 1789758000000,
-        "end": 1789768800000
-      },
-      {
-        "title": "TNT Sports Mundial",
-        "desc": "Actualidad internacional y análisis",
-        "start": 1789768800000,
-        "end": 1789777800000
-      },
-      {
-        "title": "Fútbol en Vivo / Liga Profesional",
-        "desc": "Transmisión en vivo y seguimiento de los partidos",
-        "start": 1789777800000,
-        "end": 1789785000000
-      },
-      {
-        "title": "Todos Somos Técnicos",
-        "desc": "Análisis táctico y las polémicas de la jornada",
-        "start": 1789785000000,
-        "end": 1789786800000
-      },
       {
         "title": "Lo Mejor de la Fecha",
         "desc": "Resumen de los partidos de la Liga Profesional",
@@ -2547,63 +2553,57 @@
         "desc": "Análisis táctico y las polémicas de la jornada",
         "start": 1789957800000,
         "end": 1789959600000
+      },
+      {
+        "title": "Lo Mejor de la Fecha",
+        "desc": "Resumen de los partidos de la Liga Profesional",
+        "start": 1789959600000,
+        "end": 1789984800000
+      },
+      {
+        "title": "TNT Sports Noticias",
+        "desc": "Toda la actualidad del fútbol argentino",
+        "start": 1789984800000,
+        "end": 1789995600000
+      },
+      {
+        "title": "Pelota Parada",
+        "desc": "Información al instante de todos los clubes",
+        "start": 1789995600000,
+        "end": 1790006400000
+      },
+      {
+        "title": "Halcones y Palomas",
+        "desc": "Debate y análisis de la fecha",
+        "start": 1790006400000,
+        "end": 1790017200000
+      },
+      {
+        "title": "TNT Data Sports",
+        "desc": "Estadísticas, números y previa de los encuentros",
+        "start": 1790017200000,
+        "end": 1790028000000
+      },
+      {
+        "title": "TNT Sports Mundial",
+        "desc": "Actualidad internacional y análisis",
+        "start": 1790028000000,
+        "end": 1790037000000
+      },
+      {
+        "title": "Fútbol en Vivo / Liga Profesional",
+        "desc": "Transmisión en vivo y seguimiento de los partidos",
+        "start": 1790037000000,
+        "end": 1790044200000
+      },
+      {
+        "title": "Todos Somos Técnicos",
+        "desc": "Análisis táctico y las polémicas de la jornada",
+        "start": 1790044200000,
+        "end": 1790046000000
       }
     ],
     "espn_premium_1": [
-      {
-        "title": "Repeticiones y Resúmenes",
-        "desc": "Lo mejor de la Liga Profesional de Fútbol",
-        "start": 1789700400000,
-        "end": 1789725600000
-      },
-      {
-        "title": "SportsCenter",
-        "desc": "Noticias del deporte y fútbol local",
-        "start": 1789725600000,
-        "end": 1789743600000
-      },
-      {
-        "title": "ESPN F12",
-        "desc": "Conducción de Mariano Closs y debate del mediodía",
-        "start": 1789743600000,
-        "end": 1789750800000
-      },
-      {
-        "title": "ESPN F90",
-        "desc": "Sebastián Vignolo y el análisis de la jornada",
-        "start": 1789750800000,
-        "end": 1789758000000
-      },
-      {
-        "title": "ESPN F360",
-        "desc": "Actualidad deportiva con Gustavo López",
-        "start": 1789758000000,
-        "end": 1789767000000
-      },
-      {
-        "title": "ESPN FShow",
-        "desc": "Información y debate de la tarde",
-        "start": 1789767000000,
-        "end": 1789774200000
-      },
-      {
-        "title": "Equipo F",
-        "desc": "El debate del fútbol con las principales figuras",
-        "start": 1789774200000,
-        "end": 1789777800000
-      },
-      {
-        "title": "Fútbol 1 en ESPN Premium",
-        "desc": "Transmisión en vivo de la Liga Profesional",
-        "start": 1789777800000,
-        "end": 1789785000000
-      },
-      {
-        "title": "SportsCenter Noche",
-        "desc": "Goles, jugadas y testimonios de los protagonistas",
-        "start": 1789785000000,
-        "end": 1789786800000
-      },
       {
         "title": "Repeticiones y Resúmenes",
         "desc": "Lo mejor de la Liga Profesional de Fútbol",
@@ -2711,45 +2711,63 @@
         "desc": "Goles, jugadas y testimonios de los protagonistas",
         "start": 1789957800000,
         "end": 1789959600000
+      },
+      {
+        "title": "Repeticiones y Resúmenes",
+        "desc": "Lo mejor de la Liga Profesional de Fútbol",
+        "start": 1789959600000,
+        "end": 1789984800000
+      },
+      {
+        "title": "SportsCenter",
+        "desc": "Noticias del deporte y fútbol local",
+        "start": 1789984800000,
+        "end": 1790002800000
+      },
+      {
+        "title": "ESPN F12",
+        "desc": "Conducción de Mariano Closs y debate del mediodía",
+        "start": 1790002800000,
+        "end": 1790010000000
+      },
+      {
+        "title": "ESPN F90",
+        "desc": "Sebastián Vignolo y el análisis de la jornada",
+        "start": 1790010000000,
+        "end": 1790017200000
+      },
+      {
+        "title": "ESPN F360",
+        "desc": "Actualidad deportiva con Gustavo López",
+        "start": 1790017200000,
+        "end": 1790026200000
+      },
+      {
+        "title": "ESPN FShow",
+        "desc": "Información y debate de la tarde",
+        "start": 1790026200000,
+        "end": 1790033400000
+      },
+      {
+        "title": "Equipo F",
+        "desc": "El debate del fútbol con las principales figuras",
+        "start": 1790033400000,
+        "end": 1790037000000
+      },
+      {
+        "title": "Fútbol 1 en ESPN Premium",
+        "desc": "Transmisión en vivo de la Liga Profesional",
+        "start": 1790037000000,
+        "end": 1790044200000
+      },
+      {
+        "title": "SportsCenter Noche",
+        "desc": "Goles, jugadas y testimonios de los protagonistas",
+        "start": 1790044200000,
+        "end": 1790046000000
       }
     ],
     "golf_channel": [
-      {
-        "title": "Golf de Noche",
-        "desc": "Lo mejor de los torneos de golf del mundo",
-        "start": 1789700400000,
-        "end": 1789725600000
-      },
-      {
-        "title": "Golf Central",
-        "desc": "Noticias y cobertura de las principales giras",
-        "start": 1789725600000,
-        "end": 1789740000000
-      },
-      {
-        "title": "PGA Tour: Cobertura en Vivo",
-        "desc": "Transmisión en directo del PGA Tour",
-        "start": 1789740000000,
-        "end": 1789754400000
-      },
-      {
-        "title": "European Tour & Majors",
-        "desc": "Torneo en vivo y seguimiento de hoyos",
-        "start": 1789754400000,
-        "end": 1789768800000
-      },
-      {
-        "title": "Highlights & Análisis del Día",
-        "desc": "Resumen de la jornada y mejores golpes",
-        "start": 1789768800000,
-        "end": 1789779600000
-      },
-      {
-        "title": "Golf Central Noche",
-        "desc": "Entrevistas, tablas y análisis en profundidad",
-        "start": 1789779600000,
-        "end": 1789786800000
-      },
       {
         "title": "Golf de Noche",
         "desc": "Lo mejor de los torneos de golf del mundo",
@@ -2821,45 +2839,45 @@
         "desc": "Entrevistas, tablas y análisis en profundidad",
         "start": 1789952400000,
         "end": 1789959600000
+      },
+      {
+        "title": "Golf de Noche",
+        "desc": "Lo mejor de los torneos de golf del mundo",
+        "start": 1789959600000,
+        "end": 1789984800000
+      },
+      {
+        "title": "Golf Central",
+        "desc": "Noticias y cobertura de las principales giras",
+        "start": 1789984800000,
+        "end": 1789999200000
+      },
+      {
+        "title": "PGA Tour: Cobertura en Vivo",
+        "desc": "Transmisión en directo del PGA Tour",
+        "start": 1789999200000,
+        "end": 1790013600000
+      },
+      {
+        "title": "European Tour & Majors",
+        "desc": "Torneo en vivo y seguimiento de hoyos",
+        "start": 1790013600000,
+        "end": 1790028000000
+      },
+      {
+        "title": "Highlights & Análisis del Día",
+        "desc": "Resumen de la jornada y mejores golpes",
+        "start": 1790028000000,
+        "end": 1790038800000
+      },
+      {
+        "title": "Golf Central Noche",
+        "desc": "Entrevistas, tablas y análisis en profundidad",
+        "start": 1790038800000,
+        "end": 1790046000000
       }
     ],
     "fox_sports_1": [
-      {
-        "title": "FOX Sports Resumen",
-        "desc": "Lo mejor del deporte y competiciones",
-        "start": 1789700400000,
-        "end": 1789729200000
-      },
-      {
-        "title": "FOX Sports Radio",
-        "desc": "Noticias y debate deportivo",
-        "start": 1789729200000,
-        "end": 1789743600000
-      },
-      {
-        "title": "La Vuelta",
-        "desc": "Actualidad del automovilismo y fútbol",
-        "start": 1789743600000,
-        "end": 1789754400000
-      },
-      {
-        "title": "FOX Sports Noticias",
-        "desc": "Actualidad de los clubes y Copa Libertadores",
-        "start": 1789754400000,
-        "end": 1789765200000
-      },
-      {
-        "title": "La Jugada Perfecta",
-        "desc": "Análisis previo a las transmisiones",
-        "start": 1789765200000,
-        "end": 1789776000000
-      },
-      {
-        "title": "Fútbol & Deportes en Vivo",
-        "desc": "Transmisión de eventos en directo",
-        "start": 1789776000000,
-        "end": 1789786800000
-      },
       {
         "title": "FOX Sports Resumen",
         "desc": "Lo mejor del deporte y competiciones",
@@ -2931,60 +2949,48 @@
         "desc": "Transmisión de eventos en directo",
         "start": 1789948800000,
         "end": 1789959600000
+      },
+      {
+        "title": "FOX Sports Resumen",
+        "desc": "Lo mejor del deporte y competiciones",
+        "start": 1789959600000,
+        "end": 1789988400000
+      },
+      {
+        "title": "FOX Sports Radio",
+        "desc": "Noticias y debate deportivo",
+        "start": 1789988400000,
+        "end": 1790002800000
+      },
+      {
+        "title": "La Vuelta",
+        "desc": "Actualidad del automovilismo y fútbol",
+        "start": 1790002800000,
+        "end": 1790013600000
+      },
+      {
+        "title": "FOX Sports Noticias",
+        "desc": "Actualidad de los clubes y Copa Libertadores",
+        "start": 1790013600000,
+        "end": 1790024400000
+      },
+      {
+        "title": "La Jugada Perfecta",
+        "desc": "Análisis previo a las transmisiones",
+        "start": 1790024400000,
+        "end": 1790035200000
+      },
+      {
+        "title": "Fútbol & Deportes en Vivo",
+        "desc": "Transmisión de eventos en directo",
+        "start": 1790035200000,
+        "end": 1790046000000
       }
     ],
     "tn": [
       {
         "title": "Replay Noticias",
         "desc": "Resumen de las noticias de la madrugada",
-        "start": 1789700400000,
-        "end": 1789722000000
-      },
-      {
-        "title": "TN Tempraneros",
-        "desc": "El arranque del día con las primeras noticias",
-        "start": 1789722000000,
-        "end": 1789736400000
-      },
-      {
-        "title": "TN Mañanas",
-        "desc": "Información en vivo y móviles en la calle",
-        "start": 1789736400000,
-        "end": 1789747200000
-      },
-      {
-        "title": "Nuestra Tarde",
-        "desc": "El noticiero de la tarde con todo el panorama",
-        "start": 1789747200000,
-        "end": 1789758000000
-      },
-      {
-        "title": "Está Pasando",
-        "desc": "Actualidad política, económica y social",
-        "start": 1789758000000,
-        "end": 1789765200000
-      },
-      {
-        "title": "TN Central",
-        "desc": "El noticiero central con el análisis del día",
-        "start": 1789765200000,
-        "end": 1789772400000
-      },
-      {
-        "title": "Sólo una Vuelta Más",
-        "desc": "Debate político y económico",
-        "start": 1789772400000,
-        "end": 1789779600000
-      },
-      {
-        "title": "A Dos Voces / Desde el Llano",
-        "desc": "Entrevistas en profundidad y opinión",
-        "start": 1789779600000,
-        "end": 1789786800000
-      },
-      {
-        "title": "Replay Noticias",
-        "desc": "Resumen de las noticias de la madrugada",
         "start": 1789786800000,
         "end": 1789808400000
       },
@@ -3077,60 +3083,60 @@
         "desc": "Entrevistas en profundidad y opinión",
         "start": 1789952400000,
         "end": 1789959600000
+      },
+      {
+        "title": "Replay Noticias",
+        "desc": "Resumen de las noticias de la madrugada",
+        "start": 1789959600000,
+        "end": 1789981200000
+      },
+      {
+        "title": "TN Tempraneros",
+        "desc": "El arranque del día con las primeras noticias",
+        "start": 1789981200000,
+        "end": 1789995600000
+      },
+      {
+        "title": "TN Mañanas",
+        "desc": "Información en vivo y móviles en la calle",
+        "start": 1789995600000,
+        "end": 1790006400000
+      },
+      {
+        "title": "Nuestra Tarde",
+        "desc": "El noticiero de la tarde con todo el panorama",
+        "start": 1790006400000,
+        "end": 1790017200000
+      },
+      {
+        "title": "Está Pasando",
+        "desc": "Actualidad política, económica y social",
+        "start": 1790017200000,
+        "end": 1790024400000
+      },
+      {
+        "title": "TN Central",
+        "desc": "El noticiero central con el análisis del día",
+        "start": 1790024400000,
+        "end": 1790031600000
+      },
+      {
+        "title": "Sólo una Vuelta Más",
+        "desc": "Debate político y económico",
+        "start": 1790031600000,
+        "end": 1790038800000
+      },
+      {
+        "title": "A Dos Voces / Desde el Llano",
+        "desc": "Entrevistas en profundidad y opinión",
+        "start": 1790038800000,
+        "end": 1790046000000
       }
     ],
     "ln_mas": [
       {
         "title": "Resumen LN+",
         "desc": "Las noticias destacadas de la jornada",
-        "start": 1789700400000,
-        "end": 1789722000000
-      },
-      {
-        "title": "Buen Día Nación",
-        "desc": "Primeras noticias y estado de los servicios",
-        "start": 1789722000000,
-        "end": 1789736400000
-      },
-      {
-        "title": "8 AM / Nación Central",
-        "desc": "Información económica y actualidad",
-        "start": 1789736400000,
-        "end": 1789747200000
-      },
-      {
-        "title": "El Noticiero",
-        "desc": "Información con el equipo de LN+",
-        "start": 1789747200000,
-        "end": 1789758000000
-      },
-      {
-        "title": "Crónicas de la Tarde",
-        "desc": "Seguimiento de la agenda nacional",
-        "start": 1789758000000,
-        "end": 1789765200000
-      },
-      {
-        "title": "Hora 18",
-        "desc": "Panorama político y económico",
-        "start": 1789765200000,
-        "end": 1789772400000
-      },
-      {
-        "title": "Más Realidad",
-        "desc": "Análisis de fondo y debate editorial",
-        "start": 1789772400000,
-        "end": 1789779600000
-      },
-      {
-        "title": "Odisea Argentina / La Cornisa",
-        "desc": "Investigaciones e informes especiales",
-        "start": 1789779600000,
-        "end": 1789786800000
-      },
-      {
-        "title": "Resumen LN+",
-        "desc": "Las noticias destacadas de la jornada",
         "start": 1789786800000,
         "end": 1789808400000
       },
@@ -3223,51 +3229,57 @@
         "desc": "Investigaciones e informes especiales",
         "start": 1789952400000,
         "end": 1789959600000
+      },
+      {
+        "title": "Resumen LN+",
+        "desc": "Las noticias destacadas de la jornada",
+        "start": 1789959600000,
+        "end": 1789981200000
+      },
+      {
+        "title": "Buen Día Nación",
+        "desc": "Primeras noticias y estado de los servicios",
+        "start": 1789981200000,
+        "end": 1789995600000
+      },
+      {
+        "title": "8 AM / Nación Central",
+        "desc": "Información económica y actualidad",
+        "start": 1789995600000,
+        "end": 1790006400000
+      },
+      {
+        "title": "El Noticiero",
+        "desc": "Información con el equipo de LN+",
+        "start": 1790006400000,
+        "end": 1790017200000
+      },
+      {
+        "title": "Crónicas de la Tarde",
+        "desc": "Seguimiento de la agenda nacional",
+        "start": 1790017200000,
+        "end": 1790024400000
+      },
+      {
+        "title": "Hora 18",
+        "desc": "Panorama político y económico",
+        "start": 1790024400000,
+        "end": 1790031600000
+      },
+      {
+        "title": "Más Realidad",
+        "desc": "Análisis de fondo y debate editorial",
+        "start": 1790031600000,
+        "end": 1790038800000
+      },
+      {
+        "title": "Odisea Argentina / La Cornisa",
+        "desc": "Investigaciones e informes especiales",
+        "start": 1790038800000,
+        "end": 1790046000000
       }
     ],
     "c5n": [
-      {
-        "title": "Resumen C5N",
-        "desc": "Noticias de la noche y madrugada",
-        "start": 1789700400000,
-        "end": 1789722000000
-      },
-      {
-        "title": "Mañanas Argentinas",
-        "desc": "El inicio del día con las noticias más relevantes",
-        "start": 1789722000000,
-        "end": 1789736400000
-      },
-      {
-        "title": "Nos Vemos",
-        "desc": "Información en vivo y actualidad social",
-        "start": 1789736400000,
-        "end": 1789747200000
-      },
-      {
-        "title": "El Diario",
-        "desc": "Noticias, economía y política",
-        "start": 1789747200000,
-        "end": 1789761600000
-      },
-      {
-        "title": "Minuto Uno",
-        "desc": "Análisis y debate con Gustavo Sylvestre",
-        "start": 1789761600000,
-        "end": 1789772400000
-      },
-      {
-        "title": "Duro de Domar",
-        "desc": "Debate de actualidad e invitados especiales",
-        "start": 1789772400000,
-        "end": 1789779600000
-      },
-      {
-        "title": "Desiguales / Sobredosis de TV",
-        "desc": "Informes y análisis político",
-        "start": 1789779600000,
-        "end": 1789786800000
-      },
       {
         "title": "Resumen C5N",
         "desc": "Noticias de la noche y madrugada",
@@ -3351,45 +3363,51 @@
         "desc": "Informes y análisis político",
         "start": 1789952400000,
         "end": 1789959600000
+      },
+      {
+        "title": "Resumen C5N",
+        "desc": "Noticias de la noche y madrugada",
+        "start": 1789959600000,
+        "end": 1789981200000
+      },
+      {
+        "title": "Mañanas Argentinas",
+        "desc": "El inicio del día con las noticias más relevantes",
+        "start": 1789981200000,
+        "end": 1789995600000
+      },
+      {
+        "title": "Nos Vemos",
+        "desc": "Información en vivo y actualidad social",
+        "start": 1789995600000,
+        "end": 1790006400000
+      },
+      {
+        "title": "El Diario",
+        "desc": "Noticias, economía y política",
+        "start": 1790006400000,
+        "end": 1790020800000
+      },
+      {
+        "title": "Minuto Uno",
+        "desc": "Análisis y debate con Gustavo Sylvestre",
+        "start": 1790020800000,
+        "end": 1790031600000
+      },
+      {
+        "title": "Duro de Domar",
+        "desc": "Debate de actualidad e invitados especiales",
+        "start": 1790031600000,
+        "end": 1790038800000
+      },
+      {
+        "title": "Desiguales / Sobredosis de TV",
+        "desc": "Informes y análisis político",
+        "start": 1790038800000,
+        "end": 1790046000000
       }
     ],
     "cronica_hd": [
-      {
-        "title": "Crónica de Madrugada",
-        "desc": "Noticias al instante",
-        "start": 1789700400000,
-        "end": 1789722000000
-      },
-      {
-        "title": "Es Muy Temprano",
-        "desc": "Móviles en vivo y transporte",
-        "start": 1789722000000,
-        "end": 1789736400000
-      },
-      {
-        "title": "Tiempo Real",
-        "desc": "Casos policiales y reclamos sociales",
-        "start": 1789736400000,
-        "end": 1789747200000
-      },
-      {
-        "title": "Santo Día",
-        "desc": "Información con el estilo característico de Crónica",
-        "start": 1789747200000,
-        "end": 1789761600000
-      },
-      {
-        "title": "El Noticiero de Crónica",
-        "desc": "Toda la verdad al instante",
-        "start": 1789761600000,
-        "end": 1789776000000
-      },
-      {
-        "title": "Crónica Central",
-        "desc": "Debate de noche y casos resonantes",
-        "start": 1789776000000,
-        "end": 1789786800000
-      },
       {
         "title": "Crónica de Madrugada",
         "desc": "Noticias al instante",
@@ -3461,39 +3479,45 @@
         "desc": "Debate de noche y casos resonantes",
         "start": 1789948800000,
         "end": 1789959600000
+      },
+      {
+        "title": "Crónica de Madrugada",
+        "desc": "Noticias al instante",
+        "start": 1789959600000,
+        "end": 1789981200000
+      },
+      {
+        "title": "Es Muy Temprano",
+        "desc": "Móviles en vivo y transporte",
+        "start": 1789981200000,
+        "end": 1789995600000
+      },
+      {
+        "title": "Tiempo Real",
+        "desc": "Casos policiales y reclamos sociales",
+        "start": 1789995600000,
+        "end": 1790006400000
+      },
+      {
+        "title": "Santo Día",
+        "desc": "Información con el estilo característico de Crónica",
+        "start": 1790006400000,
+        "end": 1790020800000
+      },
+      {
+        "title": "El Noticiero de Crónica",
+        "desc": "Toda la verdad al instante",
+        "start": 1790020800000,
+        "end": 1790035200000
+      },
+      {
+        "title": "Crónica Central",
+        "desc": "Debate de noche y casos resonantes",
+        "start": 1790035200000,
+        "end": 1790046000000
       }
     ],
     "canal_26": [
-      {
-        "title": "26 Noticias Noche",
-        "desc": "Resumen de las noticias mundiales",
-        "start": 1789700400000,
-        "end": 1789725600000
-      },
-      {
-        "title": "La Mañana de 26",
-        "desc": "Información internacional y mercados",
-        "start": 1789725600000,
-        "end": 1789743600000
-      },
-      {
-        "title": "26 Noticias Tarde",
-        "desc": "Geopolítica, guerras y panorama global",
-        "start": 1789743600000,
-        "end": 1789761600000
-      },
-      {
-        "title": "26 Global",
-        "desc": "Informes especiales y corresponsales",
-        "start": 1789761600000,
-        "end": 1789776000000
-      },
-      {
-        "title": "Noche 26",
-        "desc": "Análisis de la actualidad internacional",
-        "start": 1789776000000,
-        "end": 1789786800000
-      },
       {
         "title": "26 Noticias Noche",
         "desc": "Resumen de las noticias mundiales",
@@ -3553,6 +3577,36 @@
         "desc": "Análisis de la actualidad internacional",
         "start": 1789948800000,
         "end": 1789959600000
+      },
+      {
+        "title": "26 Noticias Noche",
+        "desc": "Resumen de las noticias mundiales",
+        "start": 1789959600000,
+        "end": 1789984800000
+      },
+      {
+        "title": "La Mañana de 26",
+        "desc": "Información internacional y mercados",
+        "start": 1789984800000,
+        "end": 1790002800000
+      },
+      {
+        "title": "26 Noticias Tarde",
+        "desc": "Geopolítica, guerras y panorama global",
+        "start": 1790002800000,
+        "end": 1790020800000
+      },
+      {
+        "title": "26 Global",
+        "desc": "Informes especiales y corresponsales",
+        "start": 1790020800000,
+        "end": 1790035200000
+      },
+      {
+        "title": "Noche 26",
+        "desc": "Análisis de la actualidad internacional",
+        "start": 1790035200000,
+        "end": 1790046000000
       }
     ]
   }
