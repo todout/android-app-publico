@@ -1,43 +1,7 @@
 {
-  "updated_at": "2026-09-22T03:30:07.892903+00:00",
+  "updated_at": "2026-09-22T15:00:08.567753+00:00",
   "channels": {
     "el_trece": [
-      {
-        "title": "¡Ahora caigo!",
-        "desc": "",
-        "start": 1790025300000,
-        "end": 1790031600000
-      },
-      {
-        "title": "Telenoche",
-        "desc": "",
-        "start": 1790031600000,
-        "end": 1790035200000
-      },
-      {
-        "title": "Es mi sueño",
-        "desc": "",
-        "start": 1790035200000,
-        "end": 1790040600000
-      },
-      {
-        "title": "Otro día perdido",
-        "desc": "",
-        "start": 1790040600000,
-        "end": 1790046900000
-      },
-      {
-        "title": "Síntesis",
-        "desc": "",
-        "start": 1790046900000,
-        "end": 1790049600000
-      },
-      {
-        "title": "Cucinare",
-        "desc": "",
-        "start": 1790049600000,
-        "end": 1790050500000
-      },
       {
         "title": "Fuera del aire",
         "desc": "",
@@ -121,101 +85,45 @@
         "desc": "",
         "start": 1790133300000,
         "end": 1790136000000
-      }
-    ],
-    "america_tv": [
-      {
-        "title": "América Noticias",
-        "desc": "",
-        "start": 1790023500000,
-        "end": 1790028000000
       },
       {
-        "title": "Sálvese Quien Pueda",
+        "title": "Cucinare",
         "desc": "",
-        "start": 1790028000000,
-        "end": 1790031600000
+        "start": 1790136000000,
+        "end": 1790136900000
       },
       {
-        "title": "LAM",
+        "title": "Fuera del aire",
         "desc": "",
-        "start": 1790031600000,
-        "end": 1790038800000
+        "start": 1790136900000,
+        "end": 1790155800000
+      },
+      {
+        "title": "Tiempo del tiempo",
+        "desc": "",
+        "start": 1790155800000,
+        "end": 1790157600000
+      },
+      {
+        "title": "Arriba argentinos",
+        "desc": "",
+        "start": 1790157600000,
+        "end": 1790164800000
+      },
+      {
+        "title": "La mañana con Moria",
+        "desc": "",
+        "start": 1790164800000,
+        "end": 1790170200000
+      },
+      {
+        "title": "Puro show",
+        "desc": "",
+        "start": 1790170200000,
+        "end": 1790177400000
       }
     ],
     "cnn_espanol": [
-      {
-        "title": "Directo USA con Juan Lopez",
-        "desc": "",
-        "start": 1790024400000,
-        "end": 1790028000000
-      },
-      {
-        "title": "Perspectivas desde Mexico",
-        "desc": "",
-        "start": 1790028000000,
-        "end": 1790031600000
-      },
-      {
-        "title": "Directo USA con Juan Lopez",
-        "desc": "",
-        "start": 1790031600000,
-        "end": 1790035200000
-      },
-      {
-        "title": "Panorama Mundial",
-        "desc": "",
-        "start": 1790035200000,
-        "end": 1790038800000
-      },
-      {
-        "title": "Conclusiones",
-        "desc": "",
-        "start": 1790038800000,
-        "end": 1790042400000
-      },
-      {
-        "title": "Deportes CNN",
-        "desc": "",
-        "start": 1790042400000,
-        "end": 1790046000000
-      },
-      {
-        "title": "Perspectivas desde Mexico",
-        "desc": "",
-        "start": 1790046000000,
-        "end": 1790049600000
-      },
-      {
-        "title": "Directo USA con Juan Lopez",
-        "desc": "",
-        "start": 1790049600000,
-        "end": 1790053200000
-      },
-      {
-        "title": "Panorama Mundial",
-        "desc": "",
-        "start": 1790053200000,
-        "end": 1790056800000
-      },
-      {
-        "title": "Conclusiones",
-        "desc": "",
-        "start": 1790056800000,
-        "end": 1790060400000
-      },
-      {
-        "title": "Aristegui",
-        "desc": "",
-        "start": 1790060400000,
-        "end": 1790062200000
-      },
-      {
-        "title": "Deportes CNN",
-        "desc": "",
-        "start": 1790062200000,
-        "end": 1790067600000
-      },
       {
         "title": "Perspectivas desde Mexico",
         "desc": "",
@@ -317,27 +225,75 @@
         "desc": "",
         "start": 1790132400000,
         "end": 1790136000000
+      },
+      {
+        "title": "Directo USA con Juan Lopez",
+        "desc": "",
+        "start": 1790136000000,
+        "end": 1790139600000
+      },
+      {
+        "title": "Panorama Mundial",
+        "desc": "",
+        "start": 1790139600000,
+        "end": 1790143200000
+      },
+      {
+        "title": "Conclusiones",
+        "desc": "",
+        "start": 1790143200000,
+        "end": 1790146800000
+      },
+      {
+        "title": "Aristegui",
+        "desc": "",
+        "start": 1790146800000,
+        "end": 1790148600000
+      },
+      {
+        "title": "Deportes CNN",
+        "desc": "",
+        "start": 1790148600000,
+        "end": 1790154000000
+      },
+      {
+        "title": "Perspectivas desde Mexico",
+        "desc": "",
+        "start": 1790154000000,
+        "end": 1790157600000
+      },
+      {
+        "title": "Panorama Mundial",
+        "desc": "",
+        "start": 1790157600000,
+        "end": 1790161200000
+      },
+      {
+        "title": "Deportes CNN",
+        "desc": "",
+        "start": 1790161200000,
+        "end": 1790164800000
+      },
+      {
+        "title": "Café CNN",
+        "desc": "",
+        "start": 1790164800000,
+        "end": 1790172000000
+      },
+      {
+        "title": "Café CNN",
+        "desc": "",
+        "start": 1790172000000,
+        "end": 1790175600000
+      },
+      {
+        "title": "Conclusiones",
+        "desc": "",
+        "start": 1790175600000,
+        "end": 1790177400000
       }
     ],
     "cartoon_network": [
-      {
-        "title": "Canal no disponible",
-        "desc": "",
-        "start": 1790024400000,
-        "end": 1790038800000
-      },
-      {
-        "title": "Canal no disponible",
-        "desc": "",
-        "start": 1790038800000,
-        "end": 1790053200000
-      },
-      {
-        "title": "Canal no disponible",
-        "desc": "",
-        "start": 1790053200000,
-        "end": 1790067600000
-      },
       {
         "title": "Canal no disponible",
         "desc": "",
@@ -367,39 +323,27 @@
         "desc": "",
         "start": 1790125200000,
         "end": 1790139600000
+      },
+      {
+        "title": "Canal no disponible",
+        "desc": "",
+        "start": 1790139600000,
+        "end": 1790154000000
+      },
+      {
+        "title": "Canal no disponible",
+        "desc": "",
+        "start": 1790154000000,
+        "end": 1790168400000
+      },
+      {
+        "title": "Canal no disponible",
+        "desc": "",
+        "start": 1790168400000,
+        "end": 1790182800000
       }
     ],
     "cinecanal": [
-      {
-        "title": "Ladrona de Libros",
-        "desc": "",
-        "start": 1790021400000,
-        "end": 1790031000000
-      },
-      {
-        "title": "Ciudades de papel",
-        "desc": "",
-        "start": 1790031000000,
-        "end": 1790038800000
-      },
-      {
-        "title": "Chicas Armadas y Peligrosas",
-        "desc": "El agente especial del FBI, Sarah Asburn (Sandra Bullock) y la mal humorada policía de Boston, Shannon Mullins (Melissa McCarthy), no podrían ser más incompatibles. Pero cuando unen sus fuerzas para derrocar a un despiadado capo de la droga, se convierten en algo que nadie hubiera esperado… convertirse en amigas.",
-        "start": 1790038800000,
-        "end": 1790047560000
-      },
-      {
-        "title": "The spectacular now",
-        "desc": "",
-        "start": 1790047560000,
-        "end": 1790054280000
-      },
-      {
-        "title": "Queen y Slim Los fugitivos",
-        "desc": "",
-        "start": 1790054280000,
-        "end": 1790062080000
-      },
       {
         "title": "La última canción",
         "desc": "",
@@ -441,107 +385,39 @@
         "desc": "",
         "start": 1790125140000,
         "end": 1790138460000
-      }
-    ],
-    "disney_channel": [
-      {
-        "title": "Dragon Striker",
-        "desc": "",
-        "start": 1790026200000,
-        "end": 1790028000000
       },
       {
-        "title": "Phineas y Ferb",
-        "desc": "La escuela está cerrada por el verano, y los hermanastros Phineas y Ferb deciden hacer de cada día una aventura, desde construir una montaña rusa que desafía a la muerte hasta surfear olas de marea para localizar el cerebro de Frankenstein. Sus audaces aventuras siempre terminan obstaculizando el estilo de su hermana adolescente, Candace, quien hace todo lo posible para exponer a mamá a lo que realmente está sucediendo, pero de alguna manera siempre parece fallar. Mientras tanto, el ornitorrinco mascota de mente simple de la familia lleva una doble vida como \"Agente P\" secreto y se enfrenta al malvado Dr. Doofenshmirtz para salvar el mundo. Hay muchas cosas que hacer antes de que empiecen las clases y Phineas y Ferb planean hacerlo todo.",
-        "start": 1790028000000,
-        "end": 1790029800000
+        "title": "Bad Hair",
+        "desc": "",
+        "start": 1790138460000,
+        "end": 1790144580000
       },
       {
-        "title": "Los Hechiceros Más Allá De Waverly Place",
+        "title": "Recreo",
         "desc": "",
-        "start": 1790029800000,
-        "end": 1790031600000
+        "start": 1790144580000,
+        "end": 1790149620000
       },
       {
-        "title": "Vampirina Una Vampirina adolescente",
+        "title": "La boda de Rosa",
         "desc": "",
-        "start": 1790031600000,
-        "end": 1790033400000
+        "start": 1790149620000,
+        "end": 1790157600000
       },
       {
-        "title": "Jessie",
+        "title": "Never Been Kissed",
         "desc": "",
-        "start": 1790033400000,
-        "end": 1790035200000
+        "start": 1790157600000,
+        "end": 1790169540000
+      },
+      {
+        "title": "Ophelia",
+        "desc": "",
+        "start": 1790169540000,
+        "end": 1790177160000
       }
     ],
     "espn_1": [
-      {
-        "title": "ESPN F360",
-        "desc": "",
-        "start": 1790024400000,
-        "end": 1790028000000
-      },
-      {
-        "title": "Equipo F",
-        "desc": "",
-        "start": 1790028000000,
-        "end": 1790033400000
-      },
-      {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1790033400000,
-        "end": 1790035200000
-      },
-      {
-        "title": "Fútbol argentino Primera División",
-        "desc": "",
-        "start": 1790035200000,
-        "end": 1790043000000
-      },
-      {
-        "title": "ESPN F10",
-        "desc": "",
-        "start": 1790043000000,
-        "end": 1790046000000
-      },
-      {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1790046000000,
-        "end": 1790049600000
-      },
-      {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1790049600000,
-        "end": 1790053200000
-      },
-      {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1790053200000,
-        "end": 1790056800000
-      },
-      {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1790056800000,
-        "end": 1790060400000
-      },
-      {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1790060400000,
-        "end": 1790064000000
-      },
-      {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1790064000000,
-        "end": 1790067600000
-      },
       {
         "title": "SportsCenter",
         "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
@@ -619,175 +495,63 @@
         "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
         "start": 1790132400000,
         "end": 1790136000000
-      }
-    ],
-    "espn_2": [
-      {
-        "title": "Atlético de Madrid vs. Real Madrid",
-        "desc": "Desde el estadio Vicente Calderón ubicado en la ciudad de Madrid, España, se enfrentan los equipos Club Atlético de Madrid versus el Real Madrid Club de Fútbol.",
-        "start": 1790024400000,
-        "end": 1790028000000
       },
       {
         "title": "SportsCenter",
         "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1790028000000,
-        "end": 1790033400000
+        "start": 1790136000000,
+        "end": 1790139600000
       },
       {
-        "title": "El Show de la Copa Libertadores",
-        "desc": "",
-        "start": 1790033400000,
-        "end": 1790035200000
-      }
-    ],
-    "espn_3": [
-      {
-        "title": "ESPN Compact",
-        "desc": "",
-        "start": 1790024400000,
-        "end": 1790028000000
+        "title": "SportsCenter",
+        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
+        "start": 1790139600000,
+        "end": 1790143200000
       },
       {
-        "title": "ESPN Compact",
-        "desc": "",
-        "start": 1790028000000,
-        "end": 1790031600000
+        "title": "SportsCenter",
+        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
+        "start": 1790143200000,
+        "end": 1790146800000
       },
       {
-        "title": "Carabao Cup Highlights",
-        "desc": "",
-        "start": 1790031600000,
-        "end": 1790033400000
+        "title": "SportsCenter",
+        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
+        "start": 1790146800000,
+        "end": 1790150400000
       },
       {
-        "title": "AC Milan vs. Lecce",
+        "title": "SportsCenter",
+        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
+        "start": 1790150400000,
+        "end": 1790154000000
+      },
+      {
+        "title": "SportsCenter",
+        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
+        "start": 1790154000000,
+        "end": 1790157600000
+      },
+      {
+        "title": "SportsCenter",
+        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
+        "start": 1790157600000,
+        "end": 1790164800000
+      },
+      {
+        "title": "Buen día ESPN",
         "desc": "",
-        "start": 1790033400000,
-        "end": 1790040600000
+        "start": 1790164800000,
+        "end": 1790172000000
+      },
+      {
+        "title": "ESPN F12",
+        "desc": "",
+        "start": 1790172000000,
+        "end": 1790179200000
       }
     ],
     "el_gourmet": [
-      {
-        "title": "Los imperdibles Buenos Aires",
-        "desc": "",
-        "start": 1790026200000,
-        "end": 1790028000000
-      },
-      {
-        "title": "Hermana Verónica",
-        "desc": "",
-        "start": 1790028000000,
-        "end": 1790029800000
-      },
-      {
-        "title": "La cocina de los recuerd",
-        "desc": "",
-        "start": 1790029800000,
-        "end": 1790031600000
-      },
-      {
-        "title": "La ruta de los insectos",
-        "desc": "",
-        "start": 1790031600000,
-        "end": 1790033400000
-      },
-      {
-        "title": "Celebrando juntos con Jamie T",
-        "desc": "",
-        "start": 1790033400000,
-        "end": 1790037000000
-      },
-      {
-        "title": "Simplemente Pia",
-        "desc": "",
-        "start": 1790037000000,
-        "end": 1790038800000
-      },
-      {
-        "title": "Días de campo c/ los Petersen",
-        "desc": "",
-        "start": 1790038800000,
-        "end": 1790040600000
-      },
-      {
-        "title": "Cocina de mercado",
-        "desc": "",
-        "start": 1790040600000,
-        "end": 1790042400000
-      },
-      {
-        "title": "Me voy a comer el mundo",
-        "desc": "",
-        "start": 1790042400000,
-        "end": 1790046000000
-      },
-      {
-        "title": "Maestros del taco",
-        "desc": "",
-        "start": 1790046000000,
-        "end": 1790047800000
-      },
-      {
-        "title": "Celebrando juntos con Jamie T",
-        "desc": "",
-        "start": 1790047800000,
-        "end": 1790051400000
-      },
-      {
-        "title": "Los favoritos de Margarita B",
-        "desc": "",
-        "start": 1790051400000,
-        "end": 1790053200000
-      },
-      {
-        "title": "Días de campo c/ los Petersen",
-        "desc": "",
-        "start": 1790053200000,
-        "end": 1790055000000
-      },
-      {
-        "title": "Pueblos para comerselos Méx",
-        "desc": "",
-        "start": 1790055000000,
-        "end": 1790056800000
-      },
-      {
-        "title": "Los nuevos panes de Juan",
-        "desc": "",
-        "start": 1790056800000,
-        "end": 1790058600000
-      },
-      {
-        "title": "Cocina de mar Pacifico",
-        "desc": "",
-        "start": 1790058600000,
-        "end": 1790060400000
-      },
-      {
-        "title": "Ruta 40",
-        "desc": "",
-        "start": 1790060400000,
-        "end": 1790062200000
-      },
-      {
-        "title": "Parrilla a la mexicana",
-        "desc": "",
-        "start": 1790062200000,
-        "end": 1790064000000
-      },
-      {
-        "title": "Fogones tradicionales México",
-        "desc": "",
-        "start": 1790064000000,
-        "end": 1790065800000
-      },
-      {
-        "title": "Maestros del taco",
-        "desc": "",
-        "start": 1790065800000,
-        "end": 1790067600000
-      },
       {
         "title": "Abuela querida",
         "desc": "",
@@ -1003,39 +767,141 @@
         "desc": "",
         "start": 1790134200000,
         "end": 1790137800000
+      },
+      {
+        "title": "Los Favoritos de Alex Ruiz",
+        "desc": "",
+        "start": 1790137800000,
+        "end": 1790139600000
+      },
+      {
+        "title": "Los Petersen en La Patagonia",
+        "desc": "",
+        "start": 1790139600000,
+        "end": 1790141400000
+      },
+      {
+        "title": "Fiestas con sabor mexican",
+        "desc": "",
+        "start": 1790141400000,
+        "end": 1790143200000
+      },
+      {
+        "title": "Los nuevos panes de Juan",
+        "desc": "",
+        "start": 1790143200000,
+        "end": 1790145000000
+      },
+      {
+        "title": "Cocina de mar Pacifico",
+        "desc": "",
+        "start": 1790145000000,
+        "end": 1790146800000
+      },
+      {
+        "title": "La ruta del mar patagónico",
+        "desc": "",
+        "start": 1790146800000,
+        "end": 1790148600000
+      },
+      {
+        "title": "Parrilla a la mexicana",
+        "desc": "",
+        "start": 1790148600000,
+        "end": 1790150400000
+      },
+      {
+        "title": "Fogones tradicionales México",
+        "desc": "",
+        "start": 1790150400000,
+        "end": 1790152200000
+      },
+      {
+        "title": "Maestros del sushi",
+        "desc": "",
+        "start": 1790152200000,
+        "end": 1790154000000
+      },
+      {
+        "title": "Abuelita linda",
+        "desc": "",
+        "start": 1790154000000,
+        "end": 1790155800000
+      },
+      {
+        "title": "Maestros de la medialuna",
+        "desc": "",
+        "start": 1790155800000,
+        "end": 1790157600000
+      },
+      {
+        "title": "México en una tortilla",
+        "desc": "",
+        "start": 1790157600000,
+        "end": 1790159400000
+      },
+      {
+        "title": "Maestros del ceviche",
+        "desc": "",
+        "start": 1790159400000,
+        "end": 1790161200000
+      },
+      {
+        "title": "Menú para todos los días",
+        "desc": "",
+        "start": 1790161200000,
+        "end": 1790163000000
+      },
+      {
+        "title": "Un paseo por Oaxaca",
+        "desc": "",
+        "start": 1790163000000,
+        "end": 1790164800000
+      },
+      {
+        "title": "Con solo una olla",
+        "desc": "",
+        "start": 1790164800000,
+        "end": 1790166600000
+      },
+      {
+        "title": "Productos artesanos México",
+        "desc": "",
+        "start": 1790166600000,
+        "end": 1790168400000
+      },
+      {
+        "title": "Fiesta en casa al aire libre",
+        "desc": "",
+        "start": 1790168400000,
+        "end": 1790170200000
+      },
+      {
+        "title": "Cocina de mercado",
+        "desc": "",
+        "start": 1790170200000,
+        "end": 1790172000000
+      },
+      {
+        "title": "Devuélveme los tápers México",
+        "desc": "",
+        "start": 1790172000000,
+        "end": 1790173800000
+      },
+      {
+        "title": "Los nuevos panes de Juan",
+        "desc": "",
+        "start": 1790173800000,
+        "end": 1790175600000
+      },
+      {
+        "title": "Productos artesanos México",
+        "desc": "",
+        "start": 1790175600000,
+        "end": 1790177400000
       }
     ],
     "space": [
-      {
-        "title": "El implacable",
-        "desc": "",
-        "start": 1790025420000,
-        "end": 1790033160000
-      },
-      {
-        "title": "Escape a la victoria",
-        "desc": "",
-        "start": 1790033160000,
-        "end": 1790042400000
-      },
-      {
-        "title": "Tango y Cash",
-        "desc": "",
-        "start": 1790042400000,
-        "end": 1790049960000
-      },
-      {
-        "title": "Rescate del metro 123",
-        "desc": "",
-        "start": 1790049960000,
-        "end": 1790056980000
-      },
-      {
-        "title": "El conjuro 2",
-        "desc": "",
-        "start": 1790056980000,
-        "end": 1790065440000
-      },
       {
         "title": "Jack Reacher: Bajo la Mira",
         "desc": "En un día común y corriente, un experto francotirador dispara y mata a cinco personas sin razón alguna. La policía rápidamente encuentra al asesino y lo encierra pero este en lugar de confesar de lo que hizo simplemente repite la frase “Encuentren a Jack Reacher”. Luego de leer en las noticias Jack Reacher (Tom Cruise) se presenta y empieza a investigar el porqué de estos hechos.",
@@ -1089,57 +955,45 @@
         "desc": "",
         "start": 1790128800000,
         "end": 1790138280000
+      },
+      {
+        "title": "El contador",
+        "desc": "",
+        "start": 1790138280000,
+        "end": 1790146500000
+      },
+      {
+        "title": "T-34",
+        "desc": "",
+        "start": 1790146500000,
+        "end": 1790155020000
+      },
+      {
+        "title": "Hollywood one on one",
+        "desc": "",
+        "start": 1790155020000,
+        "end": 1790157600000
+      },
+      {
+        "title": "La nueva gran estafa",
+        "desc": "",
+        "start": 1790157600000,
+        "end": 1790161260000
+      },
+      {
+        "title": "Ahora son 13",
+        "desc": "",
+        "start": 1790161260000,
+        "end": 1790170140000
+      },
+      {
+        "title": "Papá al rescate",
+        "desc": "",
+        "start": 1790170140000,
+        "end": 1790177760000
       }
     ],
     "star_channel": [
-      {
-        "title": "Alguien, en algún lugar",
-        "desc": "",
-        "start": 1790018940000,
-        "end": 1790027340000
-      },
-      {
-        "title": "Jojo Rabbit",
-        "desc": "Jojo \"Rabbit\" Betzler (Roman Griffin Davis), una sátira de la Segunda Guerra Mundial que sigue a un niño alemán solitario cuya visión del mundo se da vuelta cuando descubre que su madre soltera Rosie Betzler (Scarlett Johansson), está escondiendo a una joven judía llamada Elsa Korr (Thomasin McKenzie) en su ático. Ayudado solo por su idiota amigo imaginario, Adolfo Hitler (Taika Waititi), Jojo debe enfrentar su nacionalismo ciego.",
-        "start": 1790027340000,
-        "end": 1790035020000
-      },
-      {
-        "title": "Los Simpson",
-        "desc": "",
-        "start": 1790035020000,
-        "end": 1790036880000
-      },
-      {
-        "title": "Los Simpson",
-        "desc": "",
-        "start": 1790036880000,
-        "end": 1790038800000
-      },
-      {
-        "title": "Jugada perfecta",
-        "desc": "",
-        "start": 1790038800000,
-        "end": 1790046180000
-      },
-      {
-        "title": "Prueba de fuego",
-        "desc": "",
-        "start": 1790046180000,
-        "end": 1790055780000
-      },
-      {
-        "title": "Alerta roja",
-        "desc": "",
-        "start": 1790055780000,
-        "end": 1790063520000
-      },
-      {
-        "title": "Scrubs",
-        "desc": "",
-        "start": 1790063520000,
-        "end": 1790064840000
-      },
       {
         "title": "Scrubs",
         "desc": "",
@@ -1223,57 +1077,57 @@
         "desc": "",
         "start": 1790131560000,
         "end": 1790139720000
+      },
+      {
+        "title": "Este cuerpo no es mío",
+        "desc": "",
+        "start": 1790139720000,
+        "end": 1790147940000
+      },
+      {
+        "title": "Algo azul",
+        "desc": "",
+        "start": 1790147940000,
+        "end": 1790153460000
+      },
+      {
+        "title": "Scrubs",
+        "desc": "",
+        "start": 1790153460000,
+        "end": 1790154780000
+      },
+      {
+        "title": "Scrubs",
+        "desc": "",
+        "start": 1790154780000,
+        "end": 1790157600000
+      },
+      {
+        "title": "Scrubs",
+        "desc": "",
+        "start": 1790157600000,
+        "end": 1790159160000
+      },
+      {
+        "title": "Scrubs",
+        "desc": "",
+        "start": 1790159160000,
+        "end": 1790165520000
+      },
+      {
+        "title": "Enlace mortal",
+        "desc": "",
+        "start": 1790165520000,
+        "end": 1790171520000
+      },
+      {
+        "title": "Guardianes de alta mar",
+        "desc": "",
+        "start": 1790171520000,
+        "end": 1790182500000
       }
     ],
     "tnt": [
-      {
-        "title": "El Especialista",
-        "desc": "",
-        "start": 1790024340000,
-        "end": 1790032020000
-      },
-      {
-        "title": "Mamá se Fue de Viaje",
-        "desc": "Víctor (Carla Peterson) y Vera Garbor (Diego Peretti) están casados desde hace 20 años y tienen cuatro hijos: Bruno (Martín \"El mariscal Tito\" Lacour), Lara (Agustina Cabo), Tato (Julián Baz) y Lolo (Lorenzo Winograd). Absorbido por su actividad laboral, Víctor vive ajeno a la vida cotidiana de su mujer y sus hijos, Vera, agobiada por la vida doméstica, decide tomarse vacaciones por diez días, obligando a su marido a que pida vacaciones en el trabajo para poder cuidar a sus hijos. De inmediato la falta de Vera se nota y allí comienzan los problemas. Ahora Víctor y los pequeños aprenderán a convivir juntos sin su madre.",
-        "start": 1790032020000,
-        "end": 1790038800000
-      },
-      {
-        "title": "El destino final",
-        "desc": "",
-        "start": 1790038800000,
-        "end": 1790045340000
-      },
-      {
-        "title": "Difícil de matar",
-        "desc": "",
-        "start": 1790045340000,
-        "end": 1790051700000
-      },
-      {
-        "title": "Revancha",
-        "desc": "",
-        "start": 1790051700000,
-        "end": 1790057760000
-      },
-      {
-        "title": "Butter",
-        "desc": "",
-        "start": 1790057760000,
-        "end": 1790064360000
-      },
-      {
-        "title": "Hollywood one on one",
-        "desc": "",
-        "start": 1790064360000,
-        "end": 1790066640000
-      },
-      {
-        "title": "Hollywood one on one",
-        "desc": "",
-        "start": 1790066640000,
-        "end": 1790067600000
-      },
       {
         "title": "Hard Kill",
         "desc": "",
@@ -1345,69 +1199,57 @@
         "desc": "La película continua la historia del adolescente Billy Batson (Asher Angel) quien, al recitar la palabra mágica \"¡SHAZAM!\" (Zachary Levi) se transforma en su alter ego adulto de superhéroe, Shazam.",
         "start": 1790130120000,
         "end": 1790138520000
+      },
+      {
+        "title": "Revancha",
+        "desc": "",
+        "start": 1790138520000,
+        "end": 1790144760000
+      },
+      {
+        "title": "Los que aman odian",
+        "desc": "",
+        "start": 1790144760000,
+        "end": 1790150880000
+      },
+      {
+        "title": "Hollywood one on one",
+        "desc": "",
+        "start": 1790150880000,
+        "end": 1790154000000
+      },
+      {
+        "title": "Hollywood one on one",
+        "desc": "",
+        "start": 1790154000000,
+        "end": 1790155140000
+      },
+      {
+        "title": "Miss Simpatía 2: Armada y fabulosa",
+        "desc": "",
+        "start": 1790155140000,
+        "end": 1790162220000
+      },
+      {
+        "title": "DC League of Super-Pets",
+        "desc": "",
+        "start": 1790162220000,
+        "end": 1790169180000
+      },
+      {
+        "title": "Séptimo",
+        "desc": "",
+        "start": 1790169180000,
+        "end": 1790174700000
+      },
+      {
+        "title": "Shazam!",
+        "desc": "Todos tenemos un superhéroe dentro de nosotros, solo se necesita un poco de magia para sacarlo. En el caso de Billy Batson (Asher Angel), solo tiene que gritar una palabra, ¡SHAZAM! (Zachary Levi), este niño adoptivo de 14 años de edad puede convertirse en el superhéroe adulto Shazam, cortesía de un antiguo mago. Todavía niño de corazón – dentro de un cuerpo desgarrado y divino – Shazam se deleita en esta versión adulta de sí mismo al hacer lo que cualquier adolescente haría con superpoderes: ¡diviértete con ellos! ¿Puede volar? ¿Tiene visión de rayos X? ¿Puede dispara un rayo con sus manos? ¿Puede omitir su prueba de estudios sociales? Shazam se propone poner a prueba los limites de sus habilidades con la alegre imprudencia de un niño. Pero necesitará dominar estos poderes rápidamente para luchar contra las fuerzas mortales del mal controladas por el Dr. Thaddeus Sivana (Mark Strong).",
+        "start": 1790174700000,
+        "end": 1790183700000
       }
     ],
     "telefe": [
-      {
-        "title": "Historias de corazón",
-        "desc": "",
-        "start": 1790023500000,
-        "end": 1790031600000
-      },
-      {
-        "title": "Telefe Noticias",
-        "desc": "",
-        "start": 1790031600000,
-        "end": 1790037000000
-      },
-      {
-        "title": "Popstars",
-        "desc": "",
-        "start": 1790037000000,
-        "end": 1790041500000
-      },
-      {
-        "title": "Pasapalabra",
-        "desc": "",
-        "start": 1790041500000,
-        "end": 1790046000000
-      },
-      {
-        "title": "Staff",
-        "desc": "",
-        "start": 1790046000000,
-        "end": 1790046900000
-      },
-      {
-        "title": "Staff",
-        "desc": "",
-        "start": 1790046900000,
-        "end": 1790048700000
-      },
-      {
-        "title": "El Valor de Tus Joyas",
-        "desc": "",
-        "start": 1790048700000,
-        "end": 1790050500000
-      },
-      {
-        "title": "Popstars",
-        "desc": "",
-        "start": 1790050500000,
-        "end": 1790055000000
-      },
-      {
-        "title": "Cortá Por Lozano",
-        "desc": "",
-        "start": 1790055000000,
-        "end": 1790060400000
-      },
-      {
-        "title": "A la Barbarossa",
-        "desc": "",
-        "start": 1790060400000,
-        "end": 1790067600000
-      },
       {
         "title": "Disney Junior",
         "desc": "",
@@ -1497,39 +1339,63 @@
         "desc": "",
         "start": 1790133300000,
         "end": 1790135100000
+      },
+      {
+        "title": "El Valor de Tus Joyas",
+        "desc": "",
+        "start": 1790135100000,
+        "end": 1790136900000
+      },
+      {
+        "title": "Popstars",
+        "desc": "",
+        "start": 1790136900000,
+        "end": 1790141400000
+      },
+      {
+        "title": "A la Barbarossa",
+        "desc": "",
+        "start": 1790141400000,
+        "end": 1790146800000
+      },
+      {
+        "title": "Cortá Por Lozano",
+        "desc": "",
+        "start": 1790146800000,
+        "end": 1790154000000
+      },
+      {
+        "title": "Disney Junior",
+        "desc": "",
+        "start": 1790154000000,
+        "end": 1790156700000
+      },
+      {
+        "title": "#Tt",
+        "desc": "",
+        "start": 1790156700000,
+        "end": 1790157600000
+      },
+      {
+        "title": "Buen Telefe",
+        "desc": "",
+        "start": 1790157600000,
+        "end": 1790166600000
+      },
+      {
+        "title": "A la Barbarossa",
+        "desc": "",
+        "start": 1790166600000,
+        "end": 1790174700000
+      },
+      {
+        "title": "Ariel en su salsa",
+        "desc": "",
+        "start": 1790174700000,
+        "end": 1790177400000
       }
     ],
     "tv_publica": [
-      {
-        "title": "Iluminadas",
-        "desc": "",
-        "start": 1790020800000,
-        "end": 1790028000000
-      },
-      {
-        "title": "Televisión Pública Noticias",
-        "desc": "",
-        "start": 1790028000000,
-        "end": 1790033400000
-      },
-      {
-        "title": "La noche es nuestra",
-        "desc": "",
-        "start": 1790033400000,
-        "end": 1790040600000
-      },
-      {
-        "title": "Desde el palacio",
-        "desc": "",
-        "start": 1790040600000,
-        "end": 1790046000000
-      },
-      {
-        "title": "Televisión Pública Noticias",
-        "desc": "",
-        "start": 1790046000000,
-        "end": 1790047800000
-      },
       {
         "title": "Feliz vida",
         "desc": "",
@@ -1625,69 +1491,45 @@
         "desc": "",
         "start": 1790134200000,
         "end": 1790156700000
+      },
+      {
+        "title": "Aires de campo",
+        "desc": "",
+        "start": 1790156700000,
+        "end": 1790157600000
+      },
+      {
+        "title": "Televisión Pública Noticias",
+        "desc": "",
+        "start": 1790157600000,
+        "end": 1790161200000
+      },
+      {
+        "title": "Aire nacional",
+        "desc": "",
+        "start": 1790161200000,
+        "end": 1790164800000
+      },
+      {
+        "title": "ADN, buena salud",
+        "desc": "",
+        "start": 1790164800000,
+        "end": 1790168400000
+      },
+      {
+        "title": "Las mañanas con Andino",
+        "desc": "",
+        "start": 1790168400000,
+        "end": 1790175600000
+      },
+      {
+        "title": "Televisión Pública Noticias",
+        "desc": "",
+        "start": 1790175600000,
+        "end": 1790181000000
       }
     ],
     "tyc_sports": [
-      {
-        "title": "Líbero",
-        "desc": "",
-        "start": 1790026200000,
-        "end": 1790027700000
-      },
-      {
-        "title": "Barracas Central vs. Independiente Rivadavia",
-        "desc": "",
-        "start": 1790027700000,
-        "end": 1790035200000
-      },
-      {
-        "title": "Líbero",
-        "desc": "",
-        "start": 1790035200000,
-        "end": 1790035800000
-      },
-      {
-        "title": "Lanús vs. Estudiantes (LP)",
-        "desc": "",
-        "start": 1790035800000,
-        "end": 1790043300000
-      },
-      {
-        "title": "Aldosivi vs. Atlético Tucumán",
-        "desc": "",
-        "start": 1790043300000,
-        "end": 1790049600000
-      },
-      {
-        "title": "Carburando PGM",
-        "desc": "",
-        "start": 1790049600000,
-        "end": 1790053200000
-      },
-      {
-        "title": "Sportia",
-        "desc": "",
-        "start": 1790053200000,
-        "end": 1790056800000
-      },
-      {
-        "title": "Sportia",
-        "desc": "",
-        "start": 1790056800000,
-        "end": 1790060400000
-      },
-      {
-        "title": "Sportia",
-        "desc": "",
-        "start": 1790060400000,
-        "end": 1790064000000
-      },
-      {
-        "title": "Sportia",
-        "desc": "",
-        "start": 1790064000000,
-        "end": 1790067600000
-      },
       {
         "title": "Barracas Central vs. Independiente Rivadavia",
         "desc": "",
