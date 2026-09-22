@@ -1,31 +1,7 @@
 {
-  "updated_at": "2026-09-22T15:00:08.567753+00:00",
+  "updated_at": "2026-09-22T21:15:06.427225+00:00",
   "channels": {
     "el_trece": [
-      {
-        "title": "Fuera del aire",
-        "desc": "",
-        "start": 1790050500000,
-        "end": 1790069400000
-      },
-      {
-        "title": "Tiempo del tiempo",
-        "desc": "",
-        "start": 1790069400000,
-        "end": 1790071200000
-      },
-      {
-        "title": "Arriba argentinos",
-        "desc": "",
-        "start": 1790071200000,
-        "end": 1790078400000
-      },
-      {
-        "title": "La mañana con Moria",
-        "desc": "",
-        "start": 1790078400000,
-        "end": 1790083800000
-      },
       {
         "title": "Puro show",
         "desc": "",
@@ -121,39 +97,39 @@
         "desc": "",
         "start": 1790170200000,
         "end": 1790177400000
+      },
+      {
+        "title": "El Zorro",
+        "desc": "",
+        "start": 1790177400000,
+        "end": 1790179200000
+      },
+      {
+        "title": "Mediodía noticias",
+        "desc": "",
+        "start": 1790179200000,
+        "end": 1790184600000
+      },
+      {
+        "title": "La cocina rebelde",
+        "desc": "",
+        "start": 1790184600000,
+        "end": 1790190900000
+      },
+      {
+        "title": "Cuestión de peso",
+        "desc": "",
+        "start": 1790190900000,
+        "end": 1790198100000
+      },
+      {
+        "title": "¡Ahora caigo!",
+        "desc": "",
+        "start": 1790198100000,
+        "end": 1790204400000
       }
     ],
     "cnn_espanol": [
-      {
-        "title": "Perspectivas desde Mexico",
-        "desc": "",
-        "start": 1790067600000,
-        "end": 1790071200000
-      },
-      {
-        "title": "Panorama Mundial",
-        "desc": "",
-        "start": 1790071200000,
-        "end": 1790074800000
-      },
-      {
-        "title": "Deportes CNN",
-        "desc": "",
-        "start": 1790074800000,
-        "end": 1790078400000
-      },
-      {
-        "title": "Café CNN",
-        "desc": "",
-        "start": 1790078400000,
-        "end": 1790085600000
-      },
-      {
-        "title": "Café CNN",
-        "desc": "",
-        "start": 1790085600000,
-        "end": 1790089200000
-      },
       {
         "title": "Conclusiones",
         "desc": "",
@@ -291,15 +267,45 @@
         "desc": "",
         "start": 1790175600000,
         "end": 1790177400000
+      },
+      {
+        "title": "El mundo maravilloso de Quest",
+        "desc": "",
+        "start": 1790177400000,
+        "end": 1790179200000
+      },
+      {
+        "title": "Oppenheimer presenta",
+        "desc": "",
+        "start": 1790179200000,
+        "end": 1790182800000
+      },
+      {
+        "title": "Redacción con Nacho Girón",
+        "desc": "",
+        "start": 1790182800000,
+        "end": 1790190000000
+      },
+      {
+        "title": "Redacción con Nacho Girón",
+        "desc": "",
+        "start": 1790190000000,
+        "end": 1790193600000
+      },
+      {
+        "title": "Deportes CNN",
+        "desc": "",
+        "start": 1790193600000,
+        "end": 1790197200000
+      },
+      {
+        "title": "Directo USA con Juan Lopez",
+        "desc": "",
+        "start": 1790197200000,
+        "end": 1790200800000
       }
     ],
     "cartoon_network": [
-      {
-        "title": "Canal no disponible",
-        "desc": "",
-        "start": 1790067600000,
-        "end": 1790082000000
-      },
       {
         "title": "Canal no disponible",
         "desc": "",
@@ -341,21 +347,21 @@
         "desc": "",
         "start": 1790168400000,
         "end": 1790182800000
+      },
+      {
+        "title": "Canal no disponible",
+        "desc": "",
+        "start": 1790182800000,
+        "end": 1790197200000
+      },
+      {
+        "title": "Canal no disponible",
+        "desc": "",
+        "start": 1790197200000,
+        "end": 1790211600000
       }
     ],
     "cinecanal": [
-      {
-        "title": "La última canción",
-        "desc": "",
-        "start": 1790062080000,
-        "end": 1790071200000
-      },
-      {
-        "title": "Blancanieves y el cazador",
-        "desc": "",
-        "start": 1790071200000,
-        "end": 1790085780000
-      },
       {
         "title": "Miss Peregrine y los niños peculiares",
         "desc": "",
@@ -415,27 +421,27 @@
         "desc": "",
         "start": 1790169540000,
         "end": 1790177160000
+      },
+      {
+        "title": "La sociedad de los poetas muertos",
+        "desc": "",
+        "start": 1790177160000,
+        "end": 1790186820000
+      },
+      {
+        "title": "Un Don Excepcional",
+        "desc": "Frank Adler (Chris Evans) es un hombre soltero que cría a una niña prodigio – su joven sobrina Mary (Mckenna Grace) – en una ciudad costera de Florida. El plan de Frank para una vida escolar normal para su sobrina con apenas 7 años de edad es frustrado cuando sus habilidades matemáticas llaman la atención de su abuela Evelyn Adler (Lindsay Duncan) cuyos planes para su nieta amenazan con separar a Frank y Mary. La maestra Bonnie Stevenson (Jenny Slate) una mujer joven cuya preocupación son sus estudiantes se convierte en una conexión con su tío también.",
+        "start": 1790186820000,
+        "end": 1790194200000
+      },
+      {
+        "title": "Ciudades de papel",
+        "desc": "",
+        "start": 1790194200000,
+        "end": 1790202420000
       }
     ],
     "espn_1": [
-      {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1790067600000,
-        "end": 1790071200000
-      },
-      {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1790071200000,
-        "end": 1790078400000
-      },
-      {
-        "title": "Buen día ESPN",
-        "desc": "",
-        "start": 1790078400000,
-        "end": 1790085600000
-      },
       {
         "title": "ESPN F12",
         "desc": "",
@@ -549,81 +555,33 @@
         "desc": "",
         "start": 1790172000000,
         "end": 1790179200000
+      },
+      {
+        "title": "ESPN F90",
+        "desc": "",
+        "start": 1790179200000,
+        "end": 1790186400000
+      },
+      {
+        "title": "ESPN F3",
+        "desc": "",
+        "start": 1790186400000,
+        "end": 1790191800000
+      },
+      {
+        "title": "SportsCenter",
+        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
+        "start": 1790191800000,
+        "end": 1790197200000
+      },
+      {
+        "title": "ESPN F360",
+        "desc": "",
+        "start": 1790197200000,
+        "end": 1790200800000
       }
     ],
     "el_gourmet": [
-      {
-        "title": "Abuela querida",
-        "desc": "",
-        "start": 1790067600000,
-        "end": 1790069400000
-      },
-      {
-        "title": "Los nuevos panes de Juan",
-        "desc": "",
-        "start": 1790069400000,
-        "end": 1790071200000
-      },
-      {
-        "title": "México en una tortilla",
-        "desc": "",
-        "start": 1790071200000,
-        "end": 1790073000000
-      },
-      {
-        "title": "Maestros del ceviche",
-        "desc": "",
-        "start": 1790073000000,
-        "end": 1790074800000
-      },
-      {
-        "title": "Menú para todos los días",
-        "desc": "",
-        "start": 1790074800000,
-        "end": 1790076600000
-      },
-      {
-        "title": "Alta cocina en B.C.",
-        "desc": "",
-        "start": 1790076600000,
-        "end": 1790078400000
-      },
-      {
-        "title": "Con solo una olla",
-        "desc": "",
-        "start": 1790078400000,
-        "end": 1790080200000
-      },
-      {
-        "title": "Guardianes de tradición Méx",
-        "desc": "",
-        "start": 1790080200000,
-        "end": 1790082000000
-      },
-      {
-        "title": "Blanca cocina con Air Fryer T",
-        "desc": "",
-        "start": 1790082000000,
-        "end": 1790083800000
-      },
-      {
-        "title": "Cocina de mercado",
-        "desc": "",
-        "start": 1790083800000,
-        "end": 1790085600000
-      },
-      {
-        "title": "Devuélveme los tápers Ar",
-        "desc": "",
-        "start": 1790085600000,
-        "end": 1790087400000
-      },
-      {
-        "title": "Los nuevos panes de Juan",
-        "desc": "",
-        "start": 1790087400000,
-        "end": 1790089200000
-      },
       {
         "title": "Guardianes de tradición Méx",
         "desc": "",
@@ -899,27 +857,81 @@
         "desc": "",
         "start": 1790175600000,
         "end": 1790177400000
+      },
+      {
+        "title": "Menú para todos los días",
+        "desc": "",
+        "start": 1790177400000,
+        "end": 1790179200000
+      },
+      {
+        "title": "Fiesta en casa al aire libre",
+        "desc": "",
+        "start": 1790179200000,
+        "end": 1790181000000
+      },
+      {
+        "title": "Las Mejores Recetas de Zahie",
+        "desc": "",
+        "start": 1790181000000,
+        "end": 1790182800000
+      },
+      {
+        "title": "Maestros de la medialuna",
+        "desc": "",
+        "start": 1790182800000,
+        "end": 1790184600000
+      },
+      {
+        "title": "Los fogones tradicionales",
+        "desc": "",
+        "start": 1790184600000,
+        "end": 1790186400000
+      },
+      {
+        "title": "Estefi dulce",
+        "desc": "",
+        "start": 1790186400000,
+        "end": 1790188200000
+      },
+      {
+        "title": "Cocina de mercado",
+        "desc": "",
+        "start": 1790188200000,
+        "end": 1790190000000
+      },
+      {
+        "title": "Abuelita linda",
+        "desc": "",
+        "start": 1790190000000,
+        "end": 1790191800000
+      },
+      {
+        "title": "Simplemente Pia",
+        "desc": "",
+        "start": 1790191800000,
+        "end": 1790193600000
+      },
+      {
+        "title": "Todo sobre la carne",
+        "desc": "",
+        "start": 1790193600000,
+        "end": 1790195400000
+      },
+      {
+        "title": "Un paseo por Oaxaca",
+        "desc": "",
+        "start": 1790195400000,
+        "end": 1790197200000
+      },
+      {
+        "title": "Estefi dulce",
+        "desc": "",
+        "start": 1790197200000,
+        "end": 1790199000000
       }
     ],
     "space": [
-      {
-        "title": "Jack Reacher: Bajo la Mira",
-        "desc": "En un día común y corriente, un experto francotirador dispara y mata a cinco personas sin razón alguna. La policía rápidamente encuentra al asesino y lo encierra pero este en lugar de confesar de lo que hizo simplemente repite la frase “Encuentren a Jack Reacher”. Luego de leer en las noticias Jack Reacher (Tom Cruise) se presenta y empieza a investigar el porqué de estos hechos.",
-        "start": 1790065440000,
-        "end": 1790071200000
-      },
-      {
-        "title": "Minority Report: Sentencia Previa",
-        "desc": "",
-        "start": 1790071200000,
-        "end": 1790076240000
-      },
-      {
-        "title": "Jack Reacher: Bajo la Mira",
-        "desc": "En un día común y corriente, un experto francotirador dispara y mata a cinco personas sin razón alguna. La policía rápidamente encuentra al asesino y lo encierra pero este en lugar de confesar de lo que hizo simplemente repite la frase “Encuentren a Jack Reacher”. Luego de leer en las noticias Jack Reacher (Tom Cruise) se presenta y empieza a investigar el porqué de estos hechos.",
-        "start": 1790076240000,
-        "end": 1790085660000
-      },
       {
         "title": "Animales Fantásticos y Dónde Encontrarlos",
         "desc": "En 1926, cuando Newt Scamander (Eddie Redmayne) acaba de completar una excursión global para encontrar y documentar una extraordinaria variedad de criaturas mágicas. Al llegar a Nueva York para hacer una breve parada, podría haber ido y venido sin incidentes… si no fuera por una persona sin poderes mágicos llamado Jacob (Dan Fogler), un caso mágico fuera de lugar, y el escape de algunas de las fantásticas bestias de Newt, que podría significar problemas tanto para los mundos mágicos como para los no magos.",
@@ -991,39 +1003,27 @@
         "desc": "",
         "start": 1790170140000,
         "end": 1790177760000
+      },
+      {
+        "title": "La caida de la Casa Blanca",
+        "desc": "",
+        "start": 1790177760000,
+        "end": 1790188080000
+      },
+      {
+        "title": "Kong: La Isla Calavera",
+        "desc": "Cuando grupo de exploradores se reúnen para viajar a una expedición a la famosa Isla Calavera, despiertan fuerzas de la naturaleza, una misión de descubrimientos que se transforma en una guerra entre monstruos y humanos. Esta isla es hermosa como traicionera, pero sin darse cuenta que están adentrándose al dominio del poderoso Kong.",
+        "start": 1790188080000,
+        "end": 1790197080000
+      },
+      {
+        "title": "El camino de regreso",
+        "desc": "",
+        "start": 1790197080000,
+        "end": 1790205660000
       }
     ],
     "star_channel": [
-      {
-        "title": "Scrubs",
-        "desc": "",
-        "start": 1790064840000,
-        "end": 1790071200000
-      },
-      {
-        "title": "Scrubs",
-        "desc": "",
-        "start": 1790071200000,
-        "end": 1790072760000
-      },
-      {
-        "title": "Scrubs",
-        "desc": "",
-        "start": 1790072760000,
-        "end": 1790074860000
-      },
-      {
-        "title": "Sin rodeos",
-        "desc": "",
-        "start": 1790074860000,
-        "end": 1790081460000
-      },
-      {
-        "title": "Henry & Klauss maestros de la magia",
-        "desc": "",
-        "start": 1790081460000,
-        "end": 1790086020000
-      },
       {
         "title": "Un espía y medio",
         "desc": "",
@@ -1125,27 +1125,21 @@
         "desc": "",
         "start": 1790171520000,
         "end": 1790182500000
+      },
+      {
+        "title": "Agua para Elefantes",
+        "desc": "Un romance inesperado en un entorno único e irresistible. El estudiante de la escuela de veterinaria Jacob (Robert Pattinson) conoce y se enamora de Marlena (Reese Witherspoon), una artista estrella de un circo de una época pasada. Descubren la belleza en medio del mundo de la carpa, y se unen a través de su compasión por un elefante especial. Contra todos los pronósticos – incluyendo la ira del carismático pero peligroso marido de Marlena, August (Christoph Waltz) – Jacob y Marlena encuentran amor para toda la vida.",
+        "start": 1790182500000,
+        "end": 1790191440000
+      },
+      {
+        "title": "Duro de matar",
+        "desc": "",
+        "start": 1790191440000,
+        "end": 1790201040000
       }
     ],
     "tnt": [
-      {
-        "title": "Hard Kill",
-        "desc": "",
-        "start": 1790067600000,
-        "end": 1790073240000
-      },
-      {
-        "title": "Los Federales",
-        "desc": "",
-        "start": 1790073240000,
-        "end": 1790081520000
-      },
-      {
-        "title": "Mamá se Fue de Viaje",
-        "desc": "Víctor (Carla Peterson) y Vera Garbor (Diego Peretti) están casados desde hace 20 años y tienen cuatro hijos: Bruno (Martín \"El mariscal Tito\" Lacour), Lara (Agustina Cabo), Tato (Julián Baz) y Lolo (Lorenzo Winograd). Absorbido por su actividad laboral, Víctor vive ajeno a la vida cotidiana de su mujer y sus hijos, Vera, agobiada por la vida doméstica, decide tomarse vacaciones por diez días, obligando a su marido a que pida vacaciones en el trabajo para poder cuidar a sus hijos. De inmediato la falta de Vera se nota y allí comienzan los problemas. Ahora Víctor y los pequeños aprenderán a convivir juntos sin su madre.",
-        "start": 1790081520000,
-        "end": 1790087820000
-      },
       {
         "title": "Miss Simpatía 2: Armada y fabulosa",
         "desc": "",
@@ -1247,33 +1241,21 @@
         "desc": "Todos tenemos un superhéroe dentro de nosotros, solo se necesita un poco de magia para sacarlo. En el caso de Billy Batson (Asher Angel), solo tiene que gritar una palabra, ¡SHAZAM! (Zachary Levi), este niño adoptivo de 14 años de edad puede convertirse en el superhéroe adulto Shazam, cortesía de un antiguo mago. Todavía niño de corazón – dentro de un cuerpo desgarrado y divino – Shazam se deleita en esta versión adulta de sí mismo al hacer lo que cualquier adolescente haría con superpoderes: ¡diviértete con ellos! ¿Puede volar? ¿Tiene visión de rayos X? ¿Puede dispara un rayo con sus manos? ¿Puede omitir su prueba de estudios sociales? Shazam se propone poner a prueba los limites de sus habilidades con la alegre imprudencia de un niño. Pero necesitará dominar estos poderes rápidamente para luchar contra las fuerzas mortales del mal controladas por el Dr. Thaddeus Sivana (Mark Strong).",
         "start": 1790174700000,
         "end": 1790183700000
+      },
+      {
+        "title": "¡Shazam! La Furia de los Dioses",
+        "desc": "La película continua la historia del adolescente Billy Batson (Asher Angel) quien, al recitar la palabra mágica \"¡SHAZAM!\" (Zachary Levi) se transforma en su alter ego adulto de superhéroe, Shazam.",
+        "start": 1790183700000,
+        "end": 1790192100000
+      },
+      {
+        "title": "The Batman",
+        "desc": "",
+        "start": 1790192100000,
+        "end": 1790203920000
       }
     ],
     "telefe": [
-      {
-        "title": "Disney Junior",
-        "desc": "",
-        "start": 1790067600000,
-        "end": 1790070300000
-      },
-      {
-        "title": "#Tt",
-        "desc": "",
-        "start": 1790070300000,
-        "end": 1790071200000
-      },
-      {
-        "title": "Buen Telefe",
-        "desc": "",
-        "start": 1790071200000,
-        "end": 1790080200000
-      },
-      {
-        "title": "A la Barbarossa",
-        "desc": "",
-        "start": 1790080200000,
-        "end": 1790088300000
-      },
       {
         "title": "Ariel en su salsa",
         "desc": "",
@@ -1393,45 +1375,39 @@
         "desc": "",
         "start": 1790174700000,
         "end": 1790177400000
+      },
+      {
+        "title": "Ariel en su salsa",
+        "desc": "",
+        "start": 1790177400000,
+        "end": 1790179200000
+      },
+      {
+        "title": "El noticiero de la gente",
+        "desc": "",
+        "start": 1790179200000,
+        "end": 1790184600000
+      },
+      {
+        "title": "Cortá Por Lozano",
+        "desc": "",
+        "start": 1790184600000,
+        "end": 1790193600000
+      },
+      {
+        "title": "Bahar, ¿estás lista para despertar?",
+        "desc": "",
+        "start": 1790193600000,
+        "end": 1790196300000
+      },
+      {
+        "title": "Historias de corazón",
+        "desc": "",
+        "start": 1790196300000,
+        "end": 1790204400000
       }
     ],
     "tv_publica": [
-      {
-        "title": "Feliz vida",
-        "desc": "",
-        "start": 1790047800000,
-        "end": 1790070300000
-      },
-      {
-        "title": "Aires de campo",
-        "desc": "",
-        "start": 1790070300000,
-        "end": 1790071200000
-      },
-      {
-        "title": "Televisión Pública Noticias",
-        "desc": "",
-        "start": 1790071200000,
-        "end": 1790074800000
-      },
-      {
-        "title": "Aire nacional",
-        "desc": "",
-        "start": 1790074800000,
-        "end": 1790078400000
-      },
-      {
-        "title": "ADN, buena salud",
-        "desc": "",
-        "start": 1790078400000,
-        "end": 1790082000000
-      },
-      {
-        "title": "Las mañanas con Andino",
-        "desc": "",
-        "start": 1790082000000,
-        "end": 1790089200000
-      },
       {
         "title": "Televisión Pública Noticias",
         "desc": "",
@@ -1527,27 +1503,27 @@
         "desc": "",
         "start": 1790175600000,
         "end": 1790181000000
+      },
+      {
+        "title": "Mediodía bien arriba",
+        "desc": "",
+        "start": 1790181000000,
+        "end": 1790186400000
+      },
+      {
+        "title": "Estamos en una",
+        "desc": "",
+        "start": 1790186400000,
+        "end": 1790193600000
+      },
+      {
+        "title": "Iluminadas",
+        "desc": "",
+        "start": 1790193600000,
+        "end": 1790200800000
       }
     ],
     "tyc_sports": [
-      {
-        "title": "Barracas Central vs. Independiente Rivadavia",
-        "desc": "",
-        "start": 1790067600000,
-        "end": 1790074800000
-      },
-      {
-        "title": "Los Especiales de TyC Sports",
-        "desc": "",
-        "start": 1790074800000,
-        "end": 1790082000000
-      },
-      {
-        "title": "Rosario Central vs. Argentinos Juniors",
-        "desc": "",
-        "start": 1790082000000,
-        "end": 1790089200000
-      },
       {
         "title": "Dale al medio",
         "desc": "",
