@@ -1,37 +1,7 @@
 {
-  "updated_at": "2026-09-23T15:15:08.176346+00:00",
+  "updated_at": "2026-09-23T21:30:08.478454+00:00",
   "channels": {
     "el_trece": [
-      {
-        "title": "Fuera del aire",
-        "desc": "",
-        "start": 1790136900000,
-        "end": 1790155800000
-      },
-      {
-        "title": "Tiempo del tiempo",
-        "desc": "",
-        "start": 1790155800000,
-        "end": 1790157600000
-      },
-      {
-        "title": "Arriba argentinos",
-        "desc": "",
-        "start": 1790157600000,
-        "end": 1790164800000
-      },
-      {
-        "title": "La mañana con Moria",
-        "desc": "",
-        "start": 1790164800000,
-        "end": 1790170200000
-      },
-      {
-        "title": "Puro show",
-        "desc": "",
-        "start": 1790170200000,
-        "end": 1790177400000
-      },
       {
         "title": "El Zorro",
         "desc": "",
@@ -100,42 +70,6 @@
       }
     ],
     "cnn_espanol": [
-      {
-        "title": "Perspectivas desde Mexico",
-        "desc": "",
-        "start": 1790154000000,
-        "end": 1790157600000
-      },
-      {
-        "title": "Panorama Mundial",
-        "desc": "",
-        "start": 1790157600000,
-        "end": 1790161200000
-      },
-      {
-        "title": "Deportes CNN",
-        "desc": "",
-        "start": 1790161200000,
-        "end": 1790164800000
-      },
-      {
-        "title": "Café CNN",
-        "desc": "",
-        "start": 1790164800000,
-        "end": 1790172000000
-      },
-      {
-        "title": "Café CNN",
-        "desc": "",
-        "start": 1790172000000,
-        "end": 1790175600000
-      },
-      {
-        "title": "Conclusiones",
-        "desc": "",
-        "start": 1790175600000,
-        "end": 1790177400000
-      },
       {
         "title": "El mundo maravilloso de Quest",
         "desc": "",
@@ -219,12 +153,6 @@
       {
         "title": "Canal no disponible",
         "desc": "",
-        "start": 1790154000000,
-        "end": 1790168400000
-      },
-      {
-        "title": "Canal no disponible",
-        "desc": "",
         "start": 1790168400000,
         "end": 1790182800000
       },
@@ -248,24 +176,6 @@
       }
     ],
     "cinecanal": [
-      {
-        "title": "La boda de Rosa",
-        "desc": "",
-        "start": 1790149620000,
-        "end": 1790157600000
-      },
-      {
-        "title": "Never Been Kissed",
-        "desc": "",
-        "start": 1790157600000,
-        "end": 1790169540000
-      },
-      {
-        "title": "Ophelia",
-        "desc": "",
-        "start": 1790169540000,
-        "end": 1790177160000
-      },
       {
         "title": "La sociedad de los poetas muertos",
         "desc": "",
@@ -304,24 +214,6 @@
       }
     ],
     "espn_1": [
-      {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1790154000000,
-        "end": 1790157600000
-      },
-      {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1790157600000,
-        "end": 1790164800000
-      },
-      {
-        "title": "Buen día ESPN",
-        "desc": "",
-        "start": 1790164800000,
-        "end": 1790172000000
-      },
       {
         "title": "ESPN F12",
         "desc": "",
@@ -396,84 +288,6 @@
       }
     ],
     "el_gourmet": [
-      {
-        "title": "Abuelita linda",
-        "desc": "",
-        "start": 1790154000000,
-        "end": 1790155800000
-      },
-      {
-        "title": "Maestros de la medialuna",
-        "desc": "",
-        "start": 1790155800000,
-        "end": 1790157600000
-      },
-      {
-        "title": "México en una tortilla",
-        "desc": "",
-        "start": 1790157600000,
-        "end": 1790159400000
-      },
-      {
-        "title": "Maestros del ceviche",
-        "desc": "",
-        "start": 1790159400000,
-        "end": 1790161200000
-      },
-      {
-        "title": "Menú para todos los días",
-        "desc": "",
-        "start": 1790161200000,
-        "end": 1790163000000
-      },
-      {
-        "title": "Un paseo por Oaxaca",
-        "desc": "",
-        "start": 1790163000000,
-        "end": 1790164800000
-      },
-      {
-        "title": "Con solo una olla",
-        "desc": "",
-        "start": 1790164800000,
-        "end": 1790166600000
-      },
-      {
-        "title": "Productos artesanos México",
-        "desc": "",
-        "start": 1790166600000,
-        "end": 1790168400000
-      },
-      {
-        "title": "Fiesta en casa al aire libre",
-        "desc": "",
-        "start": 1790168400000,
-        "end": 1790170200000
-      },
-      {
-        "title": "Cocina de mercado",
-        "desc": "",
-        "start": 1790170200000,
-        "end": 1790172000000
-      },
-      {
-        "title": "Devuélveme los tápers México",
-        "desc": "",
-        "start": 1790172000000,
-        "end": 1790173800000
-      },
-      {
-        "title": "Los nuevos panes de Juan",
-        "desc": "",
-        "start": 1790173800000,
-        "end": 1790175600000
-      },
-      {
-        "title": "Productos artesanos México",
-        "desc": "",
-        "start": 1790175600000,
-        "end": 1790177400000
-      },
       {
         "title": "Menú para todos los días",
         "desc": "",
@@ -621,30 +435,6 @@
     ],
     "space": [
       {
-        "title": "T-34",
-        "desc": "",
-        "start": 1790146500000,
-        "end": 1790155020000
-      },
-      {
-        "title": "Hollywood one on one",
-        "desc": "",
-        "start": 1790155020000,
-        "end": 1790157600000
-      },
-      {
-        "title": "La nueva gran estafa",
-        "desc": "",
-        "start": 1790157600000,
-        "end": 1790161260000
-      },
-      {
-        "title": "Ahora son 13",
-        "desc": "",
-        "start": 1790161260000,
-        "end": 1790170140000
-      },
-      {
         "title": "Papá al rescate",
         "desc": "",
         "start": 1790170140000,
@@ -688,30 +478,6 @@
       }
     ],
     "star_channel": [
-      {
-        "title": "Scrubs",
-        "desc": "",
-        "start": 1790154780000,
-        "end": 1790157600000
-      },
-      {
-        "title": "Scrubs",
-        "desc": "",
-        "start": 1790157600000,
-        "end": 1790159160000
-      },
-      {
-        "title": "Scrubs",
-        "desc": "",
-        "start": 1790159160000,
-        "end": 1790165520000
-      },
-      {
-        "title": "Enlace mortal",
-        "desc": "",
-        "start": 1790165520000,
-        "end": 1790171520000
-      },
       {
         "title": "Guardianes de alta mar",
         "desc": "",
@@ -769,30 +535,6 @@
     ],
     "tnt": [
       {
-        "title": "Hollywood one on one",
-        "desc": "",
-        "start": 1790154000000,
-        "end": 1790155140000
-      },
-      {
-        "title": "Miss Simpatía 2: Armada y fabulosa",
-        "desc": "",
-        "start": 1790155140000,
-        "end": 1790162220000
-      },
-      {
-        "title": "DC League of Super-Pets",
-        "desc": "",
-        "start": 1790162220000,
-        "end": 1790169180000
-      },
-      {
-        "title": "Séptimo",
-        "desc": "",
-        "start": 1790169180000,
-        "end": 1790174700000
-      },
-      {
         "title": "Shazam!",
         "desc": "Todos tenemos un superhéroe dentro de nosotros, solo se necesita un poco de magia para sacarlo. En el caso de Billy Batson (Asher Angel), solo tiene que gritar una palabra, ¡SHAZAM! (Zachary Levi), este niño adoptivo de 14 años de edad puede convertirse en el superhéroe adulto Shazam, cortesía de un antiguo mago. Todavía niño de corazón – dentro de un cuerpo desgarrado y divino – Shazam se deleita en esta versión adulta de sí mismo al hacer lo que cualquier adolescente haría con superpoderes: ¡diviértete con ellos! ¿Puede volar? ¿Tiene visión de rayos X? ¿Puede dispara un rayo con sus manos? ¿Puede omitir su prueba de estudios sociales? Shazam se propone poner a prueba los limites de sus habilidades con la alegre imprudencia de un niño. Pero necesitará dominar estos poderes rápidamente para luchar contra las fuerzas mortales del mal controladas por el Dr. Thaddeus Sivana (Mark Strong).",
         "start": 1790174700000,
@@ -830,36 +572,6 @@
       }
     ],
     "telefe": [
-      {
-        "title": "Disney Junior",
-        "desc": "",
-        "start": 1790154000000,
-        "end": 1790156700000
-      },
-      {
-        "title": "#Tt",
-        "desc": "",
-        "start": 1790156700000,
-        "end": 1790157600000
-      },
-      {
-        "title": "Buen Telefe",
-        "desc": "",
-        "start": 1790157600000,
-        "end": 1790166600000
-      },
-      {
-        "title": "A la Barbarossa",
-        "desc": "",
-        "start": 1790166600000,
-        "end": 1790174700000
-      },
-      {
-        "title": "Ariel en su salsa",
-        "desc": "",
-        "start": 1790174700000,
-        "end": 1790177400000
-      },
       {
         "title": "Ariel en su salsa",
         "desc": "",
@@ -940,42 +652,6 @@
       }
     ],
     "tv_publica": [
-      {
-        "title": "Feliz vida",
-        "desc": "",
-        "start": 1790134200000,
-        "end": 1790156700000
-      },
-      {
-        "title": "Aires de campo",
-        "desc": "",
-        "start": 1790156700000,
-        "end": 1790157600000
-      },
-      {
-        "title": "Televisión Pública Noticias",
-        "desc": "",
-        "start": 1790157600000,
-        "end": 1790161200000
-      },
-      {
-        "title": "Aire nacional",
-        "desc": "",
-        "start": 1790161200000,
-        "end": 1790164800000
-      },
-      {
-        "title": "ADN, buena salud",
-        "desc": "",
-        "start": 1790164800000,
-        "end": 1790168400000
-      },
-      {
-        "title": "Las mañanas con Andino",
-        "desc": "",
-        "start": 1790168400000,
-        "end": 1790175600000
-      },
       {
         "title": "Televisión Pública Noticias",
         "desc": "",
