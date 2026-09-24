@@ -1,22 +1,6 @@
 {
-  "updated_at": "2026-09-24T15:00:07.956137+00:00",
+  "updated_at": "2026-09-24T21:15:08.308451+00:00",
   "channels": {
-    "el_trece": [
-      {
-        "title": "Fuera del aire",
-        "desc": "",
-        "start": 1790223300000,
-        "end": 1790242200000
-      }
-    ],
-    "tv_publica": [
-      {
-        "title": "Feliz vida",
-        "desc": "",
-        "start": 1790220600000,
-        "end": 1790243100000
-      }
-    ],
     "tnt_sports_1": [
       {
         "title": "Lo Mejor de la Fecha",
