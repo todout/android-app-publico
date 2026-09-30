@@ -7,6 +7,11 @@ Runs autonomously on Raspberry Pi.
     * Author 1 (Primary): cheroga (CherogaTV / Cheroga de GitHub - Origen backend: mensajerofm.org, ~1-3 hr cadence)
     * Author 2 (Primary): dxrioacxta (PlayPrem / DxPanel - con descifrado XOR transparente, ~20 min cadence)
     * Author 3 (Reserva / Standby): mazurikian (155 canales Flow, M3U con tokens diarios)
+- Anti-Ban Protection for External Host (mensajerofm.org):
+    * Lazy Polling: Solo consulta mensajerofm.org cada 60 minutos en reposo.
+    * On-Demand Trigger: Si dxrioacxta (GitHub CDN) detecta cambio de key, despierta a cheroga de inmediato.
+    * HTTP 304 Conditional Cache: Envía If-Modified-Since/ETag (.tracker_cache.json). Si no cambió, 0 bytes.
+    * No Cache-Buster: No envía ?t=timestamp al Apache externo para evitar saltos en firewalls o ModSecurity.
 - Automatic Failover: Si alguna de las fuentes principales cae o deja de responder,
   las candidatas de reserva son promovidas automáticamente al par activo para sostener el consenso.
 - Two-Source Consensus: Cuando las 2 fuentes activas coinciden en una nueva key, se aplica
@@ -34,6 +39,10 @@ import requests
 REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHANNELS_JSON_PATH = os.path.join(REPO_DIR, "channels.json")
 FLOW_AUDIT_LOG_PATH = os.path.join(REPO_DIR, "flow_audit.log")
+TRACKER_CACHE_PATH = os.path.join(REPO_DIR, ".tracker_cache.json")
+
+# External tracker lazy polling interval (e.g. mensajerofm.org) in seconds (1 hour)
+EXTERNAL_TRACKER_INTERVAL_SECONDS = 3600
 
 # Safety Semaphore: Max surgical Flow requests allowed in any rolling 60-minute window
 MAX_FLOW_REQUESTS_PER_HOUR = 3
@@ -139,19 +148,66 @@ def get_semaphore_status(max_per_hour: int = MAX_FLOW_REQUESTS_PER_HOUR) -> tupl
     is_green = (recent_count < max_per_hour)
     return is_green, recent_count, max_per_hour
 
-def fetch_single_tracker(url: str) -> tuple:
+def load_tracker_cache() -> dict:
+    """Loads HTTP 304 metadata (Last-Modified, ETag, last_checked, channels, edge_token) from disk."""
+    if os.path.exists(TRACKER_CACHE_PATH):
+        try:
+            with open(TRACKER_CACHE_PATH, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {}
+
+def save_tracker_cache(cache: dict):
+    """Persists tracker cache metadata to disk."""
+    try:
+        with open(TRACKER_CACHE_PATH, "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False)
+    except Exception as e:
+        print(f"[WARN] No se pudo guardar .tracker_cache.json: {e}")
+
+def fetch_single_tracker(url: str, force_network: bool = False) -> tuple:
     """
     Downloads and parses a tracker URL supporting both JSON and M3U formats.
+    Includes smart HTTP 304 conditional cache (If-Modified-Since) for external hosts.
     Returns (channel_map: dict, edge_token: str or None, error: str or None)
     """
     t_name = url.split("/")[-1]
-    bust_url = f"{url}?t={int(time.time())}"
+    is_external_self_hosted = ("mensajerofm.org" in url)
+
+    # For external hosts, do NOT use cache-busting ?t=... (it defeats HTTP 304 and overloads Apache)
+    if is_external_self_hosted:
+        fetch_url = url
+    else:
+        fetch_url = f"{url}?t={int(time.time())}"
+
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
+        "Accept": "application/json, text/plain, */*"
     }
+
+    cache = load_tracker_cache()
+    cached_entry = cache.get(url, {})
+
+    if is_external_self_hosted and not force_network and cached_entry:
+        if cached_entry.get("last_modified"):
+            headers["If-Modified-Since"] = cached_entry["last_modified"]
+        if cached_entry.get("etag"):
+            headers["If-None-Match"] = cached_entry["etag"]
+
     try:
-        resp = requests.get(bust_url, headers=headers, timeout=10)
+        resp = requests.get(fetch_url, headers=headers, timeout=10)
+
+        # Handle HTTP 304 Not Modified: Reuse cached data with 0 bytes downloaded
+        if resp.status_code == 304 and cached_entry:
+            cached_entry["last_checked"] = int(time.time())
+            cache[url] = cached_entry
+            save_tracker_cache(cache)
+            return cached_entry.get("channels", {}), cached_entry.get("edge_token"), None
+
         if resp.status_code != 200:
+            if cached_entry.get("channels"):
+                return cached_entry["channels"], cached_entry.get("edge_token"), None
             return {}, None, f"HTTP {resp.status_code}"
 
         text = resp.text
@@ -187,6 +243,16 @@ def fetch_single_tracker(url: str) -> tuple:
                             "key": key
                         }
                     curr_key = None
+
+            if is_external_self_hosted:
+                cache[url] = {
+                    "last_modified": resp.headers.get("Last-Modified"),
+                    "etag": resp.headers.get("ETag"),
+                    "last_checked": int(time.time()),
+                    "channels": channels,
+                    "edge_token": edge_tok
+                }
+                save_tracker_cache(cache)
             return channels, edge_tok, None
 
         # Format B: JSON categories and samples/channels
@@ -219,25 +285,63 @@ def fetch_single_tracker(url: str) -> tuple:
                             "kid": kid_hex,
                             "key": key_hex
                         }
+
+        if is_external_self_hosted:
+            cache[url] = {
+                "last_modified": resp.headers.get("Last-Modified"),
+                "etag": resp.headers.get("ETag"),
+                "last_checked": int(time.time()),
+                "channels": channels,
+                "edge_token": edge_tok
+            }
+            save_tracker_cache(cache)
+
         return channels, edge_tok, None
     except Exception as e:
+        if cached_entry.get("channels"):
+            return cached_entry["channels"], cached_entry.get("edge_token"), None
         return {}, None, str(e)
 
-def load_author_tracker_maps() -> tuple:
+def load_author_tracker_maps(force_refresh_author: str = None) -> tuple:
     """
-    Downloads community trackers from GitHub with automatic failover to standby candidate sources.
+    Downloads community trackers with lazy polling for external hosts
+    and automatic failover to standby candidate sources.
     Returns (active_author_maps: dict, edge_token: str, sources_status: dict)
     """
     author_maps = {}
     sources_status = {}
     edge_token = DEFAULT_EDGE_TOKEN
+    cache = load_tracker_cache()
+    now_ts = int(time.time())
 
     # 1. Load Primary Sources
     for author, urls in PRIMARY_SOURCES.items():
         author_maps[author] = {}
         author_errors = []
+
+        is_external = any("mensajerofm.org" in u for u in urls)
+        can_use_lazy_cache = (
+            is_external
+            and force_refresh_author != author
+            and all(u in cache and cache[u].get("channels") for u in urls)
+            and all((now_ts - cache[u].get("last_checked", 0)) < EXTERNAL_TRACKER_INTERVAL_SECONDS for u in urls)
+        )
+
+        if can_use_lazy_cache:
+            for u in urls:
+                ch_map = cache[u].get("channels", {})
+                tok = cache[u].get("edge_token")
+                author_maps[author].update(ch_map)
+                if tok and edge_token == DEFAULT_EDGE_TOKEN:
+                    edge_token = tok
+            count = len(author_maps[author])
+            mins_ago = int((now_ts - min(cache[u].get("last_checked", 0) for u in urls)) / 60)
+            sources_status[author] = {"role": "primary", "status": f"ONLINE (Cache {mins_ago}m)", "channels": count, "cached": True}
+            continue
+
         for url in urls:
-            ch_map, tok, err = fetch_single_tracker(url)
+            force_net = (force_refresh_author == author)
+            ch_map, tok, err = fetch_single_tracker(url, force_network=force_net)
             if err:
                 author_errors.append(f"{url.split('/')[-1]}: {err}")
             else:
@@ -247,12 +351,12 @@ def load_author_tracker_maps() -> tuple:
 
         count = len(author_maps[author])
         if count > 0:
-            sources_status[author] = {"role": "primary", "status": "ONLINE", "channels": count}
+            sources_status[author] = {"role": "primary", "status": "ONLINE", "channels": count, "cached": False}
         else:
-            sources_status[author] = {"role": "primary", "status": "OFFLINE", "channels": 0, "errors": author_errors}
+            sources_status[author] = {"role": "primary", "status": "OFFLINE", "channels": 0, "errors": author_errors, "cached": False}
 
     # 2. Check if failover is needed (if fewer than 2 primary sources are healthy)
-    healthy_primaries = [a for a, s in sources_status.items() if s["status"] == "ONLINE"]
+    healthy_primaries = [a for a, s in sources_status.items() if "ONLINE" in s["status"]]
 
     if len(healthy_primaries) < 2:
         for s_author, s_urls in STANDBY_SOURCES.items():
@@ -267,7 +371,7 @@ def load_author_tracker_maps() -> tuple:
             if len(standby_map) > 0:
                 print(f"[FAILOVER ACTIVO] Promoviendo candidata de reserva '{s_author}' ({len(standby_map)} canales) para sostener el consenso de 2 fuentes.")
                 author_maps[s_author] = standby_map
-                sources_status[s_author] = {"role": "promoted_standby", "status": "ONLINE", "channels": len(standby_map)}
+                sources_status[s_author] = {"role": "promoted_standby", "status": "ONLINE", "channels": len(standby_map), "cached": False}
                 healthy_primaries.append(s_author)
                 if len(healthy_primaries) >= 2:
                     break
@@ -348,21 +452,21 @@ def print_audit_stats():
 
     # Check sources status
     print("Estado de Fuentes Comunitarias:")
+    _, _, sources_status = load_author_tracker_maps(force_refresh_author="cheroga")
     for a, urls in PRIMARY_SOURCES.items():
-        ch_total = 0
-        status_str = "ONLINE"
-        for u in urls:
-            ch_map, _, err = fetch_single_tracker(u)
-            if err:
-                status_str = f"PARCIAL ({err})"
-            ch_total += len(ch_map)
+        s = sources_status.get(a, {})
+        status_str = s.get("status", "ONLINE")
+        ch_total = s.get("channels", 0)
         print(f" * {a:12} (Principal):        {status_str} ({ch_total} canales mapeados)")
 
     for a, urls in STANDBY_SOURCES.items():
-        ch_total = 0
-        for u in urls:
-            ch_map, _, _ = fetch_single_tracker(u)
-            ch_total += len(ch_map)
+        if a in sources_status:
+            ch_total = sources_status[a].get("channels", 0)
+        else:
+            ch_total = 0
+            for u in urls:
+                ch_map, _, _ = fetch_single_tracker(u)
+                ch_total += len(ch_map)
         print(f" * {a:12} (Candidata Suplente): LISTA / EN ESPERA ({ch_total} canales disponibles)")
     print("-" * 76)
 
@@ -446,7 +550,8 @@ def main():
         test_channels = dash_channels
 
     # Load tracker maps from active authors (with automatic failover to standby candidate)
-    author_maps, edge_token, sources_status = load_author_tracker_maps()
+    force_refresh = ("--force-refresh" in sys.argv)
+    author_maps, edge_token, sources_status = load_author_tracker_maps(force_refresh_author="cheroga" if force_refresh else None)
     active_authors = list(author_maps.keys())
 
     if len(active_authors) < 2:
@@ -457,6 +562,7 @@ def main():
     rejected_kids = load_rejected_kids()
 
     updated_channels = []
+    cheroga_refreshed_live = not sources_status.get("cheroga", {}).get("cached", False)
 
     for ch in test_channels:
         cid = ch["id"]
@@ -477,6 +583,24 @@ def main():
         # Check: do both trackers match local_drm?
         if (drm_a == local_drm or drm_a is None) and (drm_b == local_drm or drm_b is None):
             continue
+
+        # If a candidate proposed a new key and cheroga was loaded from lazy cache,
+        # refresh cheroga immediately (HTTP 304 / 200) to confirm live consensus!
+        if not cheroga_refreshed_live and (
+            (drm_a and drm_a != local_drm) or (drm_b and drm_b != local_drm)
+        ):
+            print(f"[{timestamp_str}] [LAZY REFRESH] Posible cambio de key detectado en {cid}. Validando cheroga (mensajerofm con If-Modified-Since)...")
+            fresh_maps, fresh_tok, _ = load_author_tracker_maps(force_refresh_author="cheroga")
+            if "cheroga" in fresh_maps:
+                author_maps["cheroga"] = fresh_maps["cheroga"]
+                entry_a = author_maps[author_a].get(path)
+                entry_b = author_maps[author_b].get(path)
+                drm_a = entry_a["combo"] if entry_a else None
+                drm_b = entry_b["combo"] if entry_b else None
+            cheroga_refreshed_live = True
+
+            if (drm_a == local_drm or drm_a is None) and (drm_b == local_drm or drm_b is None):
+                continue
 
         # RULE 1: TWO-SOURCE CONSENSUS (Zero Flow requests)
         # If both independent active authors agree on a new key, apply immediately!
