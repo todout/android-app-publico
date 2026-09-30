@@ -4,11 +4,9 @@ Flow Channel DRM Key Watchdog & Smart Consensus Auto-Updater for LeichTV
 Runs autonomously on Raspberry Pi.
 - Architecture: TRACKER-FIRST + SMART TWO-SOURCE CONSENSUS + AUTOMATIC FAILOVER
 - Multi-Author Tracking:
-    * Author 1 (Primary): cheroga (CherogaTV - Cono Sur tracker, ~3.3 hr commit cadence)
-    * Author 2 (Primary): puntoplay (PuntoPlay TV tracker mirror, ~1 hr commit cadence)
-    * Author 3 (Reserva / Standby): dxrioacxta (PlayPrem / DxPanel - con descifrado XOR transparente)
-    * Author 4 (Reserva / Standby): tapego (Tapego mirror, ~15 min commit cadence)
-    * Author 5 (Reserva / Standby): mazurikian (155 canales Flow, M3U con tokens diarios)
+    * Author 1 (Primary): cheroga (CherogaTV / Cheroga de GitHub - Origen backend: mensajerofm.org, ~1-3 hr cadence)
+    * Author 2 (Primary): dxrioacxta (PlayPrem / DxPanel - con descifrado XOR transparente, ~20 min cadence)
+    * Author 3 (Reserva / Standby): mazurikian (155 canales Flow, M3U con tokens diarios)
 - Automatic Failover: Si alguna de las fuentes principales cae o deja de responder,
   las candidatas de reserva son promovidas automáticamente al par activo para sostener el consenso.
 - Two-Source Consensus: Cuando las 2 fuentes activas coinciden en una nueva key, se aplica
@@ -60,24 +58,28 @@ def decode_dx_str(val: str) -> str:
     return val
 
 # Primary Independent Community Sources (Active Consensus Pair)
+#
+# NOTA DE TRAZABILIDAD Y ARQUITECTURA:
+# - 'cheroga': Se deja constancia expresa de que 'mensajerofm.org' es la infraestructura origen de
+#   Cheroga (autor del repositorio https://github.com/cheroga/cheroga.github.io). En septiembre 2026,
+#   Cheroga reestructuró su repositorio GitHub eliminando 'canales_cache.json' y pasando a consumir
+#   sus listas directamente desde mensajerofm.org en sus GitHub Actions (PlayTvPremium.yml y actualizar_json.yml).
+#   Se apunta a estos endpoints directos para evitar 404s y se documenta aquí para no perder el hilo
+#   en caso de futuras reestructuraciones.
+# - 'dxrioacxta': PlayPrem / DxPanel en GitHub con descifrado transparente Base64+XOR (DX_XOR_KEY).
 PRIMARY_SOURCES = {
     "cheroga": [
-        "https://raw.githubusercontent.com/cheroga/cheroga.github.io/master/canales_cache.json"
+        "https://mensajerofm.org/json/nocache_channel.json",
+        "https://mensajerofm.org/json/puntoplay_canales.json"
     ],
-    "puntoplay": [
-        "https://raw.githubusercontent.com/cheroga/cheroga.github.io/puntoplay/canales.json"
+    "dxrioacxta": [
+        "https://raw.githubusercontent.com/dxrioacxta/playprem/main/tv1.json",
+        "https://raw.githubusercontent.com/dxrioacxta/playprem/main/canales.json"
     ]
 }
 
 # Standby Candidate Sources (Promoted automatically if any primary source goes offline/404)
 STANDBY_SOURCES = {
-    "dxrioacxta": [
-        "https://raw.githubusercontent.com/dxrioacxta/playprem/main/tv1.json",
-        "https://raw.githubusercontent.com/dxrioacxta/playprem/main/canales.json",
-    ],
-    "tapego": [
-        "https://raw.githubusercontent.com/cheroga/cheroga.github.io/canales/nocache_channel.json"
-    ],
     "mazurikian": [
         "https://raw.githubusercontent.com/mazurikian/iptv/main/playlist.m3u"
     ]
@@ -144,8 +146,11 @@ def fetch_single_tracker(url: str) -> tuple:
     """
     t_name = url.split("/")[-1]
     bust_url = f"{url}?t={int(time.time())}"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+    }
     try:
-        resp = requests.get(bust_url, timeout=10)
+        resp = requests.get(bust_url, headers=headers, timeout=10)
         if resp.status_code != 200:
             return {}, None, f"HTTP {resp.status_code}"
 
