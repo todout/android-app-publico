@@ -5,7 +5,7 @@ Runs autonomously on Raspberry Pi.
 - Architecture: TRACKER-FIRST + SMART TWO-SOURCE CONSENSUS + AUTOMATIC FAILOVER
 - Multi-Author Tracking:
     * Author 1 (Primary): cheroga (CherogaTV / Cheroga de GitHub - Origen backend: mensajerofm.org, ~1-3 hr cadence)
-    * Author 2 (Primary): dxrioacxta (PlayPrem / DxPanel - con descifrado XOR transparente, ~20 min cadence)
+    * Author 2 (Primary): dxrioacxta (PlayPrem / DxPanel - con descifrado AES-128-ECB / XOR transparente, ~20 min cadence)
     * Author 3 (Reserva / Standby): mazurikian (155 canales Flow, M3U con tokens diarios)
 - Anti-Ban Protection for External Host (mensajerofm.org):
     * Lazy Polling: Solo consulta mensajerofm.org cada 60 minutos en reposo.
@@ -47,11 +47,131 @@ EXTERNAL_TRACKER_INTERVAL_SECONDS = 3600
 # Safety Semaphore: Max surgical Flow requests allowed in any rolling 60-minute window
 MAX_FLOW_REQUESTS_PER_HOUR = 3
 
-# XOR key used by DxPanel / PlayPrem for obfuscating URLs and DRM URIs
+# Obfuscation keys and decoders used by DxPanel / PlayPrem:
+# - Prior to 2026-09-30: Base64 + XOR with DX_XOR_KEY = b"e72dxpro1py"
+# - Since 2026-09-30 ("Actualizado desde DX PANEL (AES)"): AES-128-ECB with DX_AES_KEY = b"e72of82ke0gu2o2k"
+#   (Configured via Firebase Remote Config 'claveapp')
+DX_AES_KEY = b"e72of82ke0gu2o2k"
 DX_XOR_KEY = b"e72dxpro1py"
 
+# Crypto backends: try cryptography, then pycryptodome, with pure-Python fallback
+try:
+    from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+    from cryptography.hazmat.backends import default_backend
+    _HAS_CRYPTOGRAPHY = True
+except ImportError:
+    _HAS_CRYPTOGRAPHY = False
+
+try:
+    from Crypto.Cipher import AES as _PyCryptoAES
+    _HAS_PYCRYPTO = True
+except ImportError:
+    _HAS_PYCRYPTO = False
+
+_AES_SBOX = [
+    0x63, 0x7c, 0x77, 0x7b, 0xf2, 0x6b, 0x6f, 0xc5, 0x30, 0x01, 0x67, 0x2b, 0xfe, 0xd7, 0xab, 0x76,
+    0xca, 0x82, 0xc9, 0x7d, 0xfa, 0x59, 0x47, 0xf0, 0xad, 0xd4, 0xa2, 0xaf, 0x9c, 0xa4, 0x72, 0xc0,
+    0xb7, 0xfd, 0x93, 0x26, 0x36, 0x3f, 0xf7, 0xcc, 0x34, 0xa5, 0xe5, 0xf1, 0x71, 0xd8, 0x31, 0x15,
+    0x04, 0xc7, 0x23, 0xc3, 0x18, 0x96, 0x05, 0x9a, 0x07, 0x12, 0x80, 0xe2, 0xeb, 0x27, 0xb2, 0x75,
+    0x09, 0x83, 0x2c, 0x1a, 0x1b, 0x6e, 0x5a, 0xa0, 0x52, 0x3b, 0xd6, 0xb3, 0x29, 0xe3, 0x2f, 0x84,
+    0x53, 0xd1, 0x00, 0xed, 0x20, 0xfc, 0xb1, 0x5b, 0x6a, 0xcb, 0xbe, 0x39, 0x4a, 0x4c, 0x58, 0xcf,
+    0xd0, 0xef, 0xaa, 0xfb, 0x43, 0x4d, 0x33, 0x85, 0x45, 0xf9, 0x02, 0x7f, 0x50, 0x3c, 0x9f, 0xa8,
+    0x51, 0xa3, 0x40, 0x8f, 0x92, 0x9d, 0x38, 0xf5, 0xbc, 0xb6, 0xda, 0x21, 0x10, 0xff, 0xf3, 0xd2,
+    0xcd, 0x0c, 0x13, 0xec, 0x5f, 0x97, 0x44, 0x17, 0xc4, 0xa7, 0x7e, 0x3d, 0x64, 0x5d, 0x19, 0x73,
+    0x60, 0x81, 0x4f, 0xdc, 0x22, 0x2a, 0x90, 0x88, 0x46, 0xee, 0xb8, 0x14, 0xde, 0x5e, 0x0b, 0xdb,
+    0xe0, 0x32, 0x3a, 0x0a, 0x49, 0x06, 0x24, 0x5c, 0xc2, 0xd3, 0xac, 0x62, 0x91, 0x95, 0xe4, 0x79,
+    0xe7, 0xc8, 0x37, 0x6d, 0x8d, 0xd5, 0x4e, 0xa9, 0x6c, 0x56, 0xf4, 0xea, 0x65, 0x7a, 0xae, 0x08,
+    0xba, 0x78, 0x25, 0x2e, 0x1c, 0xa6, 0xb4, 0xc6, 0xe8, 0xdd, 0x74, 0x1f, 0x4b, 0xbd, 0x8b, 0x8a,
+    0x70, 0x3e, 0xb5, 0x66, 0x48, 0x03, 0xf6, 0x0e, 0x61, 0x35, 0x57, 0xb9, 0x86, 0xc1, 0x1d, 0x9e,
+    0xe1, 0xf8, 0x98, 0x11, 0x69, 0xd9, 0x8e, 0x94, 0x9b, 0x1e, 0x87, 0xe9, 0xce, 0x55, 0x28, 0xdf,
+    0x8c, 0xa1, 0x89, 0x0d, 0xbf, 0xe6, 0x42, 0x68, 0x41, 0x99, 0x2d, 0x0f, 0xb0, 0x54, 0xbb, 0x16
+]
+_AES_RSBOX = [_AES_SBOX.index(x) for x in range(256)]
+
+def _pure_aes_decrypt_block(block: bytes, rks: list) -> bytes:
+    state = [[block[r + 4*c] for c in range(4)] for r in range(4)]
+    rk = rks[10]
+    for r in range(4):
+        for c in range(4): state[r][c] ^= rk[r + 4*c]
+    def _xtime(a): return ((a << 1) ^ 0x1B) & 0xFF if (a & 0x80) else (a << 1)
+    def _mul(a, b):
+        res = 0
+        while b:
+            if b & 1: res ^= a
+            a = _xtime(a)
+            b >>= 1
+        return res
+    for rnd in range(9, 0, -1):
+        state[1] = [state[1][3], state[1][0], state[1][1], state[1][2]]
+        state[2] = [state[2][2], state[2][3], state[2][0], state[2][1]]
+        state[3] = [state[3][1], state[3][2], state[3][3], state[3][0]]
+        for r in range(4):
+            for c in range(4): state[r][c] = _AES_RSBOX[state[r][c]]
+        rk = rks[rnd]
+        for r in range(4):
+            for c in range(4): state[r][c] ^= rk[r + 4*c]
+        for c in range(4):
+            col = [state[r][c] for r in range(4)]
+            state[0][c] = _mul(col[0], 0x0e) ^ _mul(col[1], 0x0b) ^ _mul(col[2], 0x0d) ^ _mul(col[3], 0x09)
+            state[1][c] = _mul(col[0], 0x09) ^ _mul(col[1], 0x0e) ^ _mul(col[2], 0x0b) ^ _mul(col[3], 0x0d)
+            state[2][c] = _mul(col[0], 0x0d) ^ _mul(col[1], 0x09) ^ _mul(col[2], 0x0e) ^ _mul(col[3], 0x0b)
+            state[3][c] = _mul(col[0], 0x0b) ^ _mul(col[1], 0x0d) ^ _mul(col[2], 0x09) ^ _mul(col[3], 0x0e)
+    state[1] = [state[1][3], state[1][0], state[1][1], state[1][2]]
+    state[2] = [state[2][2], state[2][3], state[2][0], state[2][1]]
+    state[3] = [state[3][1], state[3][2], state[3][3], state[3][0]]
+    for r in range(4):
+        for c in range(4): state[r][c] = _AES_RSBOX[state[r][c]]
+    rk = rks[0]
+    for r in range(4):
+        for c in range(4): state[r][c] ^= rk[r + 4*c]
+    return bytes([state[r][c] for c in range(4) for r in range(4)])
+
+def _pure_aes_key_expansion_128(key: bytes):
+    rcon = [0x00, 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1B, 0x36]
+    w = [key[4*i:4*i+4] for i in range(4)]
+    for i in range(4, 44):
+        temp = w[i-1]
+        if i % 4 == 0:
+            rot = temp[1:] + temp[:1]
+            sub = bytes([_AES_SBOX[b] for b in rot])
+            temp = bytes([b ^ (rcon[i//4] if j == 0 else 0) for j, b in enumerate(sub)])
+        w.append(bytes([b1 ^ b2 for b1, b2 in zip(w[i-4], temp)]))
+    return [b''.join(w[4*r:4*r+4]) for r in range(11)]
+
+def decrypt_aes_128_ecb(data: bytes, key: bytes) -> bytes:
+    """Decrypts AES-128-ECB with PKCS7 unpadding (using cryptography, pycrypto, or pure-python fallback)."""
+    if len(data) % 16 != 0 or len(data) == 0:
+        return b""
+    dec = None
+    if _HAS_CRYPTOGRAPHY:
+        try:
+            cipher = Cipher(algorithms.AES(key), modes.ECB(), backend=default_backend()).decryptor()
+            dec = cipher.update(data) + cipher.finalize()
+        except Exception:
+            pass
+    elif _HAS_PYCRYPTO:
+        try:
+            cipher = _PyCryptoAES.new(key, _PyCryptoAES.MODE_ECB)
+            dec = cipher.decrypt(data)
+        except Exception:
+            pass
+    if dec is None:
+        try:
+            rks = _pure_aes_key_expansion_128(key)
+            out = bytearray()
+            for i in range(0, len(data), 16):
+                out.extend(_pure_aes_decrypt_block(data[i:i+16], rks))
+            dec = bytes(out)
+        except Exception:
+            return b""
+    if dec and len(dec) > 0:
+        pad_len = dec[-1]
+        if 1 <= pad_len <= 16 and dec[-pad_len:] == bytes([pad_len]) * pad_len:
+            dec = dec[:-pad_len]
+    return dec
+
 def decode_dx_str(val: str) -> str:
-    """Decodes Base64+XOR obfuscated URLs and DRM license URIs from DxPanel if needed."""
+    """Decodes AES-128-ECB or Base64+XOR obfuscated URLs and DRM license URIs from DxPanel."""
     if not val or not isinstance(val, str):
         return ""
     val = val.strip()
@@ -59,6 +179,14 @@ def decode_dx_str(val: str) -> str:
         return val
     try:
         raw = base64.b64decode(val)
+        # 1. Try modern AES-128-ECB
+        if len(raw) % 16 == 0 and len(raw) > 0:
+            dec_bytes = decrypt_aes_128_ecb(raw, DX_AES_KEY)
+            if dec_bytes:
+                dec = dec_bytes.decode("utf-8", errors="ignore")
+                if dec.startswith("http://") or dec.startswith("https://") or "keyid=" in dec:
+                    return dec
+        # 2. Try legacy XOR
         dec = bytes([b ^ DX_XOR_KEY[i % len(DX_XOR_KEY)] for i, b in enumerate(raw)]).decode("utf-8", errors="ignore")
         if dec.startswith("http://") or dec.startswith("https://") or "keyid=" in dec:
             return dec
@@ -75,7 +203,7 @@ def decode_dx_str(val: str) -> str:
 #   sus listas directamente desde mensajerofm.org en sus GitHub Actions (PlayTvPremium.yml y actualizar_json.yml).
 #   Se apunta a estos endpoints directos para evitar 404s y se documenta aquí para no perder el hilo
 #   en caso de futuras reestructuraciones.
-# - 'dxrioacxta': PlayPrem / DxPanel en GitHub con descifrado transparente Base64+XOR (DX_XOR_KEY).
+# - 'dxrioacxta': PlayPrem / DxPanel en GitHub con descifrado transparente AES-128-ECB (DX_AES_KEY) y fallback XOR.
 PRIMARY_SOURCES = {
     "cheroga": [
         "https://mensajerofm.org/json/nocache_channel.json",
@@ -302,7 +430,7 @@ def fetch_single_tracker(url: str, force_network: bool = False) -> tuple:
             return cached_entry["channels"], cached_entry.get("edge_token"), None
         return {}, None, str(e)
 
-def load_author_tracker_maps(force_refresh_author: str = None) -> tuple:
+def load_author_tracker_maps(force_refresh_author: str = None, quiet: bool = False) -> tuple:
     """
     Downloads community trackers with lazy polling for external hosts
     and automatic failover to standby candidate sources.
@@ -369,7 +497,8 @@ def load_author_tracker_maps(force_refresh_author: str = None) -> tuple:
                         edge_token = tok
 
             if len(standby_map) > 0:
-                print(f"[FAILOVER ACTIVO] Promoviendo candidata de reserva '{s_author}' ({len(standby_map)} canales) para sostener el consenso de 2 fuentes.")
+                if not quiet:
+                    print(f"[FAILOVER ACTIVO] Promoviendo candidata de reserva '{s_author}' ({len(standby_map)} canales) para sostener el consenso de 2 fuentes.")
                 author_maps[s_author] = standby_map
                 sources_status[s_author] = {"role": "promoted_standby", "status": "ONLINE", "channels": len(standby_map), "cached": False}
                 healthy_primaries.append(s_author)
@@ -584,13 +713,24 @@ def main():
         if (drm_a == local_drm or drm_a is None) and (drm_b == local_drm or drm_b is None):
             continue
 
+        # Check if the proposed candidate key is already known and rejected in audit memory
+        candidate_test_entry = None
+        if drm_b and drm_b != local_drm:
+            candidate_test_entry = entry_b
+        elif drm_a and drm_a != local_drm:
+            candidate_test_entry = entry_a
+
+        if candidate_test_entry and (cid, candidate_test_entry.get("kid", "").lower()) in rejected_kids:
+            # Candidate key is a known stale/rejected key, ignore without waking external host
+            continue
+
         # If a candidate proposed a new key and cheroga was loaded from lazy cache,
         # refresh cheroga immediately (HTTP 304 / 200) to confirm live consensus!
         if not cheroga_refreshed_live and (
             (drm_a and drm_a != local_drm) or (drm_b and drm_b != local_drm)
         ):
             print(f"[{timestamp_str}] [LAZY REFRESH] Posible cambio de key detectado en {cid}. Validando cheroga (mensajerofm con If-Modified-Since)...")
-            fresh_maps, fresh_tok, _ = load_author_tracker_maps(force_refresh_author="cheroga")
+            fresh_maps, fresh_tok, _ = load_author_tracker_maps(force_refresh_author="cheroga", quiet=True)
             if "cheroga" in fresh_maps:
                 author_maps["cheroga"] = fresh_maps["cheroga"]
                 entry_a = author_maps[author_a].get(path)
