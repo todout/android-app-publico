@@ -206,8 +206,8 @@ def decode_dx_str(val: str) -> str:
 # - 'dxrioacxta': PlayPrem / DxPanel en GitHub con descifrado transparente AES-128-ECB (DX_AES_KEY) y fallback XOR.
 PRIMARY_SOURCES = {
     "cheroga": [
-        "https://mensajerofm.org/json/nocache_channel.json",
-        "https://mensajerofm.org/json/puntoplay_canales.json"
+        "https://mensajerofm.org/v1/nocache_channel.json",
+        "https://mensajerofm.org/v1/puntoplay_canales.json"
     ],
     "dxrioacxta": [
         "https://raw.githubusercontent.com/dxrioacxta/playprem/main/tv1.json",
