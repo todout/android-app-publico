@@ -8,15 +8,15 @@ Aplicación ligera de televisión en vivo para Android TV, Google TV y Fire TV s
 
 Puedes descargar los archivos APK directamente o ingresarlos en **Downloader**:
 
-### 1. 📺 LeichTV v1.1 (Modo Clásico - Zapping Ultra Rápido)
+### 1. 📺 LeichTV v1.2 (Modo Clásico - Zapping Ultra Rápido)
 - **URL directa para Downloader (Raw)**:
-  `https://raw.githubusercontent.com/todout/android-app-publico/main/LeichTV_v1.1.apk`
+  `https://raw.githubusercontent.com/todout/android-app-publico/main/LeichTV_v1.2.apk`
 - Ideal para un uso tradicional de televisión (subir y bajar canales de inmediato con el D-Pad).
 
-### 2. ⚡ LeichTV+ v1.2 (Modo Avanzado con DVR / Timeshift)
+### 2. ⚡ LeichTV+ v1.4 (Modo Avanzado con DVR / Timeshift)
 - **URL directa para Downloader (Raw)**:
-  `https://raw.githubusercontent.com/todout/android-app-publico/main/LeichTVPlus_v1.2.apk`
-- Incluye zapping con Arriba/Abajo, apertura de lista de canales con OK sin pausar directo, barra inferior con Izquierda/Derecha, rebobinado acelerado continuo y auto-actualizaciones.
+  `https://raw.githubusercontent.com/todout/android-app-publico/main/LeichTVPlus_v1.4.apk`
+- Incluye zapping con Arriba/Abajo (Arriba sube de canal, Abajo baja), apertura de lista de canales con OK sin pausar directo, barra inferior con Izquierda/Derecha, rebobinado acelerado continuo y auto-actualizaciones.
 - **Se puede instalar en paralelo con LeichTV sin pisarse** (package `com.leichtvplus.tv`).
 
 ---
@@ -35,11 +35,11 @@ Puedes descargar los archivos APK directamente o ingresarlos en **Downloader**:
 - ⚡ **Sin publicidad**: Interfaz limpia, ágil y sin anuncios molestos.
 - 🎯 **Optimizado para TV**: Navegación fluida y zaping rápido 100% con control remoto (D-Pad).
 - 🔄 **Actualizaciones continuas sin desinstalar**: Diseñado con versionado incremental para actualizarse directamente sobre versiones anteriores.
-- ⛳ **44 Canales curados en alta calidad**:
-  - Fútbol Argentino: TNT Sports y ESPN Premium en HD directo más opciones web de respaldo.
+- ⛳ **45 Canales curados en alta calidad**:
+  - Fútbol Argentino: TNT Sports y ESPN Premium en HD directo de alta calidad y máxima velocidad.
   - Deportes: ESPN 1, 2, 3 y 4, TyC Sports, **DSports 1 y 2 en HD (Flow)**, FOX Sports 1, 2 y 3, DeporTV, **Golf Channel**, Eventos Flow.
   - Canales de aire: Telefe, El Trece, América TV, El Nueve, TV Pública.
-  - Noticias: TN, Canal 26, LN+, France 24, Bloomberg.
+  - Noticias: TN, Canal 26, LN+, C5N, A24, Crónica HD, France 24, CNN en Español.
   - Cine & Series: Star Channel, Cinecanal, TNT, TNT Series, Space, AMC, FX, Adult Swim.
   - Documentales: Discovery Channel, National Geographic, **Discovery ID**.
   - Variedades: Discovery Home & Health, El Gourmet, Ciudad Magazine.

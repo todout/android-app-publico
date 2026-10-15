@@ -1,10 +1,10 @@
 {
-  "version": 17,
-  "updated_at": "2026-09-14",
+  "version": 18,
+  "updated_at": "2026-10-14",
   "channels": [
     {
       "id": "tnt_sports_1",
-      "name": "TNT Sports (Opción 1 - HD)",
+      "name": "TNT Sports",
       "category": "FÚTBOL ARGENTINO",
       "logo": "android.resource://com.leichtv.tv/drawable/logo_real_tnt_sports",
       "source_type": "dash",
@@ -14,7 +14,7 @@
     },
     {
       "id": "espn_premium_1",
-      "name": "ESPN Premium (Opción 1 - HD)",
+      "name": "ESPN Premium",
       "category": "FÚTBOL ARGENTINO",
       "logo": "android.resource://com.leichtv.tv/drawable/logo_real_espn_premium",
       "source_type": "dash",
@@ -451,24 +451,6 @@
       "source_url": "https://cdn.cvattv.com.ar/live/c3eds/Eventos1HD/SA_Live_dash_enc/Eventos1HD.mpd",
       "referer": "https://portal.app.flow.com.ar/",
       "drm_key": "fdb996352a45b339b86f3eb336af36c6:21b8543c13b2b87e0e097602a71f3f91"
-    },
-    {
-      "id": "espn_premium_2",
-      "name": "ESPN Premium (Opción 2 - Web)",
-      "category": "FÚTBOL ARGENTINO",
-      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_espn_premium",
-      "source_type": "iframe",
-      "source_url": "https://streamtp-golden1.click/global1.php?stream=espnpremium",
-      "referer": "https://angulismotv.pages.dev/"
-    },
-    {
-      "id": "tnt_sports_2",
-      "name": "TNT Sports (Opción 2 - Web)",
-      "category": "FÚTBOL ARGENTINO",
-      "logo": "android.resource://com.leichtv.tv/drawable/logo_real_tnt_sports",
-      "source_type": "iframe",
-      "source_url": "https://streamtp-golden1.click/global1.php?stream=tntsports",
-      "referer": "https://angulismotv.pages.dev/"
     }
   ]
 }
