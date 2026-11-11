@@ -18,14 +18,18 @@ Puedes acortar estas URLs o ingresarlas directamente en **Downloader**:
 - Incluye zapping con Arriba/Abajo (Arriba canal siguiente, Abajo anterior), lista de canales con OK sin pausar directo, barra inferior con Izquierda/Derecha, rebobinado acelerado continuo y auto-actualizaciones.
 - Se puede instalar en paralelo con la versión clásica sin pisarse (package `com.leichtvplus.tv`).
 
-### 2. 📺 LeichTV (Modo Clásico - Zapping Ultra Rápido)
-- **URL fija de última versión para Downloader (Siempre actualizada)**:
+### 2. 📺 LeichTV (Modo Clásico - Zapping Ultra Rápido y Táctil para Móviles/Tablets)
+- **URL fija de última versión para Móvil, Tablet y TV (Siempre actualizada)**:
   ```
   https://raw.githubusercontent.com/todout/android-app-publico/main/LeichTV_latest.apk
   ```
-- **Versión específica actual (v1.2)**:
-  `https://raw.githubusercontent.com/todout/android-app-publico/main/LeichTV_v1.2.apk`
-- Ideal para uso tradicional de televisión (subir y bajar canales de inmediato con el D-Pad).
+- **Versión específica actual (v1.3)**:
+  `https://raw.githubusercontent.com/todout/android-app-publico/main/LeichTV_v1.3.apk`
+- Compatible con **Android TV, TV Boxes, Teléfonos y Tablets**:
+  - En móviles y tablets arranca en pantalla completa apaisada.
+  - Zapping táctil vertical: desliza el dedo hacia arriba o abajo para cambiar de canal instantáneamente.
+  - Toque simple para ver información del canal; doble toque o deslizar desde el borde para abrir lista completa.
+  - En TV mantiene el control tradicional con D-Pad.
 
 ---
 
