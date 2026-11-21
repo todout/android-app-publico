@@ -1,43 +1,7 @@
 {
-  "updated_at": "2026-11-21T03:30:07.709507+00:00",
+  "updated_at": "2026-11-21T15:00:10.907304+00:00",
   "channels": {
     "el_trece": [
-      {
-        "title": "¡Ahora caigo!",
-        "desc": "",
-        "start": 1795209300000,
-        "end": 1795215600000
-      },
-      {
-        "title": "Telenoche",
-        "desc": "",
-        "start": 1795215600000,
-        "end": 1795219200000
-      },
-      {
-        "title": "Es mi sueño",
-        "desc": "",
-        "start": 1795219200000,
-        "end": 1795224600000
-      },
-      {
-        "title": "Otro día perdido",
-        "desc": "",
-        "start": 1795224600000,
-        "end": 1795230900000
-      },
-      {
-        "title": "Síntesis",
-        "desc": "",
-        "start": 1795230900000,
-        "end": 1795233600000
-      },
-      {
-        "title": "Cucinare",
-        "desc": "",
-        "start": 1795233600000,
-        "end": 1795234500000
-      },
       {
         "title": "Fuera del aire",
         "desc": "",
@@ -103,51 +67,45 @@
         "desc": "",
         "start": 1795316400000,
         "end": 1795319100000
+      },
+      {
+        "title": "Cucinare",
+        "desc": "",
+        "start": 1795319100000,
+        "end": 1795320000000
+      },
+      {
+        "title": "Fuera del aire",
+        "desc": "",
+        "start": 1795320000000,
+        "end": 1795347000000
+      },
+      {
+        "title": "Apertura TX",
+        "desc": "",
+        "start": 1795347000000,
+        "end": 1795347900000
+      },
+      {
+        "title": "El Garage TV",
+        "desc": "",
+        "start": 1795347900000,
+        "end": 1795350600000
+      },
+      {
+        "title": "Extraños en la noche",
+        "desc": "",
+        "start": 1795350600000,
+        "end": 1795356000000
+      },
+      {
+        "title": "La familia Ingalls",
+        "desc": "",
+        "start": 1795356000000,
+        "end": 1795366800000
       }
     ],
     "america_tv": [
-      {
-        "title": "América Noticias",
-        "desc": "",
-        "start": 1795207500000,
-        "end": 1795212000000
-      },
-      {
-        "title": "Sálvese Quien Pueda",
-        "desc": "",
-        "start": 1795212000000,
-        "end": 1795215600000
-      },
-      {
-        "title": "LAM",
-        "desc": "",
-        "start": 1795215600000,
-        "end": 1795222800000
-      },
-      {
-        "title": "BTV, Buena Televisión",
-        "desc": "",
-        "start": 1795222800000,
-        "end": 1795226400000
-      },
-      {
-        "title": "Paso en América",
-        "desc": "",
-        "start": 1795226400000,
-        "end": 1795230000000
-      },
-      {
-        "title": "Polémica en El Bar",
-        "desc": "",
-        "start": 1795230000000,
-        "end": 1795233600000
-      },
-      {
-        "title": "Intrusos",
-        "desc": "",
-        "start": 1795233600000,
-        "end": 1795248000000
-      },
       {
         "title": "Maratón - Sálvese quien pueda",
         "desc": "",
@@ -207,81 +165,63 @@
         "desc": "",
         "start": 1795318200000,
         "end": 1795320000000
+      },
+      {
+        "title": "Pasión de Sábado",
+        "desc": "",
+        "start": 1795320000000,
+        "end": 1795341600000
+      },
+      {
+        "title": "Sálvese Quien Pueda",
+        "desc": "",
+        "start": 1795341600000,
+        "end": 1795345200000
+      },
+      {
+        "title": "Mundo visual",
+        "desc": "",
+        "start": 1795345200000,
+        "end": 1795348800000
+      },
+      {
+        "title": "Ambiente y medio",
+        "desc": "",
+        "start": 1795348800000,
+        "end": 1795352400000
+      },
+      {
+        "title": "Pedalearg",
+        "desc": "",
+        "start": 1795352400000,
+        "end": 1795354200000
+      },
+      {
+        "title": "Re! Te paso ubicación",
+        "desc": "",
+        "start": 1795354200000,
+        "end": 1795356000000
+      },
+      {
+        "title": "Tecno tendencias",
+        "desc": "",
+        "start": 1795356000000,
+        "end": 1795357800000
+      },
+      {
+        "title": "Destinos y Sabores",
+        "desc": "",
+        "start": 1795357800000,
+        "end": 1795359600000
+      },
+      {
+        "title": "Viralizados",
+        "desc": "",
+        "start": 1795359600000,
+        "end": 1795366800000
       }
     ],
     "cnn_espanol": [
-      {
-        "title": "Deportes CNN",
-        "desc": "",
-        "start": 1795208400000,
-        "end": 1795212000000
-      },
-      {
-        "title": "Directo USA con Juan Lopez",
-        "desc": "",
-        "start": 1795212000000,
-        "end": 1795215600000
-      },
-      {
-        "title": "Perspectivas desde Mexico",
-        "desc": "",
-        "start": 1795215600000,
-        "end": 1795219200000
-      },
-      {
-        "title": "Directo USA con Juan Lopez",
-        "desc": "",
-        "start": 1795219200000,
-        "end": 1795222800000
-      },
-      {
-        "title": "CNN Negocios con Gabi Frías",
-        "desc": "",
-        "start": 1795222800000,
-        "end": 1795226400000
-      },
-      {
-        "title": "Conclusiones",
-        "desc": "",
-        "start": 1795226400000,
-        "end": 1795230000000
-      },
-      {
-        "title": "Deportes CNN",
-        "desc": "",
-        "start": 1795230000000,
-        "end": 1795233600000
-      },
-      {
-        "title": "Perspectivas desde Mexico",
-        "desc": "",
-        "start": 1795233600000,
-        "end": 1795237200000
-      },
-      {
-        "title": "Conclusiones",
-        "desc": "",
-        "start": 1795237200000,
-        "end": 1795240800000
-      },
-      {
-        "title": "Directo USA con Juan Lopez",
-        "desc": "",
-        "start": 1795240800000,
-        "end": 1795244400000
-      },
-      {
-        "title": "Perspectivas desde Mexico",
-        "desc": "",
-        "start": 1795244400000,
-        "end": 1795248000000
-      },
-      {
-        "title": "Aristegui",
-        "desc": "",
-        "start": 1795248000000,
-        "end": 1795251600000
-      },
       {
         "title": "Conclusiones",
         "desc": "",
@@ -431,27 +371,117 @@
         "desc": "",
         "start": 1795318200000,
         "end": 1795320000000
+      },
+      {
+        "title": "Mirador Mundial",
+        "desc": "",
+        "start": 1795320000000,
+        "end": 1795321800000
+      },
+      {
+        "title": "Deportes CNNEn Vivo",
+        "desc": "",
+        "start": 1795321800000,
+        "end": 1795323600000
+      },
+      {
+        "title": "Oppenheimer presenta",
+        "desc": "",
+        "start": 1795323600000,
+        "end": 1795327200000
+      },
+      {
+        "title": "El mundo maravilloso de Quest",
+        "desc": "",
+        "start": 1795327200000,
+        "end": 1795329000000
+      },
+      {
+        "title": "GloboEconomía",
+        "desc": "",
+        "start": 1795329000000,
+        "end": 1795330800000
+      },
+      {
+        "title": "Conclusiones",
+        "desc": "",
+        "start": 1795330800000,
+        "end": 1795334400000
+      },
+      {
+        "title": "Mirador Mundial",
+        "desc": "",
+        "start": 1795334400000,
+        "end": 1795336200000
+      },
+      {
+        "title": "Deportes CNN",
+        "desc": "",
+        "start": 1795336200000,
+        "end": 1795338000000
+      },
+      {
+        "title": "El mundo maravilloso de Quest",
+        "desc": "",
+        "start": 1795338000000,
+        "end": 1795339800000
+      },
+      {
+        "title": "Conexión Global",
+        "desc": "",
+        "start": 1795339800000,
+        "end": 1795341600000
+      },
+      {
+        "title": "La historia completa",
+        "desc": "",
+        "start": 1795341600000,
+        "end": 1795345200000
+      },
+      {
+        "title": "Mirador Mundial",
+        "desc": "",
+        "start": 1795345200000,
+        "end": 1795347000000
+      },
+      {
+        "title": "Deportes CNN",
+        "desc": "",
+        "start": 1795347000000,
+        "end": 1795348800000
+      },
+      {
+        "title": "Oppenheimer presenta",
+        "desc": "",
+        "start": 1795348800000,
+        "end": 1795352400000
+      },
+      {
+        "title": "GloboEconomía",
+        "desc": "",
+        "start": 1795352400000,
+        "end": 1795354200000
+      },
+      {
+        "title": "Conexión Global",
+        "desc": "",
+        "start": 1795354200000,
+        "end": 1795356000000
+      },
+      {
+        "title": "Choque de Opiniones",
+        "desc": "",
+        "start": 1795356000000,
+        "end": 1795359600000
+      },
+      {
+        "title": "Conclusiones",
+        "desc": "",
+        "start": 1795359600000,
+        "end": 1795363200000
       }
     ],
     "cartoon_network": [
-      {
-        "title": "Canal no disponible",
-        "desc": "",
-        "start": 1795208400000,
-        "end": 1795222800000
-      },
-      {
-        "title": "Canal no disponible",
-        "desc": "",
-        "start": 1795222800000,
-        "end": 1795237200000
-      },
-      {
-        "title": "Canal no disponible",
-        "desc": "",
-        "start": 1795237200000,
-        "end": 1795251600000
-      },
       {
         "title": "Canal no disponible",
         "desc": "",
@@ -481,45 +511,27 @@
         "desc": "",
         "start": 1795309200000,
         "end": 1795323600000
+      },
+      {
+        "title": "Canal no disponible",
+        "desc": "",
+        "start": 1795323600000,
+        "end": 1795338000000
+      },
+      {
+        "title": "Canal no disponible",
+        "desc": "",
+        "start": 1795338000000,
+        "end": 1795352400000
+      },
+      {
+        "title": "Canal no disponible",
+        "desc": "",
+        "start": 1795352400000,
+        "end": 1795366800000
       }
     ],
     "cinecanal": [
-      {
-        "title": "No Soy Tu Mami",
-        "desc": "Una periodista sostiene en su columna semanal las razones por las cuales no quiere tener hijos, defendiendo su posición frente a la vida y la maternidad. Pero la misma comenzará a aflojarse cuando un nuevo vecino y su pequeña hija lleguen al edificio donde ella vive.",
-        "start": 1795206780000,
-        "end": 1795214880000
-      },
-      {
-        "title": "¡Mujeres al ataque!",
-        "desc": "",
-        "start": 1795214880000,
-        "end": 1795222740000
-      },
-      {
-        "title": "27 Bodas",
-        "desc": "Jane (Katherin Heigl) la eterna dama de honor que siempre ayudaba a las novias en sus bodas. Pero un día lee un reportaje en el periódico que la deja pensativa ya que ella nunca ha sido la novia. En una de las bodas conoce a Kevin (James Marsden) con el que hará una buena amistad. Jane cuyo corazón pertenece a su jefe George (Edward Bruns) sin que él lo sepa y cuando está decidida a confesarle su amor, se da cuenta que él está interesado en su hermana Tess (Malin Akerman). Ahora su hermana Tess le pide que sea su dama de honor para su boda que será dentro de tres semanas convirtiéndose así en una dama en una boda más.",
-        "start": 1795222740000,
-        "end": 1795231140000
-      },
-      {
-        "title": "Loca por las compras",
-        "desc": "",
-        "start": 1795231140000,
-        "end": 1795238280000
-      },
-      {
-        "title": "Negra Navidad",
-        "desc": "",
-        "start": 1795238280000,
-        "end": 1795243560000
-      },
-      {
-        "title": "Across the River and Into the Trees",
-        "desc": "",
-        "start": 1795243560000,
-        "end": 1795249680000
-      },
       {
         "title": "Henry & Klauss Maestros de la magia",
         "desc": "",
@@ -567,165 +579,45 @@
         "desc": "",
         "start": 1795309260000,
         "end": 1795318500000
+      },
+      {
+        "title": "Corazón de dragón La venganza",
+        "desc": "",
+        "start": 1795318500000,
+        "end": 1795325040000
+      },
+      {
+        "title": "The Menu",
+        "desc": "Una pareja viaja a una isla costera para comer en un restaurante privado donde el chef (Ralph Fiennes) ha preparado un suculento menú – con algunas gratas sorpresas.",
+        "start": 1795325040000,
+        "end": 1795331040000
+      },
+      {
+        "title": "La boda de Rosa",
+        "desc": "",
+        "start": 1795331040000,
+        "end": 1795341600000
+      },
+      {
+        "title": "Yo, traidor",
+        "desc": "",
+        "start": 1795341600000,
+        "end": 1795349280000
+      },
+      {
+        "title": "Al mejor postor",
+        "desc": "",
+        "start": 1795349280000,
+        "end": 1795356420000
+      },
+      {
+        "title": "The Way I See It",
+        "desc": "",
+        "start": 1795356420000,
+        "end": 1795364520000
       }
     ],
     "disney_channel": [
-      {
-        "title": "Los Vecinos Green",
-        "desc": "¡Cricket Green se mudará a la gran ciudad! Junto con su hermana mayor, Tilly, su padre Bill y la salvaje abuela Alice, estos simples campesinos deben aprender a vivir en una metrópolis bulliciosa. La curiosidad y el entusiasmo de Cricket llevan a su familia salvajemente fuera de lugar en viajes épicos y en los corazones de sus nuevos vecinos. ¡Nunca hay un día aburrido para una familia pequeña que puede encontrar grandes aventuras sin importar dónde se encuentren!",
-        "start": 1795208280000,
-        "end": 1795210260000
-      },
-      {
-        "title": "Dragon Striker estrellas del gorotama",
-        "desc": "",
-        "start": 1795210260000,
-        "end": 1795210320000
-      },
-      {
-        "title": "Dragon Striker",
-        "desc": "",
-        "start": 1795210320000,
-        "end": 1795211940000
-      },
-      {
-        "title": "La Era de Hielo 2",
-        "desc": "La era de hielo está terminando, Manny (Ray Romano), Diego (Denis Leary) y Sid (John Leguizamo) que mientras tratan de regresar a la superficie creyendo que Manny es el último de su especie, en el camino mientras tratan de encontrar un lugar seguro encuentran a otro mamut, se trata de una hembra llamada Ellie (Queen Latifah), una hermosa mamut que deja sorprendido a Manny pero ella fue criada por zarigüeyas y cree que es una de ellas.",
-        "start": 1795211940000,
-        "end": 1795217760000
-      },
-      {
-        "title": "Valiente",
-        "desc": "",
-        "start": 1795217760000,
-        "end": 1795223280000
-      },
-      {
-        "title": "Acampados",
-        "desc": "",
-        "start": 1795223280000,
-        "end": 1795224600000
-      },
-      {
-        "title": "Acampados",
-        "desc": "",
-        "start": 1795224600000,
-        "end": 1795225920000
-      },
-      {
-        "title": "Acampados",
-        "desc": "",
-        "start": 1795225920000,
-        "end": 1795227540000
-      },
-      {
-        "title": "Phineas y Ferb",
-        "desc": "La escuela está cerrada por el verano, y los hermanastros Phineas y Ferb deciden hacer de cada día una aventura, desde construir una montaña rusa que desafía a la muerte hasta surfear olas de marea para localizar el cerebro de Frankenstein. Sus audaces aventuras siempre terminan obstaculizando el estilo de su hermana adolescente, Candace, quien hace todo lo posible para exponer a mamá a lo que realmente está sucediendo, pero de alguna manera siempre parece fallar. Mientras tanto, el ornitorrinco mascota de mente simple de la familia lleva una doble vida como \"Agente P\" secreto y se enfrenta al malvado Dr. Doofenshmirtz para salvar el mundo. Hay muchas cosas que hacer antes de que empiecen las clases y Phineas y Ferb planean hacerlo todo.",
-        "start": 1795227540000,
-        "end": 1795228320000
-      },
-      {
-        "title": "Vampirina Una Vampirina adolescente",
-        "desc": "",
-        "start": 1795228320000,
-        "end": 1795230060000
-      },
-      {
-        "title": "Amphibia",
-        "desc": "Anfibilandia narra las aventuras cómicas de Anne Boonchuy, de 13 años, quien después de robar una misteriosa caja de música, es transportada mágicamente al mundo de Anfibilandia, un pantano salvaje lleno de ranas parlantes. Con la ayuda de una joven rana aventurera y curiosa llamada Sprig, Anne se transformará de monstruo a héroe y descubrirá la primera amistad verdadera de su vida.",
-        "start": 1795230060000,
-        "end": 1795231860000
-      },
-      {
-        "title": "Phineas y Ferb",
-        "desc": "La escuela está cerrada por el verano, y los hermanastros Phineas y Ferb deciden hacer de cada día una aventura, desde construir una montaña rusa que desafía a la muerte hasta surfear olas de marea para localizar el cerebro de Frankenstein. Sus audaces aventuras siempre terminan obstaculizando el estilo de su hermana adolescente, Candace, quien hace todo lo posible para exponer a mamá a lo que realmente está sucediendo, pero de alguna manera siempre parece fallar. Mientras tanto, el ornitorrinco mascota de mente simple de la familia lleva una doble vida como \"Agente P\" secreto y se enfrenta al malvado Dr. Doofenshmirtz para salvar el mundo. Hay muchas cosas que hacer antes de que empiecen las clases y Phineas y Ferb planean hacerlo todo.",
-        "start": 1795231860000,
-        "end": 1795233540000
-      },
-      {
-        "title": "StuGo Campamento de verano",
-        "desc": "",
-        "start": 1795233540000,
-        "end": 1795235460000
-      },
-      {
-        "title": "Zombies la serie re-animada",
-        "desc": "",
-        "start": 1795235460000,
-        "end": 1795236240000
-      },
-      {
-        "title": "Tara Duncan",
-        "desc": "",
-        "start": 1795236240000,
-        "end": 1795237020000
-      },
-      {
-        "title": "Miraculous: Las aventuras de Ladybug",
-        "desc": "",
-        "start": 1795237020000,
-        "end": 1795238460000
-      },
-      {
-        "title": "La casa Búho",
-        "desc": "",
-        "start": 1795238460000,
-        "end": 1795239840000
-      },
-      {
-        "title": "Los Vecinos Green",
-        "desc": "¡Cricket Green se mudará a la gran ciudad! Junto con su hermana mayor, Tilly, su padre Bill y la salvaje abuela Alice, estos simples campesinos deben aprender a vivir en una metrópolis bulliciosa. La curiosidad y el entusiasmo de Cricket llevan a su familia salvajemente fuera de lugar en viajes épicos y en los corazones de sus nuevos vecinos. ¡Nunca hay un día aburrido para una familia pequeña que puede encontrar grandes aventuras sin importar dónde se encuentren!",
-        "start": 1795239840000,
-        "end": 1795241160000
-      },
-      {
-        "title": "Los Hechiceros Más Allá De Waverly Place",
-        "desc": "",
-        "start": 1795241160000,
-        "end": 1795242660000
-      },
-      {
-        "title": "Jessie",
-        "desc": "",
-        "start": 1795242660000,
-        "end": 1795244040000
-      },
-      {
-        "title": "Los hechiceros de Waverly Place",
-        "desc": "",
-        "start": 1795244040000,
-        "end": 1795245420000
-      },
-      {
-        "title": "Star vs. Las Fuerzas del Mal",
-        "desc": "Después de algunas peleas audaces con monstruos de otro mundo, la princesa adolescente mágica Star Butterfly, amante de la diversión, es enviada por sus padres de la realeza a vivir con la familia Díaz en la Tierra, trayendo su propio estilo interdimensional único a su nuevo planeta. Con Marco, el hijo adolescente de la familia Diaz, esta estudiante de intercambio de otra dimensión se embarca en nuevas aventuras luchando contra villanos malvados en todo el multiverso y en la escuela secundaria, todo en un esfuerzo por proteger a su poderosa varita mágica que todavía está descubriendo cómo utilizar.",
-        "start": 1795245420000,
-        "end": 1795246800000
-      },
-      {
-        "title": "Los Vecinos Green",
-        "desc": "¡Cricket Green se mudará a la gran ciudad! Junto con su hermana mayor, Tilly, su padre Bill y la salvaje abuela Alice, estos simples campesinos deben aprender a vivir en una metrópolis bulliciosa. La curiosidad y el entusiasmo de Cricket llevan a su familia salvajemente fuera de lugar en viajes épicos y en los corazones de sus nuevos vecinos. ¡Nunca hay un día aburrido para una familia pequeña que puede encontrar grandes aventuras sin importar dónde se encuentren!",
-        "start": 1795246800000,
-        "end": 1795248120000
-      },
-      {
-        "title": "Miraculous: Las aventuras de Ladybug",
-        "desc": "",
-        "start": 1795248120000,
-        "end": 1795249560000
-      },
-      {
-        "title": "Las aventuras enredadas de Rapunzel",
-        "desc": "",
-        "start": 1795249560000,
-        "end": 1795250880000
-      },
-      {
-        "title": "Star vs. Las Fuerzas del Mal",
-        "desc": "Después de algunas peleas audaces con monstruos de otro mundo, la princesa adolescente mágica Star Butterfly, amante de la diversión, es enviada por sus padres de la realeza a vivir con la familia Díaz en la Tierra, trayendo su propio estilo interdimensional único a su nuevo planeta. Con Marco, el hijo adolescente de la familia Diaz, esta estudiante de intercambio de otra dimensión se embarca en nuevas aventuras luchando contra villanos malvados en todo el multiverso y en la escuela secundaria, todo en un esfuerzo por proteger a su poderosa varita mágica que todavía está descubriendo cómo utilizar.",
-        "start": 1795250880000,
-        "end": 1795251600000
-      },
       {
         "title": "Star vs. Las Fuerzas del Mal",
         "desc": "Después de algunas peleas audaces con monstruos de otro mundo, la princesa adolescente mágica Star Butterfly, amante de la diversión, es enviada por sus padres de la realeza a vivir con la familia Díaz en la Tierra, trayendo su propio estilo interdimensional único a su nuevo planeta. Con Marco, el hijo adolescente de la familia Diaz, esta estudiante de intercambio de otra dimensión se embarca en nuevas aventuras luchando contra villanos malvados en todo el multiverso y en la escuela secundaria, todo en un esfuerzo por proteger a su poderosa varita mágica que todavía está descubriendo cómo utilizar.",
@@ -929,75 +821,159 @@
         "desc": "",
         "start": 1795317780000,
         "end": 1795319640000
+      },
+      {
+        "title": "La casa Búho",
+        "desc": "",
+        "start": 1795319640000,
+        "end": 1795320960000
+      },
+      {
+        "title": "La casa Búho",
+        "desc": "",
+        "start": 1795320960000,
+        "end": 1795322400000
+      },
+      {
+        "title": "La casa Búho",
+        "desc": "",
+        "start": 1795322400000,
+        "end": 1795323780000
+      },
+      {
+        "title": "La casa Búho",
+        "desc": "",
+        "start": 1795323780000,
+        "end": 1795325160000
+      },
+      {
+        "title": "Acampados",
+        "desc": "",
+        "start": 1795325160000,
+        "end": 1795326480000
+      },
+      {
+        "title": "Jessie",
+        "desc": "",
+        "start": 1795326480000,
+        "end": 1795327860000
+      },
+      {
+        "title": "Miraculous: Las aventuras de Ladybug",
+        "desc": "",
+        "start": 1795327860000,
+        "end": 1795329180000
+      },
+      {
+        "title": "Star vs. Las Fuerzas del Mal",
+        "desc": "Después de algunas peleas audaces con monstruos de otro mundo, la princesa adolescente mágica Star Butterfly, amante de la diversión, es enviada por sus padres de la realeza a vivir con la familia Díaz en la Tierra, trayendo su propio estilo interdimensional único a su nuevo planeta. Con Marco, el hijo adolescente de la familia Diaz, esta estudiante de intercambio de otra dimensión se embarca en nuevas aventuras luchando contra villanos malvados en todo el multiverso y en la escuela secundaria, todo en un esfuerzo por proteger a su poderosa varita mágica que todavía está descubriendo cómo utilizar.",
+        "start": 1795329180000,
+        "end": 1795330560000
+      },
+      {
+        "title": "Amphibia",
+        "desc": "Anfibilandia narra las aventuras cómicas de Anne Boonchuy, de 13 años, quien después de robar una misteriosa caja de música, es transportada mágicamente al mundo de Anfibilandia, un pantano salvaje lleno de ranas parlantes. Con la ayuda de una joven rana aventurera y curiosa llamada Sprig, Anne se transformará de monstruo a héroe y descubrirá la primera amistad verdadera de su vida.",
+        "start": 1795330560000,
+        "end": 1795331940000
+      },
+      {
+        "title": "Phineas y Ferb",
+        "desc": "La escuela está cerrada por el verano, y los hermanastros Phineas y Ferb deciden hacer de cada día una aventura, desde construir una montaña rusa que desafía a la muerte hasta surfear olas de marea para localizar el cerebro de Frankenstein. Sus audaces aventuras siempre terminan obstaculizando el estilo de su hermana adolescente, Candace, quien hace todo lo posible para exponer a mamá a lo que realmente está sucediendo, pero de alguna manera siempre parece fallar. Mientras tanto, el ornitorrinco mascota de mente simple de la familia lleva una doble vida como \"Agente P\" secreto y se enfrenta al malvado Dr. Doofenshmirtz para salvar el mundo. Hay muchas cosas que hacer antes de que empiecen las clases y Phineas y Ferb planean hacerlo todo.",
+        "start": 1795331940000,
+        "end": 1795333620000
+      },
+      {
+        "title": "Los Vecinos Green",
+        "desc": "¡Cricket Green se mudará a la gran ciudad! Junto con su hermana mayor, Tilly, su padre Bill y la salvaje abuela Alice, estos simples campesinos deben aprender a vivir en una metrópolis bulliciosa. La curiosidad y el entusiasmo de Cricket llevan a su familia salvajemente fuera de lugar en viajes épicos y en los corazones de sus nuevos vecinos. ¡Nunca hay un día aburrido para una familia pequeña que puede encontrar grandes aventuras sin importar dónde se encuentren!",
+        "start": 1795333620000,
+        "end": 1795335000000
+      },
+      {
+        "title": "Gravity Falls: Un Verano de Misterios",
+        "desc": "Los hermanos gemelos Dipper y Mabel Pines se encuentran en una aventura inesperada cuando pasan el verano con su tío abuelo en la misteriosa ciudad de Gravity Falls. A su llegada, el tío abuelo de Dipper y Mabel, también conocido como Grunkle Stan, solicita la ayuda de los hermanos para dirigir The Mystery Shack, una divertida trampa turística que cobra demasiado a los clientes desprevenidos. Aunque Dipper y Mabe descubren rápidamente que The Mystery Shack es un engaño, sienten que hay algo extraño en su nueva ciudad y juntos comienzan a descubrir los secretos de Gravity Falls.",
+        "start": 1795335000000,
+        "end": 1795336440000
+      },
+      {
+        "title": "Star vs. Las Fuerzas del Mal",
+        "desc": "Después de algunas peleas audaces con monstruos de otro mundo, la princesa adolescente mágica Star Butterfly, amante de la diversión, es enviada por sus padres de la realeza a vivir con la familia Díaz en la Tierra, trayendo su propio estilo interdimensional único a su nuevo planeta. Con Marco, el hijo adolescente de la familia Diaz, esta estudiante de intercambio de otra dimensión se embarca en nuevas aventuras luchando contra villanos malvados en todo el multiverso y en la escuela secundaria, todo en un esfuerzo por proteger a su poderosa varita mágica que todavía está descubriendo cómo utilizar.",
+        "start": 1795336440000,
+        "end": 1795337160000
+      },
+      {
+        "title": "Miraculous: Las aventuras de Ladybug",
+        "desc": "",
+        "start": 1795337160000,
+        "end": 1795338540000
+      },
+      {
+        "title": "Phineas y Ferb",
+        "desc": "La escuela está cerrada por el verano, y los hermanastros Phineas y Ferb deciden hacer de cada día una aventura, desde construir una montaña rusa que desafía a la muerte hasta surfear olas de marea para localizar el cerebro de Frankenstein. Sus audaces aventuras siempre terminan obstaculizando el estilo de su hermana adolescente, Candace, quien hace todo lo posible para exponer a mamá a lo que realmente está sucediendo, pero de alguna manera siempre parece fallar. Mientras tanto, el ornitorrinco mascota de mente simple de la familia lleva una doble vida como \"Agente P\" secreto y se enfrenta al malvado Dr. Doofenshmirtz para salvar el mundo. Hay muchas cosas que hacer antes de que empiecen las clases y Phineas y Ferb planean hacerlo todo.",
+        "start": 1795338540000,
+        "end": 1795339920000
+      },
+      {
+        "title": "Acampados",
+        "desc": "",
+        "start": 1795339920000,
+        "end": 1795341600000
+      },
+      {
+        "title": "Patoaventuras",
+        "desc": "La nariz de Rico McPato para los negocios lo lleva a los rincones más lejanos del mundo, pero este magnate encuentra sus manos llenas en casa cuando los sobrinos Hugo, Paco y Luis se mudan a Pato Landia. Junto con sus amigos leales Joe McQuack, Gyro Sintornillos y la Sra. Betina Beackley, la pandilla de Patoaventuras nunca deja de ofrecer una gran cantidad de aventuras. Ya sea que esté buscando la Fuente de la Juventud, viajando en el tiempo a los días de la Mesa Redonda del Rey Arturo o siendo lanzado accidentalmente al espacio exterior, siempre puede confiar en Rico y los niños. ¡Prepárate para una fortuna de diversión con Patoaventuras!",
+        "start": 1795341600000,
+        "end": 1795343280000
+      },
+      {
+        "title": "Star vs. Las Fuerzas del Mal",
+        "desc": "Después de algunas peleas audaces con monstruos de otro mundo, la princesa adolescente mágica Star Butterfly, amante de la diversión, es enviada por sus padres de la realeza a vivir con la familia Díaz en la Tierra, trayendo su propio estilo interdimensional único a su nuevo planeta. Con Marco, el hijo adolescente de la familia Diaz, esta estudiante de intercambio de otra dimensión se embarca en nuevas aventuras luchando contra villanos malvados en todo el multiverso y en la escuela secundaria, todo en un esfuerzo por proteger a su poderosa varita mágica que todavía está descubriendo cómo utilizar.",
+        "start": 1795343280000,
+        "end": 1795345260000
+      },
+      {
+        "title": "La casa Búho",
+        "desc": "",
+        "start": 1795345260000,
+        "end": 1795347000000
+      },
+      {
+        "title": "Moon Girl y Devil, el dinosaurio",
+        "desc": "",
+        "start": 1795347000000,
+        "end": 1795348740000
+      },
+      {
+        "title": "Gravity Falls: Un Verano de Misterios",
+        "desc": "Los hermanos gemelos Dipper y Mabel Pines se encuentran en una aventura inesperada cuando pasan el verano con su tío abuelo en la misteriosa ciudad de Gravity Falls. A su llegada, el tío abuelo de Dipper y Mabel, también conocido como Grunkle Stan, solicita la ayuda de los hermanos para dirigir The Mystery Shack, una divertida trampa turística que cobra demasiado a los clientes desprevenidos. Aunque Dipper y Mabe descubren rápidamente que The Mystery Shack es un engaño, sienten que hay algo extraño en su nueva ciudad y juntos comienzan a descubrir los secretos de Gravity Falls.",
+        "start": 1795348740000,
+        "end": 1795350420000
+      },
+      {
+        "title": "Los Vecinos Green",
+        "desc": "¡Cricket Green se mudará a la gran ciudad! Junto con su hermana mayor, Tilly, su padre Bill y la salvaje abuela Alice, estos simples campesinos deben aprender a vivir en una metrópolis bulliciosa. La curiosidad y el entusiasmo de Cricket llevan a su familia salvajemente fuera de lugar en viajes épicos y en los corazones de sus nuevos vecinos. ¡Nunca hay un día aburrido para una familia pequeña que puede encontrar grandes aventuras sin importar dónde se encuentren!",
+        "start": 1795350420000,
+        "end": 1795352400000
+      },
+      {
+        "title": "Miraculous: Las aventuras de Ladybug",
+        "desc": "",
+        "start": 1795352400000,
+        "end": 1795354200000
+      },
+      {
+        "title": "Phineas y Ferb",
+        "desc": "La escuela está cerrada por el verano, y los hermanastros Phineas y Ferb deciden hacer de cada día una aventura, desde construir una montaña rusa que desafía a la muerte hasta surfear olas de marea para localizar el cerebro de Frankenstein. Sus audaces aventuras siempre terminan obstaculizando el estilo de su hermana adolescente, Candace, quien hace todo lo posible para exponer a mamá a lo que realmente está sucediendo, pero de alguna manera siempre parece fallar. Mientras tanto, el ornitorrinco mascota de mente simple de la familia lleva una doble vida como \"Agente P\" secreto y se enfrenta al malvado Dr. Doofenshmirtz para salvar el mundo. Hay muchas cosas que hacer antes de que empiecen las clases y Phineas y Ferb planean hacerlo todo.",
+        "start": 1795354200000,
+        "end": 1795356060000
+      },
+      {
+        "title": "Amienemigas",
+        "desc": "",
+        "start": 1795356060000,
+        "end": 1795361640000
       }
     ],
     "espn_1": [
-      {
-        "title": "ESPN F360",
-        "desc": "",
-        "start": 1795208400000,
-        "end": 1795212000000
-      },
-      {
-        "title": "Equipo F",
-        "desc": "",
-        "start": 1795212000000,
-        "end": 1795217400000
-      },
-      {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1795217400000,
-        "end": 1795222800000
-      },
-      {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1795222800000,
-        "end": 1795226400000
-      },
-      {
-        "title": "ESPN F10",
-        "desc": "",
-        "start": 1795226400000,
-        "end": 1795230000000
-      },
-      {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1795230000000,
-        "end": 1795233600000
-      },
-      {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1795233600000,
-        "end": 1795237200000
-      },
-      {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1795237200000,
-        "end": 1795240800000
-      },
-      {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1795240800000,
-        "end": 1795244400000
-      },
-      {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1795244400000,
-        "end": 1795247700000
-      },
-      {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1795247700000,
-        "end": 1795251000000
-      },
       {
         "title": "Premier League Preview Show",
         "desc": "",
@@ -1075,69 +1051,51 @@
         "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
         "start": 1795316400000,
         "end": 1795320000000
-      }
-    ],
-    "espn_2": [
-      {
-        "title": "ATP Tour Uncovered",
-        "desc": "",
-        "start": 1795210200000,
-        "end": 1795212000000
       },
       {
-        "title": "SportsCenter",
-        "desc": "SportsCenter (Sports Center) es un noticiero deportivo de televisión de la cadena ESPN. SportsCenter muestra repeticiones de las mejores jugadas del día así como también lo más sobresaliente en el deporte alrededor del mundo. En Latinoamérica SportsCenter se transmite por todos los canales de ESPN los cuales incluye ESPN Deportes (Estados Unidos) ESPN, ESPN2 y ESPN+.",
-        "start": 1795212000000,
-        "end": 1795217400000
+        "title": "Atlético Mineiro vs. Boca Juniors",
+        "desc": "",
+        "start": 1795320000000,
+        "end": 1795327200000
       },
       {
-        "title": "UEFA Women_s Champions League Highlight Show",
+        "title": "Automovilismo Fórmula 1",
         "desc": "",
-        "start": 1795217400000,
-        "end": 1795219200000
-      },
-      {
-        "title": "ESPN Knockout",
-        "desc": "",
-        "start": 1795219200000,
-        "end": 1795222800000
+        "start": 1795327200000,
+        "end": 1795329000000
       },
       {
         "title": "UEFA Champions League Weekly",
         "desc": "",
-        "start": 1795222800000,
-        "end": 1795224600000
+        "start": 1795329000000,
+        "end": 1795330800000
       },
       {
-        "title": "Fútbol Femenino UEFA Champions League",
-        "desc": "",
-        "start": 1795224600000,
-        "end": 1795231800000
-      },
-      {
-        "title": "Fútbol UEFA Nations League",
-        "desc": "",
-        "start": 1795231800000,
-        "end": 1795239000000
-      },
-      {
-        "title": "Premier League Preview Show",
-        "desc": "",
-        "start": 1795239000000,
-        "end": 1795240800000
-      },
-      {
-        "title": "ESPN Knockout",
-        "desc": "",
-        "start": 1795240800000,
-        "end": 1795244400000
+        "title": "Real Madrid vs. Celta de Vigo",
+        "desc": "Desde el estadio Santiago Bernabéu en la ciudad de Madrid, España, se enfrentan los equipos Real Madrid Club de Fútbol versus el Real Club Celta de Vigo.",
+        "start": 1795330800000,
+        "end": 1795334400000
       },
       {
         "title": "ESPN Compact",
         "desc": "",
-        "start": 1795244400000,
-        "end": 1795248300000
+        "start": 1795334400000,
+        "end": 1795338000000
       },
+      {
+        "title": "Atlético Mineiro vs. Boca Juniors",
+        "desc": "",
+        "start": 1795338000000,
+        "end": 1795345200000
+      },
+      {
+        "title": "SportsCenter+",
+        "desc": "",
+        "start": 1795345200000,
+        "end": 1795364400000
+      }
+    ],
+    "espn_2": [
       {
         "title": "ESPN Compact",
         "desc": "",
@@ -1167,87 +1125,39 @@
         "desc": "",
         "start": 1795309200000,
         "end": 1795323600000
-      }
-    ],
-    "espn_3": [
-      {
-        "title": "Fútbol UEFA Nations League",
-        "desc": "",
-        "start": 1795208400000,
-        "end": 1795212000000
       },
       {
-        "title": "Fútbol UEFA Nations League",
+        "title": "ESPN 2 Sur",
         "desc": "",
-        "start": 1795212000000,
-        "end": 1795215600000
+        "start": 1795323600000,
+        "end": 1795338000000
       },
       {
-        "title": "Equitación",
+        "title": "Campeonato mundial de MotoGP",
         "desc": "",
-        "start": 1795215600000,
-        "end": 1795219080000
+        "start": 1795338000000,
+        "end": 1795340700000
       },
       {
-        "title": "Acción de la NBA",
+        "title": "Campeonato mundial de MotoGP",
         "desc": "",
-        "start": 1795219080000,
-        "end": 1795220700000
+        "start": 1795340700000,
+        "end": 1795356900000
       },
       {
-        "title": "Automovilismo Fórmula 1",
+        "title": "Dall'Igna: Forjado con pasión",
         "desc": "",
-        "start": 1795220700000,
-        "end": 1795224900000
-      },
-      {
-        "title": "UEFA Champions League Weekly",
-        "desc": "",
-        "start": 1795224900000,
-        "end": 1795227000000
+        "start": 1795356900000,
+        "end": 1795357800000
       },
       {
         "title": "F1 Academy",
         "desc": "",
-        "start": 1795227000000,
-        "end": 1795229700000
-      },
-      {
-        "title": "Premier League Preview Show",
-        "desc": "",
-        "start": 1795229700000,
-        "end": 1795231620000
-      },
-      {
-        "title": "Futbol Bundesliga",
-        "desc": "",
-        "start": 1795231620000,
-        "end": 1795239000000
-      },
-      {
-        "title": "UEFA Women_s Champions League Highlight Show",
-        "desc": "",
-        "start": 1795239000000,
-        "end": 1795240800000
-      },
-      {
-        "title": "Aguas Arriba",
-        "desc": "",
-        "start": 1795240800000,
-        "end": 1795242600000
-      },
-      {
-        "title": "Premier League Preview Show",
-        "desc": "",
-        "start": 1795242600000,
-        "end": 1795244400000
-      },
-      {
-        "title": "Fútbol UEFA Nations League",
-        "desc": "",
-        "start": 1795244400000,
-        "end": 1795251600000
-      },
+        "start": 1795357800000,
+        "end": 1795360500000
+      }
+    ],
+    "espn_3": [
       {
         "title": "ESPN 3 Sur",
         "desc": "",
@@ -1277,141 +1187,27 @@
         "desc": "",
         "start": 1795309200000,
         "end": 1795323600000
+      },
+      {
+        "title": "ESPN 3 Sur",
+        "desc": "",
+        "start": 1795323600000,
+        "end": 1795338000000
+      },
+      {
+        "title": "ESPN 3 Sur",
+        "desc": "",
+        "start": 1795338000000,
+        "end": 1795352400000
+      },
+      {
+        "title": "ESPN 3 Sur",
+        "desc": "",
+        "start": 1795352400000,
+        "end": 1795366800000
       }
     ],
     "el_gourmet": [
-      {
-        "title": "Estefi dulce",
-        "desc": "",
-        "start": 1795210200000,
-        "end": 1795212000000
-      },
-      {
-        "title": "Fiestas con sabor mexican",
-        "desc": "",
-        "start": 1795212000000,
-        "end": 1795213800000
-      },
-      {
-        "title": "Tapeo español",
-        "desc": "",
-        "start": 1795213800000,
-        "end": 1795215600000
-      },
-      {
-        "title": "Maestros del taco",
-        "desc": "",
-        "start": 1795215600000,
-        "end": 1795217400000
-      },
-      {
-        "title": "Especial Día de muertos",
-        "desc": "",
-        "start": 1795217400000,
-        "end": 1795221000000
-      },
-      {
-        "title": "Las Mejores Recetas de Zahie",
-        "desc": "",
-        "start": 1795221000000,
-        "end": 1795222800000
-      },
-      {
-        "title": "Los Petersen en México",
-        "desc": "",
-        "start": 1795222800000,
-        "end": 1795224600000
-      },
-      {
-        "title": "Sonia en su huerta",
-        "desc": "",
-        "start": 1795224600000,
-        "end": 1795226400000
-      },
-      {
-        "title": "Asado gaucho",
-        "desc": "",
-        "start": 1795226400000,
-        "end": 1795228200000
-      },
-      {
-        "title": "Simplemente Pia",
-        "desc": "",
-        "start": 1795228200000,
-        "end": 1795230000000
-      },
-      {
-        "title": "Fogones tradicionales Esp",
-        "desc": "",
-        "start": 1795230000000,
-        "end": 1795231800000
-      },
-      {
-        "title": "Productos de mi tierra Méx",
-        "desc": "",
-        "start": 1795231800000,
-        "end": 1795233600000
-      },
-      {
-        "title": "Maestros de la pasta",
-        "desc": "",
-        "start": 1795233600000,
-        "end": 1795235400000
-      },
-      {
-        "title": "Fiestas con sabor mexican",
-        "desc": "",
-        "start": 1795235400000,
-        "end": 1795237200000
-      },
-      {
-        "title": "Los favoritos de Osuna en Qro",
-        "desc": "",
-        "start": 1795237200000,
-        "end": 1795239000000
-      },
-      {
-        "title": "Los imperdibles Buenos Aires",
-        "desc": "",
-        "start": 1795239000000,
-        "end": 1795240800000
-      },
-      {
-        "title": "Fiestas con sabor mexican",
-        "desc": "",
-        "start": 1795240800000,
-        "end": 1795242600000
-      },
-      {
-        "title": "Asado gaucho",
-        "desc": "",
-        "start": 1795242600000,
-        "end": 1795244400000
-      },
-      {
-        "title": "Tapeo español",
-        "desc": "",
-        "start": 1795244400000,
-        "end": 1795246200000
-      },
-      {
-        "title": "Amigos a la Mesa",
-        "desc": "",
-        "start": 1795246200000,
-        "end": 1795248000000
-      },
-      {
-        "title": "Productos de mi tierra Méx",
-        "desc": "",
-        "start": 1795248000000,
-        "end": 1795249800000
-      },
-      {
-        "title": "Maestros del sushi",
-        "desc": "",
-        "start": 1795249800000,
-        "end": 1795251600000
-      },
       {
         "title": "Un paseo por Oaxaca",
         "desc": "",
@@ -1627,39 +1423,141 @@
         "desc": "",
         "start": 1795318200000,
         "end": 1795320000000
+      },
+      {
+        "title": "Simplemente Pia",
+        "desc": "",
+        "start": 1795320000000,
+        "end": 1795321800000
+      },
+      {
+        "title": "La ruta del chile",
+        "desc": "",
+        "start": 1795321800000,
+        "end": 1795323600000
+      },
+      {
+        "title": "Me voy a comer el Mundo, esp",
+        "desc": "",
+        "start": 1795323600000,
+        "end": 1795327200000
+      },
+      {
+        "title": "Fiestas con sabor mexican",
+        "desc": "",
+        "start": 1795327200000,
+        "end": 1795329000000
+      },
+      {
+        "title": "Asado gaucho",
+        "desc": "",
+        "start": 1795329000000,
+        "end": 1795330800000
+      },
+      {
+        "title": "Tapeo español",
+        "desc": "",
+        "start": 1795330800000,
+        "end": 1795332600000
+      },
+      {
+        "title": "Amigos a la Mesa",
+        "desc": "",
+        "start": 1795332600000,
+        "end": 1795334400000
+      },
+      {
+        "title": "Productos de mi tierra Méx",
+        "desc": "",
+        "start": 1795334400000,
+        "end": 1795336200000
+      },
+      {
+        "title": "Maestros del sushi",
+        "desc": "",
+        "start": 1795336200000,
+        "end": 1795338000000
+      },
+      {
+        "title": "Un paseo por Oaxaca",
+        "desc": "",
+        "start": 1795338000000,
+        "end": 1795339800000
+      },
+      {
+        "title": "Con pocos ingredientes",
+        "desc": "",
+        "start": 1795339800000,
+        "end": 1795341600000
+      },
+      {
+        "title": "Los imperdibles CDMX",
+        "desc": "",
+        "start": 1795341600000,
+        "end": 1795343400000
+      },
+      {
+        "title": "Amigos con mucho gusto",
+        "desc": "",
+        "start": 1795343400000,
+        "end": 1795345200000
+      },
+      {
+        "title": "Los favoritos de Juan Manuel",
+        "desc": "",
+        "start": 1795345200000,
+        "end": 1795347000000
+      },
+      {
+        "title": "Menú para todos los días",
+        "desc": "",
+        "start": 1795347000000,
+        "end": 1795348800000
+      },
+      {
+        "title": "Fiestas con sabor mexican",
+        "desc": "",
+        "start": 1795348800000,
+        "end": 1795350600000
+      },
+      {
+        "title": "Pueblos para comerselos Méx",
+        "desc": "",
+        "start": 1795350600000,
+        "end": 1795352400000
+      },
+      {
+        "title": "Sonia en su huerta",
+        "desc": "",
+        "start": 1795352400000,
+        "end": 1795354200000
+      },
+      {
+        "title": "Guanajuato, tradición..",
+        "desc": "",
+        "start": 1795354200000,
+        "end": 1795356000000
+      },
+      {
+        "title": "Fiesta en casa al aire libre",
+        "desc": "",
+        "start": 1795356000000,
+        "end": 1795357800000
+      },
+      {
+        "title": "Amigos a la Mesa",
+        "desc": "",
+        "start": 1795357800000,
+        "end": 1795359600000
+      },
+      {
+        "title": "Los favoritos de Juan Manuel",
+        "desc": "",
+        "start": 1795359600000,
+        "end": 1795361400000
       }
     ],
     "space": [
-      {
-        "title": "Jurassic World mundo jurásico",
-        "desc": "",
-        "start": 1795205820000,
-        "end": 1795214940000
-      },
-      {
-        "title": "The Flash",
-        "desc": "",
-        "start": 1795214940000,
-        "end": 1795226400000
-      },
-      {
-        "title": "La monja",
-        "desc": "",
-        "start": 1795226400000,
-        "end": 1795233420000
-      },
-      {
-        "title": "La Monja 2",
-        "desc": "1956 – Francia. Un sacerdote es asesinado. Un mal se está extendiendo. La secuela del gran éxito mundial sigue a la Hermana Irene (Taissa Farmiga) cuando una vez más se encuentra cara a cara con Valak (Bonnie Aarons), la monja demonio.",
-        "start": 1795233420000,
-        "end": 1795240740000
-      },
-      {
-        "title": "La Momia",
-        "desc": "",
-        "start": 1795240740000,
-        "end": 1795247220000
-      },
       {
         "title": "Sin Límites",
         "desc": "Cuando un escritor que toma el riesgo de consumir una droga experimental que hace que él sea capaz de utilizar el 100 por ciento de su cerebro. Este hombre evoluciona en una versión perfecta de sí mismo, forzando a los hombres más corruptos que él en asesinos. El escritor sin trabajo Eddie Morra (Bradley Cooper) y cuya novia Lindy (Abbie Cornish) lo abandona por no verle futuro alguno. Todo esto se desvanece cuando un día, su ex hermanastro le da una muestra gratis de NZT – una droga nueva y misteriosa. Ahora tras probar el NZT, Eddie puede leer, escuchar, ver y analizar todo a la vez en un pequeño instante que hacen que nazca un nuevo Eddie, un hombre súper exitoso que llama la atención del gurú de los negocios Carl Van Loon (Robert De Niro), quien ve en él una máquina de hacer millones. Pero no todo será fácil para Eddie ya que deberá enfrentar los efectos contrarios que esta droga ocasionan.",
@@ -1743,57 +1641,75 @@
         "desc": "",
         "start": 1795312800000,
         "end": 1795320480000
+      },
+      {
+        "title": "La Momia",
+        "desc": "",
+        "start": 1795320480000,
+        "end": 1795327380000
+      },
+      {
+        "title": "La Monja 2",
+        "desc": "1956 – Francia. Un sacerdote es asesinado. Un mal se está extendiendo. La secuela del gran éxito mundial sigue a la Hermana Irene (Taissa Farmiga) cuando una vez más se encuentra cara a cara con Valak (Bonnie Aarons), la monja demonio.",
+        "start": 1795327380000,
+        "end": 1795334160000
+      },
+      {
+        "title": "Master Z: El legado de Ip Man",
+        "desc": "",
+        "start": 1795334160000,
+        "end": 1795340640000
+      },
+      {
+        "title": "Hollywood one on one",
+        "desc": "",
+        "start": 1795340640000,
+        "end": 1795341300000
+      },
+      {
+        "title": "TNT Buzz",
+        "desc": "",
+        "start": 1795341300000,
+        "end": 1795341420000
+      },
+      {
+        "title": "TNT Buzz",
+        "desc": "",
+        "start": 1795341420000,
+        "end": 1795341600000
+      },
+      {
+        "title": "Hollywood one on one",
+        "desc": "",
+        "start": 1795341600000,
+        "end": 1795342680000
+      },
+      {
+        "title": "Tesoros de garaje",
+        "desc": "",
+        "start": 1795342680000,
+        "end": 1795344180000
+      },
+      {
+        "title": "Tesoros de garaje",
+        "desc": "",
+        "start": 1795344180000,
+        "end": 1795345320000
+      },
+      {
+        "title": "Furia de Titanes 2",
+        "desc": "",
+        "start": 1795345320000,
+        "end": 1795351860000
+      },
+      {
+        "title": "Spider-Man: Un nuevo universo",
+        "desc": "",
+        "start": 1795351860000,
+        "end": 1795360680000
       }
     ],
     "star_channel": [
-      {
-        "title": "Contracara",
-        "desc": "",
-        "start": 1795208820000,
-        "end": 1795218900000
-      },
-      {
-        "title": "Los Simpson",
-        "desc": "",
-        "start": 1795218900000,
-        "end": 1795220880000
-      },
-      {
-        "title": "Los Simpson",
-        "desc": "",
-        "start": 1795220880000,
-        "end": 1795222800000
-      },
-      {
-        "title": "The Call of the Wild",
-        "desc": "",
-        "start": 1795222800000,
-        "end": 1795229940000
-      },
-      {
-        "title": "The King's Man: el origen",
-        "desc": "",
-        "start": 1795229940000,
-        "end": 1795239540000
-      },
-      {
-        "title": "Melinda y Melinda",
-        "desc": "",
-        "start": 1795239540000,
-        "end": 1795245420000
-      },
-      {
-        "title": "Scrubs",
-        "desc": "",
-        "start": 1795245420000,
-        "end": 1795246680000
-      },
-      {
-        "title": "Scrubs",
-        "desc": "",
-        "start": 1795246680000,
-        "end": 1795248000000
-      },
       {
         "title": "Sin rodeos",
         "desc": "",
@@ -1877,51 +1793,57 @@
         "desc": "Dominika Egorova (Jennifer Lawrence) es muchas cosas. Una hija devota decidida a proteger a su madre a toda costa.Una primera bailarina cuya ferocidad ha llevado a su cuerpo y mente al límite absoluto.Una maestra del combate de la seducción y manipulación.Cuando sufre una lesión que hace que termine su carrera, Dominika y su madre se enfrentan a un futuro sombrío e incierto. Es por ese motivo se encuentra decidida a convertirse en la nueva recluta de la Escuela Sparrow, un servicio secreto de inteligencia que entrena a jóvenes excepcionales como ella para utilizar sus cuerpos y mentes como armas. Después de soportar el proceso de entrenamiento perverso y sádico, ella emerge como la Sparrow más peligrosa que el programa ha creado. Ahora Dominika debe reconciliar a la persona que fue con el poder que posee ahora, con su propia vida y todas las personas cercanas a ella estando en riesgo, incluyendo un agente de la CIA estadounidense que intenta convencerla de que es la única persona que puede confiar.",
         "start": 1795316400000,
         "end": 1795327020000
+      },
+      {
+        "title": "La Entrega",
+        "desc": "",
+        "start": 1795327020000,
+        "end": 1795333200000
+      },
+      {
+        "title": "Scrubs",
+        "desc": "",
+        "start": 1795333200000,
+        "end": 1795334580000
+      },
+      {
+        "title": "Scrubs",
+        "desc": "",
+        "start": 1795334580000,
+        "end": 1795335840000
+      },
+      {
+        "title": "Sin rodeos",
+        "desc": "",
+        "start": 1795335840000,
+        "end": 1795341600000
+      },
+      {
+        "title": "Scrubs",
+        "desc": "",
+        "start": 1795341600000,
+        "end": 1795343220000
+      },
+      {
+        "title": "Scrubs",
+        "desc": "",
+        "start": 1795343220000,
+        "end": 1795349640000
+      },
+      {
+        "title": "Alta Fidelidad",
+        "desc": "",
+        "start": 1795349640000,
+        "end": 1795358160000
+      },
+      {
+        "title": "High Strung Free Dance",
+        "desc": "",
+        "start": 1795358160000,
+        "end": 1795366500000
       }
     ],
     "tnt": [
-      {
-        "title": "MasterChef Celebrity",
-        "desc": "",
-        "start": 1795206360000,
-        "end": 1795211700000
-      },
-      {
-        "title": "Troya",
-        "desc": "",
-        "start": 1795211700000,
-        "end": 1795222800000
-      },
-      {
-        "title": "Los 40 Music Awards Santander 2026",
-        "desc": "",
-        "start": 1795222800000,
-        "end": 1795236900000
-      },
-      {
-        "title": "El Especialista",
-        "desc": "",
-        "start": 1795236900000,
-        "end": 1795243680000
-      },
-      {
-        "title": "Al Filo del Mañana",
-        "desc": "Bill Cage (Tom Cruise) es un soldado que se encuentra la última batalla contra fuerzas alienígenas, cuando este fracasa y muere empieza nuevamente precisamente en el mismo día una y otra vez, ahora con la ayuda de Rita Vrataski (Emily Blunt) deberá aprender tras cada derrota a convertirse en un mejor guerrero.",
-        "start": 1795243680000,
-        "end": 1795250280000
-      },
-      {
-        "title": "Hollywood one on one",
-        "desc": "",
-        "start": 1795250280000,
-        "end": 1795251060000
-      },
-      {
-        "title": "Hollywood one on one",
-        "desc": "",
-        "start": 1795251060000,
-        "end": 1795251600000
-      },
       {
         "title": "Hollywood one on one",
         "desc": "",
@@ -1999,69 +1921,69 @@
         "desc": "",
         "start": 1795317960000,
         "end": 1795325700000
+      },
+      {
+        "title": "Bastardos sin gloria",
+        "desc": "",
+        "start": 1795325700000,
+        "end": 1795335000000
+      },
+      {
+        "title": "Hollywood one on one",
+        "desc": "",
+        "start": 1795335000000,
+        "end": 1795337220000
+      },
+      {
+        "title": "Hollywood one on one",
+        "desc": "",
+        "start": 1795337220000,
+        "end": 1795338000000
+      },
+      {
+        "title": "Hollywood one on one",
+        "desc": "",
+        "start": 1795338000000,
+        "end": 1795340160000
+      },
+      {
+        "title": "Hollywood one on one",
+        "desc": "",
+        "start": 1795340160000,
+        "end": 1795340760000
+      },
+      {
+        "title": "Hollywood one on one",
+        "desc": "",
+        "start": 1795340760000,
+        "end": 1795341360000
+      },
+      {
+        "title": "Hollywood one on one",
+        "desc": "",
+        "start": 1795341360000,
+        "end": 1795342080000
+      },
+      {
+        "title": "Asesinos de élite",
+        "desc": "",
+        "start": 1795342080000,
+        "end": 1795349340000
+      },
+      {
+        "title": "Rápido y Furioso",
+        "desc": "Tienen la adrenalina y las máquinas malas, pero, sobre todo, tienen una necesidad extrema de velocidad. En las calles cargadas de turbo de Los Ángeles, cada noche es una carrera de campeonato. Con la furia potenciada por el nitro, Dominic Toretto (Vin Diesel), gobierna el camino convirtiendo a todos sus rivales en polvo. Él y su rival, Johnny Tran (Rick Yune) son los más audaces, los más malos y los mejores. Pero ahora, hay nueva rabia en el camino. Saben que es duro, saben que es rápido, pero lo que no saben es que es un detective demoníaco de la velocidad (Paul Walker) con suficiente empuje y determinación para salir victorioso. Con una intensa acción a toda velocidad, increíbles acrobacias a alta velocidad y pedal a fondo hasta la máxima intensidad, este asalto rápido y furioso te pone en el asiento del conductor y te desafía a superar todos los límites.",
+        "start": 1795349340000,
+        "end": 1795356240000
+      },
+      {
+        "title": "Más rápido más furioso",
+        "desc": "",
+        "start": 1795356240000,
+        "end": 1795363500000
       }
     ],
     "telefe": [
-      {
-        "title": "Historias de corazón",
-        "desc": "",
-        "start": 1795207500000,
-        "end": 1795215600000
-      },
-      {
-        "title": "Telefe Noticias",
-        "desc": "",
-        "start": 1795215600000,
-        "end": 1795221000000
-      },
-      {
-        "title": "Masterchef junior",
-        "desc": "",
-        "start": 1795221000000,
-        "end": 1795225500000
-      },
-      {
-        "title": "Pasapalabra",
-        "desc": "",
-        "start": 1795225500000,
-        "end": 1795230000000
-      },
-      {
-        "title": "Staff",
-        "desc": "",
-        "start": 1795230000000,
-        "end": 1795230900000
-      },
-      {
-        "title": "Staff",
-        "desc": "",
-        "start": 1795230900000,
-        "end": 1795232700000
-      },
-      {
-        "title": "El Valor de Tus Joyas",
-        "desc": "",
-        "start": 1795232700000,
-        "end": 1795234500000
-      },
-      {
-        "title": "Cortá Por Lozano",
-        "desc": "",
-        "start": 1795234500000,
-        "end": 1795239900000
-      },
-      {
-        "title": "Ariel en su salsa",
-        "desc": "",
-        "start": 1795239900000,
-        "end": 1795243500000
-      },
-      {
-        "title": "A la Barbarossa",
-        "desc": "",
-        "start": 1795243500000,
-        "end": 1795251600000
-      },
       {
         "title": "Disney Junior",
         "desc": "",
@@ -2121,51 +2043,45 @@
         "desc": "",
         "start": 1795316400000,
         "end": 1795320000000
+      },
+      {
+        "title": "PH, podemos hablar",
+        "desc": "",
+        "start": 1795320000000,
+        "end": 1795327200000
+      },
+      {
+        "title": "Juego chino",
+        "desc": "",
+        "start": 1795327200000,
+        "end": 1795329000000
+      },
+      {
+        "title": "El Chavo y Chapulín",
+        "desc": "",
+        "start": 1795329000000,
+        "end": 1795336200000
+      },
+      {
+        "title": "Tierras",
+        "desc": "",
+        "start": 1795336200000,
+        "end": 1795338000000
+      },
+      {
+        "title": "Disney Junior",
+        "desc": "",
+        "start": 1795338000000,
+        "end": 1795343400000
+      },
+      {
+        "title": "El Chavo y Chapulín",
+        "desc": "",
+        "start": 1795343400000,
+        "end": 1795365000000
       }
     ],
     "tv_publica": [
-      {
-        "title": "Iluminadas",
-        "desc": "",
-        "start": 1795204800000,
-        "end": 1795212000000
-      },
-      {
-        "title": "Canal Siete Noticias",
-        "desc": "",
-        "start": 1795212000000,
-        "end": 1795217400000
-      },
-      {
-        "title": "Canal Siete Noticias Internacional",
-        "desc": "",
-        "start": 1795217400000,
-        "end": 1795221000000
-      },
-      {
-        "title": "Lo mejor de: Se siente Argentina",
-        "desc": "",
-        "start": 1795221000000,
-        "end": 1795226400000
-      },
-      {
-        "title": "Documentales en la Televisión Pública Argentina",
-        "desc": "",
-        "start": 1795226400000,
-        "end": 1795230000000
-      },
-      {
-        "title": "Canal Siete Noticias",
-        "desc": "",
-        "start": 1795230000000,
-        "end": 1795231800000
-      },
-      {
-        "title": "Feliz vida",
-        "desc": "",
-        "start": 1795231800000,
-        "end": 1795233600000
-      },
       {
         "title": "Fuera del aire",
         "desc": "",
@@ -2285,57 +2201,51 @@
         "desc": "",
         "start": 1795318200000,
         "end": 1795340700000
+      },
+      {
+        "title": "Documentales en la Televisión Pública Argentina",
+        "desc": "",
+        "start": 1795340700000,
+        "end": 1795341600000
+      },
+      {
+        "title": "Pampero TV",
+        "desc": "",
+        "start": 1795341600000,
+        "end": 1795345200000
+      },
+      {
+        "title": "El Cálamo y su mensaje",
+        "desc": "",
+        "start": 1795345200000,
+        "end": 1795348800000
+      },
+      {
+        "title": "La santa misa",
+        "desc": "",
+        "start": 1795348800000,
+        "end": 1795351800000
+      },
+      {
+        "title": "Angelus",
+        "desc": "",
+        "start": 1795351800000,
+        "end": 1795352400000
+      },
+      {
+        "title": "Gigantes del Sur",
+        "desc": "",
+        "start": 1795352400000,
+        "end": 1795356000000
+      },
+      {
+        "title": "Lo mejor de: Se siente Argentina",
+        "desc": "",
+        "start": 1795356000000,
+        "end": 1795365000000
       }
     ],
     "tyc_sports": [
-      {
-        "title": "Sportia",
-        "desc": "",
-        "start": 1795204800000,
-        "end": 1795212000000
-      },
-      {
-        "title": "Los Especiales de TyC Sports",
-        "desc": "",
-        "start": 1795212000000,
-        "end": 1795215300000
-      },
-      {
-        "title": "Vélez Sarsfield vs. Belgrano",
-        "desc": "El Club Atlético Vélez Sarsfield de Buenos Aires se enfrenta al Club Atlético Belgrano de Córdoba.",
-        "start": 1795215300000,
-        "end": 1795222800000
-      },
-      {
-        "title": "Hay Equipo",
-        "desc": "",
-        "start": 1795222800000,
-        "end": 1795226400000
-      },
-      {
-        "title": "Gabriel Díaz vs. Bruno Acosta; Sebastián Papeschi vs. Nahuel García",
-        "desc": "",
-        "start": 1795226400000,
-        "end": 1795233600000
-      },
-      {
-        "title": "Boca Juniors vs. River Plate",
-        "desc": "Desde el estadio Alberto J. Armando “La Bombonera” en Buenos Aires, Argentina. Se enfrentan los equipos Club Atlético Boca Juniors versus Club Atlético River Plate.",
-        "start": 1795233600000,
-        "end": 1795244700000
-      },
-      {
-        "title": "Sportia",
-        "desc": "",
-        "start": 1795244700000,
-        "end": 1795248000000
-      },
-      {
-        "title": "Sportia",
-        "desc": "",
-        "start": 1795248000000,
-        "end": 1795251600000
-      },
       {
         "title": "Sportia",
         "desc": "",
@@ -2413,6 +2323,72 @@
         "desc": "La Asociación Atlética Argentinos Juniors de Buenos Aires se enfrenta al Club Atlético Independiente de Avellaneda.",
         "start": 1795312800000,
         "end": 1795320000000
+      },
+      {
+        "title": "Defensa y Justicia vs. Barracas Central",
+        "desc": "El Club Social y Deportivo Defensa y Justicia de Florencio Varela se enfrenta al Club Atlético Barracas Central de Buenos Aires.",
+        "start": 1795320000000,
+        "end": 1795327200000
+      },
+      {
+        "title": "Sportia",
+        "desc": "",
+        "start": 1795327200000,
+        "end": 1795330800000
+      },
+      {
+        "title": "Sportia",
+        "desc": "",
+        "start": 1795330800000,
+        "end": 1795334400000
+      },
+      {
+        "title": "Sportia",
+        "desc": "",
+        "start": 1795334400000,
+        "end": 1795338000000
+      },
+      {
+        "title": "Sportia",
+        "desc": "",
+        "start": 1795338000000,
+        "end": 1795341600000
+      },
+      {
+        "title": "Noveno Chukker",
+        "desc": "",
+        "start": 1795341600000,
+        "end": 1795343400000
+      },
+      {
+        "title": "Sportia",
+        "desc": "",
+        "start": 1795343400000,
+        "end": 1795345200000
+      },
+      {
+        "title": "Sportia",
+        "desc": "",
+        "start": 1795345200000,
+        "end": 1795347000000
+      },
+      {
+        "title": "Sportia",
+        "desc": "",
+        "start": 1795347000000,
+        "end": 1795350600000
+      },
+      {
+        "title": "Sportia",
+        "desc": "",
+        "start": 1795350600000,
+        "end": 1795354200000
+      },
+      {
+        "title": "Automovilismo TC 2000",
+        "desc": "",
+        "start": 1795354200000,
+        "end": 1795365000000
       }
     ],
     "tnt_sports_1": [
