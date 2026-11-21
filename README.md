@@ -23,8 +23,8 @@ Puedes acortar estas URLs o ingresarlas directamente en **Downloader**:
   ```
   https://raw.githubusercontent.com/todout/android-app-publico/main/LeichTV_latest.apk
   ```
-- **Versión específica actual (v1.3)**:
-  `https://raw.githubusercontent.com/todout/android-app-publico/main/LeichTV_v1.3.apk`
+- **Versión específica actual (v1.4)**:
+  `https://raw.githubusercontent.com/todout/android-app-publico/main/LeichTV_v1.4.apk`
 - Compatible con **Android TV, TV Boxes, Teléfonos y Tablets**:
   - En móviles y tablets arranca en pantalla completa apaisada.
   - Zapping táctil vertical: desliza el dedo hacia arriba o abajo para cambiar de canal instantáneamente.
